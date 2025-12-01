@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣地區地圖切換</title>
+    <style>
+        /* 隱藏所有地圖容器，除了第一個 */
+        .map-container {
+            width: 100%;
+            height: 600px; /* 設定地圖顯示高度 */
+            display: none;
+        }
+        /* 按鈕樣式 */
+        .button-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button onclick="showMap('taipei_map')">台北市</button>
+        <button onclick="showMap('new_taipei_map')">新北</button>
+        <button onclick="showMap('taoyuan_map')">桃園</button>
+        <button onclick="showMap('taoyuan_map')">新竹</button>
+        <button onclick="showMap('taoyuan_map')">台中</button>
+        <button onclick="showMap('taoyuan_map')">台南</button>
+        <button onclick="showMap('taoyuan_map')">高雄</button>
+    </div>
+
+    <div id="taipei_map" class="map-container" style="display: block;">
+        <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_ca01e4ae791d402c8d2f6aa30f60ec9f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_ca01e4ae791d402c8d2f6aa30f60ec9f&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_ca01e4ae791d402c8d2f6aa30f60ec9f = L.map(
+                &quot;map_ca01e4ae791d402c8d2f6aa30f60ec9f&quot;,
+                {
+                    center: [25.033, 121.5654],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 13,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6918bad0bbff288f31b4a2f513608b55 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_6918bad0bbff288f31b4a2f513608b55.addTo(map_ca01e4ae791d402c8d2f6aa30f60ec9f);
+        
+    
+            var marker_9045b498efcb21a1effa40ba0beb22fc = L.marker(
+                [25.033, 121.5654],
+                {
+}
+            ).addTo(map_ca01e4ae791d402c8d2f6aa30f60ec9f);
+        
+    
+        var popup_b02b8f74e6422d28d08e7d3622847ed1 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_07105e439e0bb05f5297b359008c3f65 = $(`&lt;div id=&quot;html_07105e439e0bb05f5297b359008c3f65&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Taipei&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_b02b8f74e6422d28d08e7d3622847ed1.setContent(html_07105e439e0bb05f5297b359008c3f65);
+            
+        
+
+        marker_9045b498efcb21a1effa40ba0beb22fc.bindPopup(popup_b02b8f74e6422d28d08e7d3622847ed1)
+        ;
+
+        
+    
+    
+            marker_9045b498efcb21a1effa40ba0beb22fc.bindTooltip(
+                `&lt;div&gt;
+                     Taipei
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
+    </div>
+
+    <div id="new_taipei_map" class="map-container">
+        <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_c2fdc4ed0eda83a04308ffc461da866c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_c2fdc4ed0eda83a04308ffc461da866c&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_c2fdc4ed0eda83a04308ffc461da866c = L.map(
+                &quot;map_c2fdc4ed0eda83a04308ffc461da866c&quot;,
+                {
+                    center: [25.0105, 121.4646],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 12,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3dc20d94e6f0b7df414c5ca18aed5b1b = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_3dc20d94e6f0b7df414c5ca18aed5b1b.addTo(map_c2fdc4ed0eda83a04308ffc461da866c);
+        
+    
+            var marker_a8eaf7b61352abbe20b5acd3eddf9f9a = L.marker(
+                [25.0105, 121.4646],
+                {
+}
+            ).addTo(map_c2fdc4ed0eda83a04308ffc461da866c);
+        
+    
+        var popup_31ffa0f7e24fb6ff685815799eed4988 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_0b03f27ea8dc525721d7d7007c60b188 = $(`&lt;div id=&quot;html_0b03f27ea8dc525721d7d7007c60b188&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;New Taipei&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_31ffa0f7e24fb6ff685815799eed4988.setContent(html_0b03f27ea8dc525721d7d7007c60b188);
+            
+        
+
+        marker_a8eaf7b61352abbe20b5acd3eddf9f9a.bindPopup(popup_31ffa0f7e24fb6ff685815799eed4988)
+        ;
+
+        
+    
+    
+            marker_a8eaf7b61352abbe20b5acd3eddf9f9a.bindTooltip(
+                `&lt;div&gt;
+                     New Taipei
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
+    </div>
+
+    <div id="taoyuan_map" class="map-container">
+        <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_4ba6f3d3a06e32e188dcbb47ff812fae {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_4ba6f3d3a06e32e188dcbb47ff812fae&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_4ba6f3d3a06e32e188dcbb47ff812fae = L.map(
+                &quot;map_4ba6f3d3a06e32e188dcbb47ff812fae&quot;,
+                {
+                    center: [24.9937, 121.3009],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 12,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7f91658f33ec9a235533ba1fce85afa2 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_7f91658f33ec9a235533ba1fce85afa2.addTo(map_4ba6f3d3a06e32e188dcbb47ff812fae);
+        
+    
+            var marker_b0220c3f422ba435a3d340e5e9d76278 = L.marker(
+                [24.9937, 121.3009],
+                {
+}
+            ).addTo(map_4ba6f3d3a06e32e188dcbb47ff812fae);
+        
+    
+        var popup_dc556c2bbf9fda50903bda3b70f82e44 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_53086ca6998fb99ae1b8a591df98f781 = $(`&lt;div id=&quot;html_53086ca6998fb99ae1b8a591df98f781&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Taoyuan&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_dc556c2bbf9fda50903bda3b70f82e44.setContent(html_53086ca6998fb99ae1b8a591df98f781);
+            
+        
+
+        marker_b0220c3f422ba435a3d340e5e9d76278.bindPopup(popup_dc556c2bbf9fda50903bda3b70f82e44)
+        ;
+
+        
+    
+    
+            marker_b0220c3f422ba435a3d340e5e9d76278.bindTooltip(
+                `&lt;div&gt;
+                     Taoyuan
+                 &lt;/div&gt;`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
+    </div>
+
+    <script>
+        function showMap(mapId) {
+            // 獲取所有地圖容器
+            var mapContainers = document.getElementsByClassName('map-container');
+            
+            // 隱藏所有地圖
+            for (var i = 0; i < mapContainers.length; i++) {
+                mapContainers[i].style.display = 'none';
+            }
+
+            // 顯示選定的地圖
+            document.getElementById(mapId).style.display = 'block';
+
+            // IMPORTANT: 由於 folium 在容器隱藏時初始化會有問題，
+            // 重新顯示後需要呼叫一次地圖的 invalidateSize() 方法來確保渲染正確。
+            // 這是一個常見的 Folium/Leaflet 嵌入問題的修復。
+            // 我們需要取得 Folium 地圖物件本身 (它儲存在 window 變數中，命名規則為 'm_' + mapId)
+            // 由於直接從 Python 嵌入的 Folium HTML 缺乏統一的 ID 命名，
+            // 這個簡單版本**不會**做這個修復。如果地圖顯示不完整，
+            // 則建議使用 Flask 伺服器來更優雅地處理這個問題。
+        }
+    </script>
+
+</body>
+</html>
