@@ -2,15 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>台灣地區地圖切換</title>
+    <title>AGS 房產數據洞察 - Index </title>
     <style>
-        /* 隱藏所有地圖容器，除了第一個 */
         .map-container {
             width: 100%;
             height: 600px; /* 設定地圖顯示高度 */
             display: none;
         }
-        /* 按鈕樣式 */
         .button-container {
             margin-bottom: 20px;
         }
@@ -21,7 +19,8 @@
     <div class="button-container">
         <button onclick="showMap('taipei_map')">台北市</button>
         <button onclick="showMap('new_taipei_map')">新北</button>
-        <button onclick="showMap('taoyuan_map')">桃園</button>
+        <button onclick="window.location.href='ags_jud_Taoyuan.html'">桃園</button>
+        <button onclick="window.location.href='ags_jud_Hsinchu.html'">新竹</button>
         <button onclick="showMap('taoyuan_map')">新竹</button>
         <button onclick="showMap('taoyuan_map')">台中</button>
         <button onclick="showMap('taoyuan_map')">台南</button>
@@ -451,17 +450,7 @@
             for (var i = 0; i < mapContainers.length; i++) {
                 mapContainers[i].style.display = 'none';
             }
-
-            // 顯示選定的地圖
             document.getElementById(mapId).style.display = 'block';
-
-            // IMPORTANT: 由於 folium 在容器隱藏時初始化會有問題，
-            // 重新顯示後需要呼叫一次地圖的 invalidateSize() 方法來確保渲染正確。
-            // 這是一個常見的 Folium/Leaflet 嵌入問題的修復。
-            // 我們需要取得 Folium 地圖物件本身 (它儲存在 window 變數中，命名規則為 'm_' + mapId)
-            // 由於直接從 Python 嵌入的 Folium HTML 缺乏統一的 ID 命名，
-            // 這個簡單版本**不會**做這個修復。如果地圖顯示不完整，
-            // 則建議使用 Flask 伺服器來更優雅地處理這個問題。
         }
     </script>
 

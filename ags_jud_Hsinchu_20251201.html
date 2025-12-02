@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d96bead2b3817e8c3493304154b800fc {
+                    position: relative;
+                    width: 80.0%;
+                    height: 500.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+<style> table{ border:1px solid #000; } td{ border:1px solid #000; padding:10px; } </style> <p><small>資料區域:新竹<br>資料日期:2025-12-01<br>系統版本:0.5.1201<br>識別碼:A442E0C7-FBDD-43E6-9DB7-6DFF954507AF</small></p> <p><table> <thead> <tr> <th>法院</th> <th>案號</th> <th>縣市</th> <th>地址</th> <th>拍次</th> <th class='price'>總拍賣底價 (NTD)</th> <th>点交状况</th> <th>停拍</th> </tr> </thead> <tbody> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第019328號</td> <td>新竹市</td> <td>新竹市中華路三段46號3樓&nbsp;<br>149坪(495.51平方公尺) X 全部</td> <td>1141205&nbsp;<br>特別程序</td> <td class='price'>42,304000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第019328號</td> <td>新竹市</td> <td>新竹市中華路三段46號4樓&nbsp;<br>112坪(371.55平方公尺) X 100000分之1844</td> <td>1141205&nbsp;<br>特別程序</td> <td class='price'>42,304000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第049112號</td> <td>新竹縣</td> <td>新竹縣五峰鄉大隘村5鄰五峰78號&nbsp;<br>46坪(153.72平方公尺) X 3分之1</td> <td>1141107&nbsp;<br>特別程序</td> <td class='price'>630,500</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第007142號</td> <td>新竹市</td> <td>新竹市中山路600巷8弄9號&nbsp;<br>31坪(102.60平方公尺) X 18分之1</td> <td>1141003&nbsp;<br>特別程序</td> <td class='price'>1,269200</td> <td>不點交</td> <td>停拍公告:/scd/11411/12133720971.01N.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第007142號</td> <td>新竹市</td> <td>新竹市中山路600巷8弄9號&nbsp;<br>9坪(32.63平方公尺) X 18分之1</td> <td>1141003&nbsp;<br>特別程序</td> <td class='price'>1,269200</td> <td>不點交</td> <td>停拍公告:/scd/11411/12133720971.01N.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第020196號</td> <td>新竹市</td> <td>新竹市金竹路186巷10號2樓&nbsp;<br>18坪(62.75平方公尺) X 18分之17</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>3,968000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第038349號</td> <td>新竹市</td> <td>無門牌(新竹市西濱路一段1 巷146 號右側右棟)&nbsp;<br>122坪(403.74平方公尺) X 全部</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>2,622800</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第038349號</td> <td>新竹市</td> <td>無門牌(新竹市西濱路一段1 巷146 號右側右棟)&nbsp;<br>16坪(55.46平方公尺) X 全部</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>2,622800</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第044514號</td> <td>新竹縣</td> <td>新竹縣尖石鄉梅花154號&nbsp;<br>15坪(52.47平方公尺) X 3分之1</td> <td>1141106&nbsp;<br>特別程序</td> <td class='price'>409,600</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第063474號</td> <td>新竹縣</td> <td>新竹縣新豐鄉中崙285之25號5樓&nbsp;<br>19坪(64.16平方公尺) X 全部</td> <td>1141003&nbsp;<br>特別程序</td> <td class='price'>2,534400</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執助字第003162號</td> <td>新竹縣</td> <td>新竹縣關西鎮正義路266巷4號&nbsp;<br>31坪(103.50平方公尺) X 2分之1</td> <td>1140925&nbsp;<br>特別程序</td> <td class='price'>9,000000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執助字第003162號</td> <td>新竹縣</td> <td>新竹縣關西鎮正義路266巷4號&nbsp;<br>45坪(149.75平方公尺) X 2分之1</td> <td>1140925&nbsp;<br>特別程序</td> <td class='price'>9,000000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第002570號</td> <td>新竹縣</td> <td>新竹縣湖口鄉民生街3巷18弄13號&nbsp;<br>77坪(256.59平方公尺) X 全部</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>20,006400</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第002570號</td> <td>新竹縣</td> <td>新竹縣湖口鄉民生街3巷18弄13號&nbsp;<br>1坪(6.46平方公尺) X 全部</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>20,006400</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第004577號</td> <td>新竹縣</td> <td>新竹縣關西鎮南坑18號之1&nbsp;<br>75坪(249.40平方公尺) X 全部</td> <td>1141020&nbsp;<br>特別程序</td> <td class='price'>19,840000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第004577號</td> <td>新竹縣</td> <td>新竹縣關西鎮南坑18號之1&nbsp;<br>70坪(233.76平方公尺) X 全部</td> <td>1141020&nbsp;<br>特別程序</td> <td class='price'>19,840000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第005154號</td> <td>新竹市</td> <td>新竹市明湖路486巷6號&nbsp;<br>74坪(247.52平方公尺) X 100000分之33333</td> <td>1141124&nbsp;<br>特別程序</td> <td class='price'>448,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第010743號</td> <td>新竹縣</td> <td>新竹縣關西鎮中山路193號6樓&nbsp;<br>27坪(91.01平方公尺) X 2分之1</td> <td>1141121&nbsp;<br>特別程序</td> <td class='price'>5,088000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第010743號</td> <td>新竹縣</td> <td>新竹縣關西鎮中山路179號&nbsp;<br>0坪(3.06平方公尺) X 10000分之106</td> <td>1141121&nbsp;<br>特別程序</td> <td class='price'>5,088000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執助字第000492號</td> <td>新竹縣</td> <td>新竹縣關西鎮大德街38巷3號&nbsp;<br>46坪(152.78平方公尺) X 3分之1</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>1,785600</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執助字第000492號</td> <td>新竹縣</td> <td>新竹縣關西鎮大德街38巷3號&nbsp;<br>41坪(137.96平方公尺) X 3分之1</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>1,785600</td> <td>不點交</td> <td></td> </tr> </tbody> </table></p> <br> <div id=ags-insight></div>
+    
+    
+        <style>
+            #map_d96bead2b3817e8c3493304154b800fc {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                /* 確保地圖作為區塊元素，才能應用 auto margin */
+                display: block !important;
+            }
+        </style>
+    
+    
+            <div class="folium-map" id="map_d96bead2b3817e8c3493304154b800fc" ></div>
+<br><br>
+<div id="ags-greeting">
+<p>您好，</p>
+<p>
+我們是 AGS 資料洞察團隊, 一家專注於運用科技,把原始資料轉換成高價值資訊,並精準交付 的資訊服務業者.
+</p>
+<p>
+我們深知, 在您日常的決策中, 精準的數據與即時的市場洞察至關重要. 為了協助您更好地掌握市場動態並優化管理策略, 我們為您整理了以下一組最新數據:
+</p>
+</div>
+
+<div id="ags-value">
+<p>
+這組數據不僅僅是單純的房源資訊, 它背後隱藏著重要的市場信號與機會, 我們可以根據您的職位為您突出這組數據的特定價值：
+<lu>
+<li>對於 Real Estate Manager (房產經理)：這些數據是判斷該地區潛力與定價策略的關鍵依據. [區域] 與 [價格] 資訊顯示出該區的價值潛力/市場接受度, 協助您精準評估投資回報率 (ROI) 及制定營銷策略.</li>
+<li>對於 Security Manager (保全經理)：所示的物業類型與價值是評估潛在安全風險, 規劃智慧安防升級方案的重要參考. 高價值物業的安保需求通常更高, 我們的數據能幫助您預測需求並優化資源配置. </li>
+<li>對於 Apartment Manager (公寓大廈經理)：了解周邊房產能幫助您評估現有大廈的管理服務溢價空間與競爭力, 亦可作為提升住戶服務或設施升級的參考方向.</li>
+<li>對於 Community Secretary (社區祕書)：這組數據反映了社區周邊的發展趨勢與居民構成變化. 掌握此資訊能協助您更好地預測社區服務需求, 協調資源, 並為住戶會議提供數據支持, 以提升社區管理效率與滿意度.</li>
+</ul>
+</p>
+</div>
+
+<div id="ags-action">
+我們的服務旨在將這些原始數據轉化為可執行(Actionable)的洞察報告，協助您：
+<ul>
+<li>優化決策流程</li>
+<li>提升管理效率</li>
+<li>降低潛在風險</li>
+</ul>
+</div>
+
+<div id="ags-sponsor">
+<p>
+我們很樂意與您線上, 更深入地探討我們如何為您的工作帶來具體且實質的幫助, 請直接回覆此郵件，告訴我們您的方便時間.
+</p>
+<p>
+歡迎支持我們, 讓團隊持續提供更好的服務與資訊價值給更多受眾, 謝謝您!
+</p>
+<p>
+<a href=https://buymeacoffee.com/robert.tsai.1111 target='_blank'>進入贊助網站</a> (Buy Me A Coffee 為一小額贊助平台, 讓您可以輕鬆支持我們的工作)
+</p>
+AGS 資料洞察團隊 敬上
+</p>
+</div>
+        
+</body>
+<script>
+    
+    
+            var map_d96bead2b3817e8c3493304154b800fc = L.map(
+                "map_d96bead2b3817e8c3493304154b800fc",
+                {
+                    center: [24.8068, 120.969],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f35dd0d86ab64c0a6eb34bbd1f5fdea8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f35dd0d86ab64c0a6eb34bbd1f5fdea8.addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            var marker_aae671a953ade0ccf387352b365bc682 = L.marker(
+                [24.7971812, 120.9625243],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_aae671a953ade0ccf387352b365bc682.bindTooltip(
+                `<div>
+                     300台灣新竹市北區中華路三段46號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fec2f406bd5f2e261cb937202d6eabf6 = L.marker(
+                [24.7971812, 120.9625243],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_fec2f406bd5f2e261cb937202d6eabf6.bindTooltip(
+                `<div>
+                     300台灣新竹市北區中華路三段46號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_392c31264bb99ab688420560d3777067 = L.marker(
+                [24.633489, 121.118519],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_392c31264bb99ab688420560d3777067.bindTooltip(
+                `<div>
+                     311台灣新竹縣五峰鄉五峰
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3b2d014d9b0158c6179a4e441368377f = L.marker(
+                [24.7973843, 120.9545809],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_3b2d014d9b0158c6179a4e441368377f.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區中山路600巷8弄9號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ba175067a42e02d3c9f1d108de630804 = L.marker(
+                [24.7973843, 120.9545809],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_ba175067a42e02d3c9f1d108de630804.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區中山路600巷8弄9號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1ac3115ab66efc4fe62d3bafd36c9501 = L.marker(
+                [24.8246813, 120.9716484],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_1ac3115ab66efc4fe62d3bafd36c9501.bindTooltip(
+                `<div>
+                     300台灣新竹市北區金竹路186巷10號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fda76fadc9c45a28fd1ad46ba97c8d8d = L.marker(
+                [24.8291388, 120.9226455],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_fda76fadc9c45a28fd1ad46ba97c8d8d.bindTooltip(
+                `<div>
+                     300台灣新竹市北區西濱路一段1巷146號右
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_14bd4450edb83bd0128754b24210256f = L.marker(
+                [24.8291388, 120.9226455],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_14bd4450edb83bd0128754b24210256f.bindTooltip(
+                `<div>
+                     300台灣新竹市北區西濱路一段1巷146號右
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8ecd8845dfdc37c262eb02b953e0baba = L.marker(
+                [24.6118547, 121.2958947],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_8ecd8845dfdc37c262eb02b953e0baba.bindTooltip(
+                `<div>
+                     313台灣新竹縣尖石鄉
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5f7e3f5b329d163c12b89c1a88ac04f5 = L.marker(
+                [24.894405, 121.011536],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_5f7e3f5b329d163c12b89c1a88ac04f5.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉中崙
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_310bf5d1767b8d9cc82b2d374330d16f = L.marker(
+                [24.7970288, 121.1730129],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_310bf5d1767b8d9cc82b2d374330d16f.bindTooltip(
+                `<div>
+                     306台灣新竹县关西镇正義路266巷4號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3f72fa645bde29db470025a3f6425dd7 = L.marker(
+                [24.7970288, 121.1730129],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_3f72fa645bde29db470025a3f6425dd7.bindTooltip(
+                `<div>
+                     306台灣新竹县关西镇正義路266巷4號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_37c99a7ade2f8f6b1381ddeb070ff4ae = L.marker(
+                [24.8997352, 121.0451804],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_37c99a7ade2f8f6b1381ddeb070ff4ae.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉民生街3巷18號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1a0e9083046870599bb8d8bae389e665 = L.marker(
+                [24.8997352, 121.0451804],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_1a0e9083046870599bb8d8bae389e665.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉民生街3巷18號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eb4853012aaac0b642edaec5912e2c06 = L.marker(
+                [24.7906092, 121.175976],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_eb4853012aaac0b642edaec5912e2c06.bindTooltip(
+                `<div>
+                     306台灣新竹縣關西鎮大同路70-1號台灣紅茶公司後面
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5120b8f0a4c0999fc5297ec87b7f9f0c = L.marker(
+                [24.7906092, 121.175976],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_5120b8f0a4c0999fc5297ec87b7f9f0c.bindTooltip(
+                `<div>
+                     306台灣新竹縣關西鎮大同路70-1號台灣紅茶公司後面
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eb73af26cc16cfbf8624d16acc0af245 = L.marker(
+                [24.7800908, 120.9675745],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_eb73af26cc16cfbf8624d16acc0af245.bindTooltip(
+                `<div>
+                     300台灣新竹市東區明湖路486號6 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_18fa4f04562663e143a2a916bd346025 = L.marker(
+                [24.7918386, 121.1728979],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_18fa4f04562663e143a2a916bd346025.bindTooltip(
+                `<div>
+                     306台灣新竹縣關西鎮中山路193號6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8abd84a8ba71f441707ccb389a407110 = L.marker(
+                [24.7918466, 121.1729843],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_8abd84a8ba71f441707ccb389a407110.bindTooltip(
+                `<div>
+                     306台灣新竹縣關西鎮中山路179號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9bc2cf99b84014dc01ce170f44a52c3a = L.marker(
+                [24.7869422, 121.1794718],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_9bc2cf99b84014dc01ce170f44a52c3a.bindTooltip(
+                `<div>
+                     306台灣新竹縣關西鎮大德街38巷3號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_89e401f02ad160d0f8e1fc9ebeea7356 = L.marker(
+                [24.7869422, 121.1794718],
+                {
+}
+            ).addTo(map_d96bead2b3817e8c3493304154b800fc);
+        
+    
+            marker_89e401f02ad160d0f8e1fc9ebeea7356.bindTooltip(
+                `<div>
+                     306台灣新竹縣關西鎮大德街38巷3號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
