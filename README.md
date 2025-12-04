@@ -31,13 +31,13 @@ AGS 資料洞察團隊, 一家專注於運用科技,把原始資料轉換成高�
 我們很樂意與您線上, 更深入地探討我們如何為您的工作帶來具體且實質的幫助, 請直接回覆此郵件，告訴我們您的方便時間.
 
 ### AGS Estate - Hsinchu 新竹房產資料洞察
-[新竹法院法拍屋 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_Hsinchu.html)
+[新竹法院 法拍屋-應買 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_Hsinchu.html)
 
 ### AGS Estate - Taoyuan 桃園房產資料洞察
-[桃園法院法拍屋 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_Taoyuan.html)
+[桃園法院 法拍屋-應買 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_Taoyuan.html)
 
 ### AGS Estate - New Taipei 新北房產資料洞察
-[新北法院法拍屋 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_NewTaipei.html)
+[新北法院 法拍屋-應買 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_NewTaipei.html)
 
 
 
