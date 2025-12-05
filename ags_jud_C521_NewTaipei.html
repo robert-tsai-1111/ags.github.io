@@ -1,0 +1,3746 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5b35e76951006f31b5fb7bcbb661af28 {
+                    position: relative;
+                    width: 90.0%;
+                    height: 500.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+<style> table{ border:1px solid #000; max-width: 100%; height: auto; margin-left: auto; margin-right: auto; } td{ border:1px solid #000; padding:10px; } .container { max-width: 960px; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; margin-top: 20px; margin-bottom: 20px; } </style> <div class=container> <p><small>資料區域:新北<br>資料日期:2025-12-05<br>系統版本:0.5.1201<br>識別碼:6BD23DE9-2BF2-4B7B-A6D5-0823958FE71C</small></p> <p><table> <thead> <tr> <th>法院</th> <th>案號</th> <th>縣市</th> <th>地址</th> <th>拍次</th> <th class='price'>總拍賣底價 (NTD)</th> <th>点交状况</th> <th>停拍</th> </tr> </thead> <tbody> <tr> <td>臺灣新北地方法院</td> <td>108司執字第019205號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區文化路一段270巷3弄1號十樓'>新北市板橋區文化路一段270巷3弄1號十樓</a>&nbsp;<br>34坪(114.53平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>25,507000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>108司執字第019205號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區文化路一段270巷3弄1號十樓（未登記部分）'>新北市板橋區文化路一段270巷3弄1號十樓（未登記部分）</a>&nbsp;<br>0坪(0.44平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>25,507000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>112司執字第013043號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區大同路1段181號5樓'>新北市汐止區大同路1段181號5樓</a>&nbsp;<br>45坪(149.11平方公尺) X 全部</td> <td>1141208&nbsp;<br>第3拍</td> <td class='price'>12,470000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>112司執字第013043號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區大同路1段177號地下2、3、4樓'>新北市汐止區大同路1段177號地下2、3、4樓</a>&nbsp;<br>2757坪(9117.06平方公尺) X 240分之1</td> <td>1141208&nbsp;<br>第3拍</td> <td class='price'>12,470000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>112司執字第031013號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區新民街230號地下層'>新北市淡水區新民街230號地下層</a>&nbsp;<br>200坪(661.61平方公尺) X 100000分之1000</td> <td>1141208&nbsp;<br>第17拍</td> <td class='price'>4,200</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>112司執字第081781號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區八勢路一段174號'>新北市淡水區八勢路一段174號</a>&nbsp;<br>76坪(252.07平方公尺) X 全部</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>19,290000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>112司執字第159163號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=國泰街86號2樓之31'>國泰街86號2樓之31</a>&nbsp;<br>8坪(27.70平方公尺) X 12分之1</td> <td>1141215&nbsp;<br>第3拍</td> <td class='price'>290,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>112司執字第162846號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區漢生東路313巷11號'>新北市板橋區漢生東路313巷11號</a>&nbsp;<br>40坪(132.40平方公尺) X 全部</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>24,400000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>112司執字第162846號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區漢生東路313巷11號'>新北市板橋區漢生東路313巷11號</a>&nbsp;<br>30坪(101.47平方公尺) X 1分之1</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>24,400000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>112司執字第168640號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區海山路25號十三樓'>新北市板橋區海山路25號十三樓</a>&nbsp;<br>15坪(51.99平方公尺) X 全部</td> <td>1150107&nbsp;<br>第2拍</td> <td class='price'>33,920000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>112司執字第168640號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區海山路25號十三樓之1'>新北市板橋區海山路25號十三樓之1</a>&nbsp;<br>15坪(51.99平方公尺) X 全部</td> <td>1150107&nbsp;<br>第2拍</td> <td class='price'>33,920000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>112司執字第168640號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區海山路25號十三樓(未登記部分)'>新北市板橋區海山路25號十三樓(未登記部分)</a>&nbsp;<br>11坪(36.58平方公尺) X 全部</td> <td>1150107&nbsp;<br>第2拍</td> <td class='price'>33,920000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>112司執字第168640號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區海山路25號十三樓之1(未登記部分)'>新北市板橋區海山路25號十三樓之1(未登記部分)</a>&nbsp;<br>11坪(36.58平方公尺) X 全部</td> <td>1150107&nbsp;<br>第2拍</td> <td class='price'>33,920000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>112司執字第201112號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=大同街20號四樓'>大同街20號四樓</a>&nbsp;<br>26坪(88.77平方公尺) X 1分之1</td> <td>1141224&nbsp;<br>第2拍</td> <td class='price'>17,472000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>112司執字第201112號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=大同區20號四樓'>大同區20號四樓</a>&nbsp;<br>21坪(72.09平方公尺) X 1分之1</td> <td>1141224&nbsp;<br>第2拍</td> <td class='price'>17,472000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第021283號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區民生路117巷33之2號三樓'>新北市淡水區民生路117巷33之2號三樓</a>&nbsp;<br>25坪(85.11平方公尺) X 公同共有全部</td> <td>1141222&nbsp;<br>第2拍</td> <td class='price'>11,490000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第030411號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市瑞芳區員山子路員山巷17號五樓'>新北市瑞芳區員山子路員山巷17號五樓</a>&nbsp;<br>15坪(51.17平方公尺) X 全部</td> <td>1141231&nbsp;<br>第4拍</td> <td class='price'>1,813000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第030411號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=員山子路員山巷17號五樓'>員山子路員山巷17號五樓</a>&nbsp;<br>2坪(9.54平方公尺) X 全部</td> <td>1141231&nbsp;<br>第4拍</td> <td class='price'>1,813000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第032616號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=東澳31之2號'>東澳31之2號</a>&nbsp;<br>24坪(79.52平方公尺) X 全部</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>1,984000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第034298號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新墾丁路108之1號'>新墾丁路108之1號</a>&nbsp;<br>42坪(141.71平方公尺) X 1分之1</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>9,000000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第034298號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新墾丁路108之1號增建'>新墾丁路108之1號增建</a>&nbsp;<br>31坪(104.83平方公尺) X 1分之1</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>9,000000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第034377號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=東和路35號2樓'>東和路35號2樓</a>&nbsp;<br>23坪(77.35平方公尺) X 4分之1</td> <td>1141209&nbsp;<br>第4拍</td> <td class='price'>505,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第036458號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區景平路290號3樓之2'>新北市中和區景平路290號3樓之2</a>&nbsp;<br>21坪(69.66平方公尺) X 全部</td> <td>1141211&nbsp;<br>第3拍</td> <td class='price'>117,760000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第036458號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區景平路290號3樓'>新北市中和區景平路290號3樓</a>&nbsp;<br>174坪(577.38平方公尺) X 全部</td> <td>1141211&nbsp;<br>第3拍</td> <td class='price'>117,760000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第036997號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=西勢湖18之3號2樓'>西勢湖18之3號2樓</a>&nbsp;<br>181坪(599.76平方公尺) X 6174分之1</td> <td>1141230&nbsp;<br>第4拍</td> <td class='price'>453,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第037327號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區忠三街39巷53號'>新北市汐止區忠三街39巷53號</a>&nbsp;<br>127坪(421.52平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>41,300000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第037327號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區忠三街39巷41弄2號地下二層'>新北市汐止區忠三街39巷41弄2號地下二層</a>&nbsp;<br>538坪(1780.60平方公尺) X 10000分之417</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>41,300000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第038695號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市瑞芳區鼻頭路61號'>新北市瑞芳區鼻頭路61號</a>&nbsp;<br>63坪(208.71平方公尺) X 4分之1</td> <td>1150106&nbsp;<br>第4拍</td> <td class='price'>455,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第040976號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=中山路143之3號2樓'>中山路143之3號2樓</a>&nbsp;<br>14坪(47.41平方公尺) X 全部</td> <td>1141216&nbsp;<br>第5拍</td> <td class='price'>1,622000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第040976號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=中山路143之3號二樓'>中山路143之3號二樓</a>&nbsp;<br>21坪(70.01平方公尺) X 全部</td> <td>1141216&nbsp;<br>第5拍</td> <td class='price'>1,622000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執字第041274號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=一坑路70號三樓'>一坑路70號三樓</a>&nbsp;<br>28坪(92.96平方公尺) X 全部</td> <td>1141224&nbsp;<br>第4拍</td> <td class='price'>7,372000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第052263號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三芝區樂全街64號12樓'>新北市三芝區樂全街64號12樓</a>&nbsp;<br>10坪(35.42平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>4,580000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第052263號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三芝區樂全街66號12樓'>新北市三芝區樂全街66號12樓</a>&nbsp;<br>10坪(33.21平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>4,580000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第053736號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市永和區大新街63巷2號11樓'>新北市永和區大新街63巷2號11樓</a>&nbsp;<br>32坪(105.87平方公尺) X 全部</td> <td>1150105&nbsp;<br>第4拍</td> <td class='price'>18,420000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第053736號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市永和區大新街63巷2號11樓未登記'>新北市永和區大新街63巷2號11樓未登記</a>&nbsp;<br>26坪(87.75平方公尺) X 全部</td> <td>1150105&nbsp;<br>第4拍</td> <td class='price'>18,420000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第076445號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區忠孝街11巷41號'>新北市中和區忠孝街11巷41號</a>&nbsp;<br>3坪(12.70平方公尺) X 1分之1</td> <td>1141208&nbsp;<br>第3拍</td> <td class='price'>10,120000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第076445號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區忠孝街11巷41號'>新北市中和區忠孝街11巷41號</a>&nbsp;<br>23坪(77.98平方公尺) X 1分之1</td> <td>1141208&nbsp;<br>第3拍</td> <td class='price'>10,120000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第091953號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區富華街125之2號四樓'>新北市三重區富華街125之2號四樓</a>&nbsp;<br>19坪(63.58平方公尺) X 8分之1</td> <td>1150105&nbsp;<br>第3拍</td> <td class='price'>100,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第093157號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區汐萬路二段228巷31弄144號5樓'>新北市汐止區汐萬路二段228巷31弄144號5樓</a>&nbsp;<br>21坪(70.34平方公尺) X 全部</td> <td>1141211&nbsp;<br>第3拍</td> <td class='price'>3,560000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第094382號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區水源街二段177巷94號'>新北市淡水區水源街二段177巷94號</a>&nbsp;<br>17坪(56.47平方公尺) X 全部</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>10,680000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第094382號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區水源街二段177巷94號夾層增建部分'>新北市淡水區水源街二段177巷94號夾層增建部分</a>&nbsp;<br>11坪(39.35平方公尺) X 全部</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>10,680000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第096580號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區坪頂120巷23弄10號2樓'>新北市淡水區坪頂120巷23弄10號2樓</a>&nbsp;<br>38坪(127.69平方公尺) X 1分之1</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>6,010000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第097054號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三芝區民生街1巷11號'>新北市三芝區民生街1巷11號</a>&nbsp;<br>30坪(100.85平方公尺) X 7分之1</td> <td>1150120&nbsp;<br>第1拍</td> <td class='price'>657,000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第097054號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三芝區民生街1巷11號(增建)'>新北市三芝區民生街1巷11號(增建)</a>&nbsp;<br>3坪(11.80平方公尺) X 7分之1</td> <td>1150120&nbsp;<br>第1拍</td> <td class='price'>657,000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第097785號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市鶯歌區三鶯路62巷23號'>新北市鶯歌區三鶯路62巷23號</a>&nbsp;<br>31坪(103.28平方公尺) X 18分之1</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>580,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第097785號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市鶯歌區三鶯路62巷23號(未登記部分)'>新北市鶯歌區三鶯路62巷23號(未登記部分)</a>&nbsp;<br>26坪(88.08平方公尺) X 18分之1</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>580,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第098443號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市蘆洲區永安北路二段58巷18號'>新北市蘆洲區永安北路二段58巷18號</a>&nbsp;<br>19坪(63.84平方公尺) X 全部</td> <td>1141210&nbsp;<br>第2拍</td> <td class='price'>29,840000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第098443號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市蘆洲區永安北路二段58巷18號'>新北市蘆洲區永安北路二段58巷18號</a>&nbsp;<br>24坪(80.19平方公尺) X 全部</td> <td>1141210&nbsp;<br>第2拍</td> <td class='price'>29,840000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第104310號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市永和區文化路90巷9弄4號'>新北市永和區文化路90巷9弄4號</a>&nbsp;<br>28坪(92.68平方公尺) X 全部</td> <td>1141219&nbsp;<br>第1拍</td> <td class='price'>2,500000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第105939號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區水源街二段177巷70號9樓'>新北市淡水區水源街二段177巷70號9樓</a>&nbsp;<br>27坪(92.22平方公尺) X 全部</td> <td>1141224&nbsp;<br>第2拍</td> <td class='price'>11,130000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第108532號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區和平街6巷3弄7號4樓'>新北市汐止區和平街6巷3弄7號4樓</a>&nbsp;<br>25坪(85.04平方公尺) X 2分之1</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>4,680000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第109195號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區文化路一段44號'>新北市板橋區文化路一段44號</a>&nbsp;<br>104坪(345.16平方公尺) X 6分之1</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>11,850000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第109195號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區文化路一段44號(未登記部分)'>新北市板橋區文化路一段44號(未登記部分)</a>&nbsp;<br>43坪(142.24平方公尺) X 6分之1</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>11,850000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第113367號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三芝區淡金路二段79號三樓'>新北市三芝區淡金路二段79號三樓</a>&nbsp;<br>19坪(64.34平方公尺) X 全部</td> <td>1141208&nbsp;<br>第1拍</td> <td class='price'>4,490000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第116408號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=中正東路二段5巷25號'>中正東路二段5巷25號</a>&nbsp;<br>48坪(160.74平方公尺) X 全部</td> <td>1141208&nbsp;<br>第1拍</td> <td class='price'>43,810000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執字第116408號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區中正東路二段5巷25號（增建）'>新北市淡水區中正東路二段5巷25號（增建）</a>&nbsp;<br>19坪(63.80平方公尺) X 全部</td> <td>1141208&nbsp;<br>第1拍</td> <td class='price'>43,810000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第128051號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市樹林區保安街一段9號12樓之3'>新北市樹林區保安街一段9號12樓之3</a>&nbsp;<br>28坪(93.94平方公尺) X 全部</td> <td>1150105&nbsp;<br>第2拍</td> <td class='price'>16,800000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第132170號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區中山路一段2號11樓之9'>新北市板橋區中山路一段2號11樓之9</a>&nbsp;<br>27坪(89.27平方公尺) X 1分之1</td> <td>1141209&nbsp;<br>第3拍</td> <td class='price'>39,832300</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第132170號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區館前東路13號11樓之1'>新北市板橋區館前東路13號11樓之1</a>&nbsp;<br>31坪(103.54平方公尺) X 1分之1</td> <td>1141209&nbsp;<br>第3拍</td> <td class='price'>39,832300</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第132170號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區館前東路13號11樓之2'>新北市板橋區館前東路13號11樓之2</a>&nbsp;<br>30坪(100.78平方公尺) X 1分之1</td> <td>1141209&nbsp;<br>第3拍</td> <td class='price'>39,832300</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第136794號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區中山路二段553巷4弄13號四樓'>新北市板橋區中山路二段553巷4弄13號四樓</a>&nbsp;<br>29坪(96.01平方公尺) X 全部</td> <td>1141219&nbsp;<br>第4拍</td> <td class='price'>7,650000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第136794號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區中山路二段553巷4弄13號四樓未保存登記建物'>新北市板橋區中山路二段553巷4弄13號四樓未保存登記建物</a>&nbsp;<br>17坪(59.06平方公尺) X 全部</td> <td>1141219&nbsp;<br>第4拍</td> <td class='price'>7,650000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第146109號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三峽區紫微45之27號'>新北市三峽區紫微45之27號</a>&nbsp;<br>29坪(99.00平方公尺) X 4分之1</td> <td>1141210&nbsp;<br>第1拍</td> <td class='price'>310,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第147639號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=三民路159巷19弄16號'>三民路159巷19弄16號</a>&nbsp;<br>37坪(122.50平方公尺) X 全部</td> <td>1141215&nbsp;<br>第4拍</td> <td class='price'>23,361000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第147639號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新店區三民路159巷19弄16號增建部分'>新北市新店區三民路159巷19弄16號增建部分</a>&nbsp;<br>36坪(119.40平方公尺) X 全部</td> <td>1141215&nbsp;<br>第4拍</td> <td class='price'>23,361000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第149341號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區大勇街23號3樓'>新北市中和區大勇街23號3樓</a>&nbsp;<br>37坪(123.08平方公尺) X 全部</td> <td>1141215&nbsp;<br>第3拍</td> <td class='price'>28,810000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第149645號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市土城區廣福街3巷6號3樓'>新北市土城區廣福街3巷6號3樓</a>&nbsp;<br>24坪(79.64平方公尺) X 公同共有1分之1</td> <td>1150105&nbsp;<br>第3拍</td> <td class='price'>14,150000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第150029號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區新生街83號2樓'>新北市板橋區新生街83號2樓</a>&nbsp;<br>20坪(67.74平方公尺) X 4分之1</td> <td>1141211&nbsp;<br>第3拍</td> <td class='price'>1,710000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第153237號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區萬板路312巷12號五樓'>新北市板橋區萬板路312巷12號五樓</a>&nbsp;<br>28坪(94.88平方公尺) X 全部</td> <td>1141219&nbsp;<br>第4拍</td> <td class='price'>10,860000</td> <td>不點交</td> <td>停拍公告:/pcd/11411/28103720057.022.pdf</td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第157968號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三峽區民生街104巷17號'>新北市三峽區民生街104巷17號</a>&nbsp;<br>73坪(243.18平方公尺) X 6分之1</td> <td>1141218&nbsp;<br>第3拍</td> <td class='price'>2,310000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第159559號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區國泰街70號五樓之二十七'>新北市板橋區國泰街70號五樓之二十七</a>&nbsp;<br>7坪(24.60平方公尺) X 1分之1</td> <td>1141217&nbsp;<br>第4拍</td> <td class='price'>3,930000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第159559號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區國泰街70號五樓之二十七(未登記部分)'>新北市板橋區國泰街70號五樓之二十七(未登記部分)</a>&nbsp;<br>20坪(66.99平方公尺) X 1分之1</td> <td>1141217&nbsp;<br>第4拍</td> <td class='price'>3,930000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第160790號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市樹林區太元街2巷13號3樓'>新北市樹林區太元街2巷13號3樓</a>&nbsp;<br>24坪(79.75平方公尺) X 5分之1</td> <td>1150108&nbsp;<br>第4拍</td> <td class='price'>1,940635</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第160790號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市樹林區太元街2巷13號3樓'>新北市樹林區太元街2巷13號3樓</a>&nbsp;<br>2坪(8.50平方公尺) X 5分之1</td> <td>1150108&nbsp;<br>第4拍</td> <td class='price'>1,940635</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第162331號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區江寧路三段131巷5號四樓'>新北市板橋區江寧路三段131巷5號四樓</a>&nbsp;<br>19坪(64.20平方公尺) X 1分之1</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>1,805500</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第164220號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市土城區中央路三段281巷23弄19號五樓'>新北市土城區中央路三段281巷23弄19號五樓</a>&nbsp;<br>29坪(96.98平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>12,370000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第164220號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中央路三段281巷23弄19號5樓(未登記部分)'>新北市中央路三段281巷23弄19號5樓(未登記部分)</a>&nbsp;<br>18坪(61.95平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>12,370000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第172193號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=中和區復興路268號三樓之二'>中和區復興路268號三樓之二</a>&nbsp;<br>26坪(88.33平方公尺) X 1分之1</td> <td>1141218&nbsp;<br>第2拍</td> <td class='price'>24,800000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第177578號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市泰山區明志路1段466巷21號3樓'>新北市泰山區明志路1段466巷21號3樓</a>&nbsp;<br>31坪(103.88平方公尺) X 全部</td> <td>1150108&nbsp;<br>第4拍</td> <td class='price'>7,490000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第178081號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區五權街45巷2號四樓'>新北市板橋區五權街45巷2號四樓</a>&nbsp;<br>20坪(66.84平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>7,783000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第178081號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區五權街45巷2號4樓未登記部分'>新北市板橋區五權街45巷2號4樓未登記部分</a>&nbsp;<br>1坪(3.72平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>7,783000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第179889號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區豐年街124巷18號四樓'>新北市新莊區豐年街124巷18號四樓</a>&nbsp;<br>22坪(73.66平方公尺) X 全部</td> <td>1141223&nbsp;<br>第4拍</td> <td class='price'>6,420000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第179889號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區豐年街124巷18號四樓'>新北市新莊區豐年街124巷18號四樓</a>&nbsp;<br>17坪(58.35平方公尺) X 全部</td> <td>1141223&nbsp;<br>第4拍</td> <td class='price'>6,420000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第180429號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安民街205號2樓'>安民街205號2樓</a>&nbsp;<br>27坪(90.98平方公尺) X 全部</td> <td>1141211&nbsp;<br>第3拍</td> <td class='price'>12,810000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第180429號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安民街231號'>安民街231號</a>&nbsp;<br>3坪(10.83平方公尺) X 10000分之38</td> <td>1141211&nbsp;<br>第3拍</td> <td class='price'>12,810000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第182619號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區連城路523巷11弄2號'>新北市中和區連城路523巷11弄2號</a>&nbsp;<br>60坪(200.37平方公尺) X 全部</td> <td>1141219&nbsp;<br>第4拍</td> <td class='price'>21,870000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第182619號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區連城路523巷11弄2號未登記'>新北市中和區連城路523巷11弄2號未登記</a>&nbsp;<br>16坪(53.69平方公尺) X 全部</td> <td>1141219&nbsp;<br>第4拍</td> <td class='price'>21,870000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第188305號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市土城區明德路一段53號五樓'>新北市土城區明德路一段53號五樓</a>&nbsp;<br>23坪(76.44平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>11,100000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第188305號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市土城區明德路一段53號五樓(未登記部份)'>新北市土城區明德路一段53號五樓(未登記部份)</a>&nbsp;<br>17坪(58.73平方公尺) X 1分之1</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>11,100000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第198307號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區新北大道一段115號等地下三樓'>新北市三重區新北大道一段115號等地下三樓</a>&nbsp;<br>703坪(2325.20平方公尺) X 10000分之231</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>25,657000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第198307號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區中華路3號'>新北市三重區中華路3號</a>&nbsp;<br>17坪(58.01平方公尺) X 338分之1</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>25,657000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第198307號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區中華路一號八樓'>新北市三重區中華路一號八樓</a>&nbsp;<br>32坪(107.81平方公尺) X 1分之1</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>25,657000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第198307號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區中華路1號八樓'>新北市三重區中華路1號八樓</a>&nbsp;<br>0坪(2.01平方公尺) X 全部</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>25,657000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第198695號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區中山路二段359號五樓'>新北市板橋區中山路二段359號五樓</a>&nbsp;<br>17坪(57.58平方公尺) X 全部</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>11,840000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第202835號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三峽區中正路二段287號'>新北市三峽區中正路二段287號</a>&nbsp;<br>59坪(197.50平方公尺) X 全部</td> <td>1141208&nbsp;<br>第1拍</td> <td class='price'>9,300000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第205976號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區華新街7號三樓'>新北市中和區華新街7號三樓</a>&nbsp;<br>30坪(101.00平方公尺) X 1分之1</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>9,870000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第209328號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區力行路二段136巷36弄5號4樓'>新北市三重區力行路二段136巷36弄5號4樓</a>&nbsp;<br>23坪(79.00平方公尺) X 5分之1</td> <td>1141218&nbsp;<br>第3拍</td> <td class='price'>1,653700</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第209328號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區力行路二段136巷36弄5號4樓'>新北市三重區力行路二段136巷36弄5號4樓</a>&nbsp;<br>1坪(4.50平方公尺) X 5分之1</td> <td>1141218&nbsp;<br>第3拍</td> <td class='price'>1,653700</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第211903號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區中和路26巷1號2樓'>新北市中和區中和路26巷1號2樓</a>&nbsp;<br>16坪(55.10平方公尺) X 60分之39</td> <td>1150115&nbsp;<br>第4拍</td> <td class='price'>6,250000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第211903號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區中和路26巷1號3樓'>新北市中和區中和路26巷1號3樓</a>&nbsp;<br>16坪(55.10平方公尺) X 60分之39</td> <td>1150115&nbsp;<br>第4拍</td> <td class='price'>6,250000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第211903號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區中和路26巷1號2樓未登記'>新北市中和區中和路26巷1號2樓未登記</a>&nbsp;<br>7坪(23.82平方公尺) X 60分之39</td> <td>1150115&nbsp;<br>第4拍</td> <td class='price'>6,250000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第211903號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區中和路26巷1號3樓未登記'>新北市中和區中和路26巷1號3樓未登記</a>&nbsp;<br>5坪(19.29平方公尺) X 60分之39</td> <td>1150115&nbsp;<br>第4拍</td> <td class='price'>6,250000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>113司執字第212449號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市樹林區復興路92號4樓'>新北市樹林區復興路92號4樓</a>&nbsp;<br>24坪(82.34平方公尺) X 全部</td> <td>1150105&nbsp;<br>第1拍</td> <td class='price'>11,800000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第223798號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安光路43號18樓'>安光路43號18樓</a>&nbsp;<br>28坪(93.14平方公尺) X 全部</td> <td>1141223&nbsp;<br>第2拍</td> <td class='price'>29,370000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第223805號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安祥路109巷2號'>安祥路109巷2號</a>&nbsp;<br>42坪(142.01平方公尺) X 100000分之499</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>35,876000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第223805號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安祥路109巷85弄3之1號地下一樓'>安祥路109巷85弄3之1號地下一樓</a>&nbsp;<br>3坪(11.48平方公尺) X 100000分之499</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>35,876000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第223805號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安祥路109巷51之1號地下一樓'>安祥路109巷51之1號地下一樓</a>&nbsp;<br>6坪(22.56平方公尺) X 100000分之499</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>35,876000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第223805號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安祥路109巷90弄74之1號地下一樓'>安祥路109巷90弄74之1號地下一樓</a>&nbsp;<br>7坪(23.46平方公尺) X 100000分之499</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>35,876000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第223805號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安祥路109巷110號'>安祥路109巷110號</a>&nbsp;<br>141坪(467.53平方公尺) X 全部</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>35,876000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第223805號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安祥路109巷90弄63之1號地下一樓'>安祥路109巷90弄63之1號地下一樓</a>&nbsp;<br>3坪(11.07平方公尺) X 100000分之499</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>35,876000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第226295號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新店區永業路117號3樓'>新北市新店區永業路117號3樓</a>&nbsp;<br>24坪(79.87平方公尺) X 5分之1</td> <td>1141224&nbsp;<br>第1拍</td> <td class='price'>1,760000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執字第257293號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新烏路五段53號'>新烏路五段53號</a>&nbsp;<br>587坪(1941.02平方公尺) X 全部</td> <td>1141205&nbsp;<br>第1拍</td> <td class='price'>32,000000</td> <td>如備註或使用情形欄所示</td> <td>停拍公告:/tpd/11412/04144203734.031.pdf</td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執助字第001232號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=汽車路7之3號'>汽車路7之3號</a>&nbsp;<br>11坪(38.23平方公尺) X 2分之1</td> <td>1141209&nbsp;<br>第2拍</td> <td class='price'>808,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>113司執助字第001232號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=汽車路14號一樓'>汽車路14號一樓</a>&nbsp;<br>40坪(135.44平方公尺) X 2分之1</td> <td>1141209&nbsp;<br>第2拍</td> <td class='price'>2,975000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執助字第007743號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安光路47號22樓'>安光路47號22樓</a>&nbsp;<br>47坪(156.00平方公尺) X 全部</td> <td>1141224&nbsp;<br>第3拍</td> <td class='price'>37,890000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執助字第007743號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=安光路47號22樓增建部分'>安光路47號22樓增建部分</a>&nbsp;<br>5坪(17.51平方公尺) X 全部</td> <td>1141224&nbsp;<br>第3拍</td> <td class='price'>37,890000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執助字第019817號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區忠三街10巷37弄4號'>新北市汐止區忠三街10巷37弄4號</a>&nbsp;<br>70坪(232.52平方公尺) X 1分之1</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>19,320000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執助字第019817號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區忠三街10巷35號之1'>新北市汐止區忠三街10巷35號之1</a>&nbsp;<br>37坪(123.20平方公尺) X 10000分之1266</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>19,320000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執助字第019817號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區忠三街10巷1號房屋地下二層'>新北市汐止區忠三街10巷1號房屋地下二層</a>&nbsp;<br>1767坪(5841.51平方公尺) X 10000分之105</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>19,320000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>113司執助字第019817號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區忠三街10巷37弄4號增建'>新北市汐止區忠三街10巷37弄4號增建</a>&nbsp;<br>16坪(54.84平方公尺) X 1分之1</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>19,320000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執消債清字第000086號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市鶯歌區鶯桃路268巷17號2樓'>新北市鶯歌區鶯桃路268巷17號2樓</a>&nbsp;<br>24坪(82.15平方公尺) X 4分之1</td> <td>1141224&nbsp;<br>第2拍</td> <td class='price'>1,862000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>113司執消債清字第000086號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市鶯歌區鶯桃路268巷17號2樓'>新北市鶯歌區鶯桃路268巷17號2樓</a>&nbsp;<br>1坪(5.58平方公尺) X 4分之1</td> <td>1141224&nbsp;<br>第2拍</td> <td class='price'>1,862000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第000024號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區新民街152巷37號'>新北市淡水區新民街152巷37號</a>&nbsp;<br>30坪(101.00平方公尺) X 2分之1</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>4,656000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第000024號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區新民街152巷37號(增建)'>新北市淡水區新民街152巷37號(增建)</a>&nbsp;<br>12坪(42.25平方公尺) X 2分之1</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>4,656000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第002713號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=仁四街8號4樓'>仁四街8號4樓</a>&nbsp;<br>18坪(60.13平方公尺) X 全部</td> <td>1150114&nbsp;<br>第1拍</td> <td class='price'>300,000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第003993號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=磺港路25之3號'>磺港路25之3號</a>&nbsp;<br>42坪(139.98平方公尺) X 5分之1</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>278,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第004356號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區中正路758號3樓'>新北市中和區中正路758號3樓</a>&nbsp;<br>106坪(352.59平方公尺) X 1分之1</td> <td>1141218&nbsp;<br>第2拍</td> <td class='price'>65,040000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第004356號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區中正路760號3樓'>新北市中和區中正路760號3樓</a>&nbsp;<br>106坪(352.59平方公尺) X 1分之1</td> <td>1141218&nbsp;<br>第2拍</td> <td class='price'>65,040000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第004670號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=三重區仁政街44巷2號'>三重區仁政街44巷2號</a>&nbsp;<br>104坪(346.48平方公尺) X 2分之1</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>57,200000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第004670號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區仁政街44巷2號'>新北市三重區仁政街44巷2號</a>&nbsp;<br>187坪(619.31平方公尺) X 2分之1</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>57,200000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第004895號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區懷德街127巷36號三樓'>新北市板橋區懷德街127巷36號三樓</a>&nbsp;<br>21坪(70.11平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>11,259000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第004895號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區懷德街127巷36號三樓（未登記部分）'>新北市板橋區懷德街127巷36號三樓（未登記部分）</a>&nbsp;<br>2坪(7.40平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>11,259000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第004911號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市八里區商港路32號十一樓'>新北市八里區商港路32號十一樓</a>&nbsp;<br>27坪(89.92平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>28,980000</td> <td>部份點交</td> <td>停拍公告:/sld/11411/20161841039.006.pdf</td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第004911號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市八里區中山路二段459號十三樓'>新北市八里區中山路二段459號十三樓</a>&nbsp;<br>29坪(97.48平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>28,980000</td> <td>部份點交</td> <td>停拍公告:/sld/11411/20161841039.006.pdf</td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第004911號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市八里區商港路38號六樓'>新北市八里區商港路38號六樓</a>&nbsp;<br>30坪(99.76平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>28,980000</td> <td>部份點交</td> <td>停拍公告:/sld/11411/20161841039.006.pdf</td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第005948號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市萬里區仁二街15號3樓'>新北市萬里區仁二街15號3樓</a>&nbsp;<br>19坪(64.59平方公尺) X 全部</td> <td>1141210&nbsp;<br>第4拍</td> <td class='price'>1,003000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣雲林地方法院</td> <td>114司執字第008574號</td> <td>雲林縣</td> <td><a href='http://maps.google.com/?q=雲林縣北港鎮華勝路446號'>雲林縣北港鎮華勝路446號</a>&nbsp;<br>33坪(112.26平方公尺) X 3分之2</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>4,000000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣雲林地方法院</td> <td>114司執字第008574號</td> <td>雲林縣</td> <td><a href='http://maps.google.com/?q=雲林縣北港鎮華勝路446號'>雲林縣北港鎮華勝路446號</a>&nbsp;<br>17坪(57.45平方公尺) X 3分之2</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>4,000000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第009699號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=梅竹蹊21號'>梅竹蹊21號</a>&nbsp;<br>29坪(97.24平方公尺) X 6分之1</td> <td>1141216&nbsp;<br>第3拍</td> <td class='price'>855,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第010348號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市瑞芳區中央路48巷86號'>新北市瑞芳區中央路48巷86號</a>&nbsp;<br>15坪(51.33平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>210,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第011902號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市樹林區光興街242號'>新北市樹林區光興街242號</a>&nbsp;<br>20坪(67.50平方公尺) X 全部</td> <td>1141219&nbsp;<br>第2拍</td> <td class='price'>8,520000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第011902號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市樹林區光興街242號'>新北市樹林區光興街242號</a>&nbsp;<br>20坪(67.05平方公尺) X 全部</td> <td>1141219&nbsp;<br>第2拍</td> <td class='price'>8,520000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第012978號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區莊敬路35號三樓'>新北市中和區莊敬路35號三樓</a>&nbsp;<br>25坪(84.48平方公尺) X 5分之1</td> <td>1141209&nbsp;<br>第3拍</td> <td class='price'>1,620000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第013033號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市萬里區忠四街36號4樓'>新北市萬里區忠四街36號4樓</a>&nbsp;<br>17坪(59.12平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>774,000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第013332號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區鄧公路27巷4之1號'>新北市淡水區鄧公路27巷4之1號</a>&nbsp;<br>18坪(60.00平方公尺) X 6分之1</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>1,170000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第013332號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區鄧公路27巷4之1號未登記部分'>新北市淡水區鄧公路27巷4之1號未登記部分</a>&nbsp;<br>18坪(62.00平方公尺) X 6分之1</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>1,170000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第013582號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=仁四街26號3樓'>仁四街26號3樓</a>&nbsp;<br>18坪(60.13平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>1,490000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第015509號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=東勢街216巷22弄2之3號22樓'>東勢街216巷22弄2之3號22樓</a>&nbsp;<br>30坪(99.32平方公尺) X 1分之1</td> <td>1141224&nbsp;<br>第2拍</td> <td class='price'>15,220000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第016922號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區淡金路59號8樓'>新北市淡水區淡金路59號8樓</a>&nbsp;<br>25坪(85.53平方公尺) X 全部</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>13,130000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第017039號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=西勢湖18之3號7樓'>西勢湖18之3號7樓</a>&nbsp;<br>149坪(492.92平方公尺) X 1768分之2</td> <td>1141216&nbsp;<br>第3拍</td> <td class='price'>219,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第022222號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=孝三街20號4樓'>孝三街20號4樓</a>&nbsp;<br>18坪(62.22平方公尺) X 全部</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>901,000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第022331號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市樹林區八德街275號2樓'>新北市樹林區八德街275號2樓</a>&nbsp;<br>20坪(69.01平方公尺) X 全部</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>15,800000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第023407號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=三爪子坑路205之6號2樓'>三爪子坑路205之6號2樓</a>&nbsp;<br>25坪(84.28平方公尺) X 3分之1</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>933,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第023407號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=三爪子坑路205之6號二樓'>三爪子坑路205之6號二樓</a>&nbsp;<br>0坪(0.00平方公尺) X 3分之1</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>933,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第024136號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區興福寮88巷7號五樓'>新北市淡水區興福寮88巷7號五樓</a>&nbsp;<br>32坪(107.25平方公尺) X 1分之1</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>25,390000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第025354號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區文化南路65巷40號3樓'>新北市三重區文化南路65巷40號3樓</a>&nbsp;<br>8坪(29.00平方公尺) X 公同共有1分之1</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>6,636000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第025354號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區文化南路65巷40號3樓(未登記部分)'>新北市三重區文化南路65巷40號3樓(未登記部分)</a>&nbsp;<br>7坪(25.73平方公尺) X 公同共有1分之1</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>6,636000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第025402號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區成功路41巷64號。'>新北市三重區成功路41巷64號。</a>&nbsp;<br>22坪(73.50平方公尺) X 4分之1</td> <td>1150114&nbsp;<br>第1拍</td> <td class='price'>4,418000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第025402號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區成功路41巷64號。'>新北市三重區成功路41巷64號。</a>&nbsp;<br>8坪(26.71平方公尺) X 4分之1</td> <td>1150114&nbsp;<br>第1拍</td> <td class='price'>4,418000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第027823號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市土城區中央路二段177巷44號4樓'>新北市土城區中央路二段177巷44號4樓</a>&nbsp;<br>26坪(86.28平方公尺) X 公同共有1分之1</td> <td>1141218&nbsp;<br>第3拍</td> <td class='price'>8,360000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執字第030104號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市瑞芳區大寮路49巷9之4號3樓'>新北市瑞芳區大寮路49巷9之4號3樓</a>&nbsp;<br>30坪(100.82平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>16,000000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第034454號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區大觀路二段3巷55號三樓'>新北市板橋區大觀路二段3巷55號三樓</a>&nbsp;<br>22坪(74.36平方公尺) X 公同共有1分之1</td> <td>1141208&nbsp;<br>第3拍</td> <td class='price'>8,247000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第034454號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區大觀路二段3巷55號三樓(未登記部分)'>新北市板橋區大觀路二段3巷55號三樓(未登記部分)</a>&nbsp;<br>2坪(8.80平方公尺) X 公同共有1分之1</td> <td>1141208&nbsp;<br>第3拍</td> <td class='price'>8,247000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>114司執字第034633號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=北宜路二段503號8樓'>北宜路二段503號8樓</a>&nbsp;<br>26坪(86.31平方公尺) X 全部</td> <td>1141211&nbsp;<br>第3拍</td> <td class='price'>8,050000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第034841號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區忠孝街31巷14號'>新北市中和區忠孝街31巷14號</a>&nbsp;<br>29坪(97.99平方公尺) X 全部</td> <td>1141218&nbsp;<br>第2拍</td> <td class='price'>18,190000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第036306號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=三峽區長泰街19號3樓'>三峽區長泰街19號3樓</a>&nbsp;<br>24坪(80.62平方公尺) X 全部</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>5,450000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第036528號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三芝區淡金路二段47號'>新北市三芝區淡金路二段47號</a>&nbsp;<br>28坪(92.62平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>71,000000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第036528號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三芝區淡金路二段51號地下一層'>新北市三芝區淡金路二段51號地下一層</a>&nbsp;<br>288坪(952.60平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>71,000000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第036528號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三芝區淡金路二段77號地下一層'>新北市三芝區淡金路二段77號地下一層</a>&nbsp;<br>242坪(803.05平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>71,000000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第036893號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區中山北路2段189巷15弄16號3樓'>新北市淡水區中山北路2段189巷15弄16號3樓</a>&nbsp;<br>24坪(80.98平方公尺) X 全部</td> <td>1141210&nbsp;<br>第2拍</td> <td class='price'>14,880000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第036893號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市淡水區中山北路2段189巷15弄8號4樓'>新北市淡水區中山北路2段189巷15弄8號4樓</a>&nbsp;<br>14坪(49.52平方公尺) X 全部</td> <td>1141210&nbsp;<br>第2拍</td> <td class='price'>9,430000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣臺北地方法院</td> <td>114司執字第041605號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=文化街84巷17號七樓'>文化街84巷17號七樓</a>&nbsp;<br>30坪(100.85平方公尺) X 120分之6</td> <td>1141224&nbsp;<br>第1拍</td> <td class='price'>1,500000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣臺南地方法院</td> <td>114司執字第043468號</td> <td>臺南市</td> <td><a href='http://maps.google.com/?q=臺南市新營區新北里1鄰周武街11號'>臺南市新營區新北里1鄰周武街11號</a>&nbsp;<br>23坪(78.72平方公尺) X 全部</td> <td>1141224&nbsp;<br>第1拍</td> <td class='price'>5,170000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣臺南地方法院</td> <td>114司執字第043468號</td> <td>臺南市</td> <td><a href='http://maps.google.com/?q=臺南市新營區新北里1鄰周武街11號'>臺南市新營區新北里1鄰周武街11號</a>&nbsp;<br>14坪(48.87平方公尺) X 全部</td> <td>1141224&nbsp;<br>第1拍</td> <td class='price'>5,170000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第046255號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市土城區中央路二段61巷24弄8號三樓。'>新北市土城區中央路二段61巷24弄8號三樓。</a>&nbsp;<br>26坪(86.18平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>12,060000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第047056號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區八德街194號6樓'>新北市新莊區八德街194號6樓</a>&nbsp;<br>23坪(78.79平方公尺) X 3分之1</td> <td>1141209&nbsp;<br>第2拍</td> <td class='price'>3,860000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第047586號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區復興街128號'>新北市板橋區復興街128號</a>&nbsp;<br>29坪(97.85平方公尺) X 2分之1</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>13,000001</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第047586號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區復興街128號(未登記部分)'>新北市板橋區復興街128號(未登記部分)</a>&nbsp;<br>17坪(57.66平方公尺) X 2分之1</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>13,000001</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第049842號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區中山路一段170之2號七樓'>新北市板橋區中山路一段170之2號七樓</a>&nbsp;<br>56坪(187.34平方公尺) X 全部</td> <td>1141208&nbsp;<br>第1拍</td> <td class='price'>112,360000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第051759號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區裕民街139號5樓。'>新北市板橋區裕民街139號5樓。</a>&nbsp;<br>29坪(98.57平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>21,920000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第052035號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區福德一路201巷12號7樓之2'>新北市汐止區福德一路201巷12號7樓之2</a>&nbsp;<br>8坪(27.37平方公尺) X 2分之1</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>3,260000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第052253號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市永和區永利路4巷15號三樓'>新北市永和區永利路4巷15號三樓</a>&nbsp;<br>30坪(102.15平方公尺) X 全部</td> <td>1141216&nbsp;<br>第3拍</td> <td class='price'>14,940000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第055155號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市林口區文化三路二段58號十五樓'>新北市林口區文化三路二段58號十五樓</a>&nbsp;<br>47坪(155.63平方公尺) X 2分之1</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>20,430000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第058589號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區中興街204號14樓之6'>新北市中和區中興街204號14樓之6</a>&nbsp;<br>22坪(73.39平方公尺) X 全部</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>22,824000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第059634號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區莒光路95號3樓'>新北市中和區莒光路95號3樓</a>&nbsp;<br>30坪(100.22平方公尺) X 全部</td> <td>1141215&nbsp;<br>第1拍</td> <td class='price'>16,000000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第062257號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區仁愛街480號2樓'>新北市三重區仁愛街480號2樓</a>&nbsp;<br>24坪(81.00平方公尺) X 全部</td> <td>1141208&nbsp;<br>第3拍</td> <td class='price'>11,260000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第062671號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區東勢街201巷1之5號'>新北市汐止區東勢街201巷1之5號</a>&nbsp;<br>15坪(50.88平方公尺) X 全部</td> <td>1150122&nbsp;<br>第1拍</td> <td class='price'>15,420000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第062671號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區東勢街201巷1之10號'>新北市汐止區東勢街201巷1之10號</a>&nbsp;<br>54坪(179.32平方公尺) X 100000分之351</td> <td>1150122&nbsp;<br>第1拍</td> <td class='price'>15,420000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第064754號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市五股區成泰路3段559巷22號3樓'>新北市五股區成泰路3段559巷22號3樓</a>&nbsp;<br>21坪(72.52平方公尺) X 全部</td> <td>1141209&nbsp;<br>第2拍</td> <td class='price'>5,640000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第064754號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市五股區成泰路3段559巷22號3樓'>新北市五股區成泰路3段559巷22號3樓</a>&nbsp;<br>2坪(9.07平方公尺) X 全部</td> <td>1141209&nbsp;<br>第2拍</td> <td class='price'>5,640000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣士林地方法院</td> <td>114司執字第069877號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市汐止區長江街99號3樓之5'>新北市汐止區長江街99號3樓之5</a>&nbsp;<br>8坪(28.68平方公尺) X 9分之1</td> <td>1141223&nbsp;<br>第1拍</td> <td class='price'>622,000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第073738號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區連城路340巷12弄6號'>新北市中和區連城路340巷12弄6號</a>&nbsp;<br>21坪(72.00平方公尺) X 2分之1</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>6,764200</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第078231號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市蘆洲區成功路77號3樓'>新北市蘆洲區成功路77號3樓</a>&nbsp;<br>27坪(92.23平方公尺) X 全部</td> <td>1141218&nbsp;<br>第2拍</td> <td class='price'>24,560000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第079240號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區四川路二段245巷49號四樓'>新北市板橋區四川路二段245巷49號四樓</a>&nbsp;<br>29坪(98.06平方公尺) X 全部</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>21,080000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第079868號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區新莊路522號'>新北市新莊區新莊路522號</a>&nbsp;<br>17坪(59.00平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>3,218000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第079868號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區新莊路522號'>新北市新莊區新莊路522號</a>&nbsp;<br>23坪(77.31平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>3,218000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第081205號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區中和街8號5樓'>新北市新莊區中和街8號5樓</a>&nbsp;<br>25坪(85.32平方公尺) X 公同共有1分之1</td> <td>1141223&nbsp;<br>第1拍</td> <td class='price'>15,070000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第081205號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區民樂街87巷10號3樓'>新北市新莊區民樂街87巷10號3樓</a>&nbsp;<br>24坪(82.25平方公尺) X 全部</td> <td>1141223&nbsp;<br>第1拍</td> <td class='price'>12,900000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第081205號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區中和街8號5樓'>新北市新莊區中和街8號5樓</a>&nbsp;<br>28坪(94.81平方公尺) X 公同共有1分之1</td> <td>1141223&nbsp;<br>第1拍</td> <td class='price'>15,070000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第105960號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區中山路2段531巷17弄9號2樓'>新北市板橋區中山路2段531巷17弄9號2樓</a>&nbsp;<br>24坪(80.62平方公尺) X 全部</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>22,800000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第105960號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區中山路2段531巷15之2號'>新北市板橋區中山路2段531巷15之2號</a>&nbsp;<br>3坪(11.66平方公尺) X 10000分之142</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>22,800000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第115699號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市三重區集英路62號12樓'>新北市三重區集英路62號12樓</a>&nbsp;<br>28坪(93.67平方公尺) X 全部</td> <td>1141215&nbsp;<br>第1拍</td> <td class='price'>42,500000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第117334號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區新樹路785號十一樓'>新北市新莊區新樹路785號十一樓</a>&nbsp;<br>15坪(50.74平方公尺) X 1分之1</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>17,500000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第120265號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區復興路268號12樓之6'>新北市中和區復興路268號12樓之6</a>&nbsp;<br>7坪(24.40平方公尺) X 全部</td> <td>1141208&nbsp;<br>第1拍</td> <td class='price'>5,430000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第120265號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市中和區復興路268號12樓之6(未辦保存登記部分-待8/26測量建號)'>新北市中和區復興路268號12樓之6(未辦保存登記部分-待8/26測量建號)</a>&nbsp;<br>0坪(3.01平方公尺) X 全部</td> <td>1141208&nbsp;<br>第1拍</td> <td class='price'>5,430000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第122440號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市板橋區新府路68號二十四樓'>新北市板橋區新府路68號二十四樓</a>&nbsp;<br>21坪(71.67平方公尺) X 全部</td> <td>1141208&nbsp;<br>第2拍</td> <td class='price'>24,400000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執字第127047號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市永和區永和路二段168號19樓'>新北市永和區永和路二段168號19樓</a>&nbsp;<br>73坪(244.33平方公尺) X 全部</td> <td>1141223&nbsp;<br>第2拍</td> <td class='price'>106,510000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣基隆地方法院</td> <td>114司執助字第000881號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=西勢湖18之3號2樓'>西勢湖18之3號2樓</a>&nbsp;<br>181坪(599.76平方公尺) X 6174分之1</td> <td>1141230&nbsp;<br>第1拍</td> <td class='price'>500,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執助字第002694號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區中榮街122巷21號5樓'>新北市新莊區中榮街122巷21號5樓</a>&nbsp;<br>24坪(82.20平方公尺) X 全部</td> <td>1141223&nbsp;<br>第4拍</td> <td class='price'>11,560000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執助字第002694號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市新莊區中榮街122巷21號5樓'>新北市新莊區中榮街122巷21號5樓</a>&nbsp;<br>21坪(71.55平方公尺) X 全部</td> <td>1141223&nbsp;<br>第4拍</td> <td class='price'>11,560000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新北地方法院</td> <td>114司執助字第006188號</td> <td>新北市</td> <td><a href='http://maps.google.com/?q=新北市樹林區學府路210號六樓'>新北市樹林區學府路210號六樓</a>&nbsp;<br>63坪(209.94平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>42,820000</td> <td>點交</td> <td></td> </tr> </tbody> </table></p> <br> <div id=ags-insight></div> </div>
+    
+    
+        <style>
+            #map_5b35e76951006f31b5fb7bcbb661af28 {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                /* 確保地圖作為區塊元素，才能應用 auto margin */
+                display: block !important;
+            }
+        </style>
+    
+    
+            <div class="folium-map" id="map_5b35e76951006f31b5fb7bcbb661af28" ></div>
+<br><br>
+<div class="container">
+    <div id="ags-greeting">
+    <p>您好，</p>
+    <p>
+    我們是 AGS 資料洞察團隊, 一家專注於運用科技,把原始資料轉換成高價值資訊,並精準交付 的資訊服務業者.
+    </p>
+    <p>
+    我們深知, 在您日常的決策中, 精準的數據與即時的市場洞察至關重要. 為了協助您更好地掌握市場動態並優化管理策略, 我們為您整理了以下一組最新數據:
+    </p>
+    </div>
+
+    <div id="ags-value">
+    <p>
+    這組數據不僅僅是單純的房源資訊, 它背後隱藏著重要的市場信號與機會, 我們可以根據您的職位為您突出這組數據的特定價值：
+    <lu>
+    <li>對於 Real Estate Manager (房產經理)：這些數據是判斷該地區潛力與定價策略的關鍵依據. [區域] 與 [價格] 資訊顯示出該區的價值潛力/市場接受度, 協助您精準評估投資回報率 (ROI) 及制定營銷策略.</li>
+    <li>對於 Security Manager (保全經理)：所示的物業類型與價值是評估潛在安全風險, 規劃智慧安防升級方案的重要參考. 高價值物業的安保需求通常更高, 我們的數據能幫助您預測需求並優化資源配置. </li>
+    <li>對於 Apartment Manager (公寓大廈經理)：了解周邊房產能幫助您評估現有大廈的管理服務溢價空間與競爭力, 亦可作為提升住戶服務或設施升級的參考方向.</li>
+    <li>對於 Community Secretary (社區祕書)：這組數據反映了社區周邊的發展趨勢與居民構成變化. 掌握此資訊能協助您更好地預測社區服務需求, 協調資源, 並為住戶會議提供數據支持, 以提升社區管理效率與滿意度.</li>
+    </ul>
+    </p>
+    </div>
+
+    <div id="ags-action">
+    我們的服務旨在將這些原始數據轉化為可執行(Actionable)的洞察報告，協助您：
+    <ul>
+    <li>優化決策流程</li>
+    <li>提升管理效率</li>
+    <li>降低潛在風險</li>
+    </ul>
+    </div>
+
+    <div id="ags-sponsor">
+    <p>
+    我們很樂意與您線上, 更深入地探討我們如何為您的工作帶來具體且實質的幫助, 請直接回覆此郵件，告訴我們您的方便時間.
+    </p>
+    <p>
+    歡迎支持我們, 讓團隊持續提供更好的服務與資訊價值給更多受眾, 謝謝您!
+    </p>
+    <p>
+    <a href=https://buymeacoffee.com/robert.tsai.1111 target='_blank'>進入贊助網站</a> (Buy Me A Coffee 為一小額贊助平台, 讓您可以輕鬆支持我們的工作)
+    </p>
+    AGS 資料洞察團隊 敬上
+    </p>
+    </div>
+</div>
+        
+</body>
+<script>
+    
+    
+            var map_5b35e76951006f31b5fb7bcbb661af28 = L.map(
+                "map_5b35e76951006f31b5fb7bcbb661af28",
+                {
+                    center: [25.0105, 121.4646],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a4ca70e6af6821c9ba99d1e594c2e778 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a4ca70e6af6821c9ba99d1e594c2e778.addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            var marker_9bfe9bf4364ef698575d15896dcc85cf = L.marker(
+                [25.0210548, 121.4679118],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9bfe9bf4364ef698575d15896dcc85cf.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區文化路一段270巷3弄1號十
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ccfe2e5a6722613d284598df875cddee = L.marker(
+                [25.0210548, 121.4679118],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ccfe2e5a6722613d284598df875cddee.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區文化路一段270巷3弄1號十
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ed8b145a07331da70dc2dc7268aab40b = L.marker(
+                [24.9293019, 121.3789988],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ed8b145a07331da70dc2dc7268aab40b.bindTooltip(
+                `<div>
+                     237台灣新北市三峽區大同路1號181 号 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c33aea931291efcf015c77a1dbcd83f7 = L.marker(
+                [24.9293019, 121.3789988],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_c33aea931291efcf015c77a1dbcd83f7.bindTooltip(
+                `<div>
+                     237台灣新北市三峽區大同路1號177 号 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_556827a98d52965425ee16b1dabdb2d1 = L.marker(
+                [25.180845, 121.4364109],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_556827a98d52965425ee16b1dabdb2d1.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區新民街230號层
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f18c52b4567a3f02bb58756bb3d02304 = L.marker(
+                [25.1560148, 121.4687807],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_f18c52b4567a3f02bb58756bb3d02304.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區八勢路一段174號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7fd4e9b842d00ee02ff67191b282d889 = L.marker(
+                [25.0065449, 121.4671928],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_7fd4e9b842d00ee02ff67191b282d889.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區國泰街86號2 之 31
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1f18b1470f0fffc6e17d8e4435d91ac2 = L.marker(
+                [25.0083439, 121.4723535],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1f18b1470f0fffc6e17d8e4435d91ac2.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區漢生東路313巷11號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_76ed3d7edc53c8ad2095181b1f644290 = L.marker(
+                [25.0083439, 121.4723535],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_76ed3d7edc53c8ad2095181b1f644290.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區漢生東路313巷11號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_01d492f24fc64b31e8a9ed7ea236b52d = L.marker(
+                [25.0089012, 121.4682499],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_01d492f24fc64b31e8a9ed7ea236b52d.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區海山路25號十 三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9a364fdb5e887986a4b0a53ab8937e32 = L.marker(
+                [25.0089012, 121.4682499],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9a364fdb5e887986a4b0a53ab8937e32.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區海山路25號十 三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6211301ec5f6095c591ff7f4ec93e703 = L.marker(
+                [25.0089012, 121.4682499],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_6211301ec5f6095c591ff7f4ec93e703.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區海山路25號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f14efe80536eaf45d352ba0f6bc9249e = L.marker(
+                [25.0089012, 121.4682499],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_f14efe80536eaf45d352ba0f6bc9249e.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區海山路25號十 三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b4aae7b9b5fd16cacfee047ad1fcf326 = L.marker(
+                [25.0269817, 121.4776991],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b4aae7b9b5fd16cacfee047ad1fcf326.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區大同街20號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_010fdbd04725d6db47e582e07d4a6164 = L.marker(
+                [25.0689058, 121.5094691],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_010fdbd04725d6db47e582e07d4a6164.bindTooltip(
+                `<div>
+                     103台灣臺北市大同區民族西路325號1樓
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ce069f8c17b2302e3bce11e1bed6e15a = L.marker(
+                [25.1398104, 121.4647873],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ce069f8c17b2302e3bce11e1bed6e15a.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區民生路117巷33號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e74b8ed2a2de47b9db67b2abad25bf9a = L.marker(
+                [25.1040058, 121.8174767],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e74b8ed2a2de47b9db67b2abad25bf9a.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區員山子路員山巷
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_710a0c913fe2600d05228a4ea3a7554c = L.marker(
+                [25.1037093, 121.8205343],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_710a0c913fe2600d05228a4ea3a7554c.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區員山子路17號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0ad110ee8180bd8f685198a7da184cb9 = L.marker(
+                [25.0622095, 121.4570447],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_0ad110ee8180bd8f685198a7da184cb9.bindTooltip(
+                `<div>
+                     台灣新北市板橋區新北
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_adb03869612f3d4ca73e1a7cd7ba9bfe = L.marker(
+                [25.194151, 121.6780281],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_adb03869612f3d4ca73e1a7cd7ba9bfe.bindTooltip(
+                `<div>
+                     207台灣新北市萬里區新墾丁路108號1 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e54499ec64c2aca100aa21cb00e931c5 = L.marker(
+                [25.194151, 121.6780281],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e54499ec64c2aca100aa21cb00e931c5.bindTooltip(
+                `<div>
+                     207台灣新北市萬里區新墾丁路108號1 号 增
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_51ee7d4d046a432af5bfdc263d171488 = L.marker(
+                [25.0622095, 121.4570447],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_51ee7d4d046a432af5bfdc263d171488.bindTooltip(
+                `<div>
+                     台灣新北市板橋區新北
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_429382b78b7423d8bc96a17399dadcde = L.marker(
+                [24.9930177, 121.5133585],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_429382b78b7423d8bc96a17399dadcde.bindTooltip(
+                `<div>
+                     235台灣新北市中和區景平路288，290號3 之 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_31dd33ddb636ab10560563e2c10fd016 = L.marker(
+                [24.9930177, 121.5133585],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_31dd33ddb636ab10560563e2c10fd016.bindTooltip(
+                `<div>
+                     235台灣新北市中和區景平路288，290號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3172dc68a6e897f23a70d6b87bf3393b = L.marker(
+                [25.252072, 121.6047761],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_3172dc68a6e897f23a70d6b87bf3393b.bindTooltip(
+                `<div>
+                     208台灣新北市金山區2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_abe55bbe87f82b4735eb74925181505a = L.marker(
+                [25.0806352, 121.627282],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_abe55bbe87f82b4735eb74925181505a.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區忠三街39巷53號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ba946216b6f64f50f814af0b676c93d0 = L.marker(
+                [25.0796126, 121.627275],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ba946216b6f64f50f814af0b676c93d0.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區忠三街39巷41弄2號二
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_996f74032c6504b03c0ba3e788d29cc5 = L.marker(
+                [25.1246503, 121.9170253],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_996f74032c6504b03c0ba3e788d29cc5.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區鼻頭路61號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3d0fdd2de4e8a608db50c85671b4d9d4 = L.marker(
+                [25.1718966, 121.4405736],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_3d0fdd2de4e8a608db50c85671b4d9d4.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區中山路143之3號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4bcc7713438399e73944358ba3799558 = L.marker(
+                [25.1718966, 121.4405736],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_4bcc7713438399e73944358ba3799558.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區中山路143之3號二
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_890775f497334dfef719278fe9e594a7 = L.marker(
+                [25.1084308, 121.8037846],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_890775f497334dfef719278fe9e594a7.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區一坑路70號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eb39eb050bb42693b3c6db7dd90e8f32 = L.marker(
+                [25.2588501, 121.4871953],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_eb39eb050bb42693b3c6db7dd90e8f32.bindTooltip(
+                `<div>
+                     252台灣新北市三芝區樂全街64號12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f4ac75ebebf6bae93c03370f816cd032 = L.marker(
+                [25.2588697, 121.4872433],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_f4ac75ebebf6bae93c03370f816cd032.bindTooltip(
+                `<div>
+                     252台灣新北市三芝區樂全街66號12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_11e1f911a069ad7ff5de9790b1df41d3 = L.marker(
+                [25.0087179, 121.5164899],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_11e1f911a069ad7ff5de9790b1df41d3.bindTooltip(
+                `<div>
+                     234台灣新北市永和區大新街63巷2號11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_915e92a77cf8452404ede3ca002a388a = L.marker(
+                [25.0087179, 121.5164899],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_915e92a77cf8452404ede3ca002a388a.bindTooltip(
+                `<div>
+                     234台灣新北市永和區大新街63巷2號11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_54b00a499cd2a25412b958d55748dcd5 = L.marker(
+                [24.9839976, 121.5094858],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_54b00a499cd2a25412b958d55748dcd5.bindTooltip(
+                `<div>
+                     235台灣新北市中和區忠孝街11巷41號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0fb2531475653830e84fd88a7d40d7b3 = L.marker(
+                [24.9839976, 121.5094858],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_0fb2531475653830e84fd88a7d40d7b3.bindTooltip(
+                `<div>
+                     235台灣新北市中和區忠孝街11巷41號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9e68644394331ded27240389927b474e = L.marker(
+                [25.0844509, 121.4926456],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9e68644394331ded27240389927b474e.bindTooltip(
+                `<div>
+                     241台灣新北市三重區富華街125號2 号 四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f4ba48768424d6d04664ec0c6eaa7a64 = L.marker(
+                [25.092106, 121.647845],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_f4ba48768424d6d04664ec0c6eaa7a64.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區汐萬路二段228巷31弄144號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cf811445281d06afdae6ae3610001df1 = L.marker(
+                [25.177207, 121.4518191],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_cf811445281d06afdae6ae3610001df1.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區水源街二段177巷94號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e034961d286e06133bac25b26283b5cf = L.marker(
+                [25.177207, 121.4518191],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e034961d286e06133bac25b26283b5cf.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區水源街二段177巷94號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b51a7eb1a9d3493a10d96275ca916470 = L.marker(
+                [25.1615279, 121.4646763],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b51a7eb1a9d3493a10d96275ca916470.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區坪頂路120號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d61a690aa1b187aa422cc7973c2b6fbe = L.marker(
+                [24.9359215, 121.3785922],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_d61a690aa1b187aa422cc7973c2b6fbe.bindTooltip(
+                `<div>
+                     237台灣新北市三峽區民生街1巷5-11號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_923fa1588cb980fb48e659dc295a3fa8 = L.marker(
+                [24.9359215, 121.3785922],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_923fa1588cb980fb48e659dc295a3fa8.bindTooltip(
+                `<div>
+                     237台灣新北市三峽區民生街1巷5-11號增 建
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_23efa5fe8e8c1b0f979d8e6d7ce87b3b = L.marker(
+                [24.942153, 121.357902],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_23efa5fe8e8c1b0f979d8e6d7ce87b3b.bindTooltip(
+                `<div>
+                     239台灣新北市鶯歌區三鶯路62巷23號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a043849e61484d64eb59a0ff2523a977 = L.marker(
+                [24.942153, 121.357902],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_a043849e61484d64eb59a0ff2523a977.bindTooltip(
+                `<div>
+                     239台灣新北市鶯歌區三鶯路62巷23號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1da7ff205e7e44f81d6a71e9154557a0 = L.marker(
+                [25.084316, 121.48209],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1da7ff205e7e44f81d6a71e9154557a0.bindTooltip(
+                `<div>
+                     247台灣新北市蘆洲區永安北路二段58巷18號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_80f8cc96180c4e80de9bc86e955400e9 = L.marker(
+                [25.084316, 121.48209],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_80f8cc96180c4e80de9bc86e955400e9.bindTooltip(
+                `<div>
+                     247台灣新北市蘆洲區永安北路二段58巷18號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_891100fb22546071057491a38f3fdb05 = L.marker(
+                [25.0159484, 121.5136352],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_891100fb22546071057491a38f3fdb05.bindTooltip(
+                `<div>
+                     234台灣新北市永和區文化路90巷9弄4號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9834f6b430e08bd19889af50e2410e89 = L.marker(
+                [25.1772453, 121.4524222],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9834f6b430e08bd19889af50e2410e89.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區水源街二段177巷70號9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2db899233d05b5200cf362155c4c02e7 = L.marker(
+                [25.0713963, 121.6631869],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_2db899233d05b5200cf362155c4c02e7.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區和平街6巷3弄7號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_653d31dd46c852e082bac35f56fffb5e = L.marker(
+                [25.0118598, 121.459588],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_653d31dd46c852e082bac35f56fffb5e.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區文化路一段44號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ec871cbb87b783816ec88b57116fb8c5 = L.marker(
+                [25.0118598, 121.459588],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ec871cbb87b783816ec88b57116fb8c5.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區文化路一段44號未
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_06cc7fb17995c671336b052f3787b216 = L.marker(
+                [25.2605542, 121.5038919],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_06cc7fb17995c671336b052f3787b216.bindTooltip(
+                `<div>
+                     252台灣新北市三芝區淡金路二段79號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_33856ec2286c32bfecf86d90e4d822ca = L.marker(
+                [25.1586058, 121.4598671],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_33856ec2286c32bfecf86d90e4d822ca.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區中正東路二段5巷25號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_05c96bde050dffca69c2652c93b1a24a = L.marker(
+                [25.1586058, 121.4598671],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_05c96bde050dffca69c2652c93b1a24a.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區中正東路二段5巷25號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fe52681658e7a4edc12cc5fe4e7cf710 = L.marker(
+                [24.9937002, 121.4262476],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_fe52681658e7a4edc12cc5fe4e7cf710.bindTooltip(
+                `<div>
+                     238台灣新北市樹林區保安街一段9號12 之 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_477bb8f0a584950739b40cdf3d3d8257 = L.marker(
+                [25.0072878, 121.4596379],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_477bb8f0a584950739b40cdf3d3d8257.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區中山路一段2號11 之 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e9a714d296203c28ca5fac7ee5f1abe5 = L.marker(
+                [25.0072367, 121.4599409],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e9a714d296203c28ca5fac7ee5f1abe5.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區館前東路13號11 之 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d236a02ff3604dc26b8c7477d45e38ef = L.marker(
+                [25.0072367, 121.4599409],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_d236a02ff3604dc26b8c7477d45e38ef.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區館前東路13號11 之 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_afefdd347a3d9666aed38887c349d0bb = L.marker(
+                [25.0227792, 121.483592],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_afefdd347a3d9666aed38887c349d0bb.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區中山路二段553巷4弄13號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_47bcdd0432da6b88fd14fab6fb498aa3 = L.marker(
+                [25.0227792, 121.483592],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_47bcdd0432da6b88fd14fab6fb498aa3.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區中山路二段553巷4弄13號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b67747ba97d91cff78f1d9cd40924022 = L.marker(
+                [24.916224, 121.416094],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b67747ba97d91cff78f1d9cd40924022.bindTooltip(
+                `<div>
+                     237台灣新北市三峽區紫微
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0a041663775506a7d4351c078047113b = L.marker(
+                [24.9738392, 121.5325108],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_0a041663775506a7d4351c078047113b.bindTooltip(
+                `<div>
+                     231台灣新北市新店區三民路159巷19弄16號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1e43d0900c5633018ca362d723ab3d9e = L.marker(
+                [24.9738392, 121.5325108],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1e43d0900c5633018ca362d723ab3d9e.bindTooltip(
+                `<div>
+                     231台灣新北市新店區三民路159巷19弄16號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4abac3d4ba3f49cb29ae4a9432794f01 = L.marker(
+                [24.9929018, 121.5171186],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_4abac3d4ba3f49cb29ae4a9432794f01.bindTooltip(
+                `<div>
+                     235台灣新北市中和區大勇街23號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dacdccf62c981fd9e25448885ef66faf = L.marker(
+                [24.9886124, 121.4571079],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_dacdccf62c981fd9e25448885ef66faf.bindTooltip(
+                `<div>
+                     236台灣新北市土城區廣福街3巷6號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e0800ac32706523ffaeda041bd1a7874 = L.marker(
+                [25.0215108, 121.4578717],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e0800ac32706523ffaeda041bd1a7874.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區新生街83號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e6dea28379c04652e3feba4ee0faa19c = L.marker(
+                [25.0247019, 121.4780208],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e6dea28379c04652e3feba4ee0faa19c.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區萬板路312巷12號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9b06473af294acbdf56ffa8624755c3f = L.marker(
+                [24.9361013, 121.3735126],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9b06473af294acbdf56ffa8624755c3f.bindTooltip(
+                `<div>
+                     237台灣新北市三峽區民生街104巷17號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_05ad675ed745bd3554d5cf132f81e345 = L.marker(
+                [25.0066561, 121.4674983],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_05ad675ed745bd3554d5cf132f81e345.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區國泰街70號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_05f1f570695e7b3f472509583de14316 = L.marker(
+                [25.0066561, 121.4674983],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_05f1f570695e7b3f472509583de14316.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區國泰街70號五 之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bcf6649be581ec604ca6e08498d08701 = L.marker(
+                [24.9809016, 121.4168755],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_bcf6649be581ec604ca6e08498d08701.bindTooltip(
+                `<div>
+                     238台灣新北市樹林區太元街2巷13號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_df184aa0c1b59cad9ba7ac8481424083 = L.marker(
+                [24.9809016, 121.4168755],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_df184aa0c1b59cad9ba7ac8481424083.bindTooltip(
+                `<div>
+                     238台灣新北市樹林區太元街2巷13號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7f84da5647f8c4ec6d9c4f46e3da4af0 = L.marker(
+                [25.0334885, 121.4736041],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_7f84da5647f8c4ec6d9c4f46e3da4af0.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區江寧路三段131號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1e113946fdf22abc7bcacd1c79e00f50 = L.marker(
+                [24.9616243, 121.4264108],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1e113946fdf22abc7bcacd1c79e00f50.bindTooltip(
+                `<div>
+                     236台灣新北市土城區中央路三段281巷23弄19號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b87fe1f3a7c9393046bf9aa544d7b2bc = L.marker(
+                [24.9616243, 121.4264108],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b87fe1f3a7c9393046bf9aa544d7b2bc.bindTooltip(
+                `<div>
+                     236台灣新北市土城區中央路三段281巷23弄19號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1e979b2bb2dd73925402f5fff485d4bf = L.marker(
+                [24.9905691, 121.5030633],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1e979b2bb2dd73925402f5fff485d4bf.bindTooltip(
+                `<div>
+                     235台灣新北市中和區復興路268號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_966f60578f25a9048adf7837d9637538 = L.marker(
+                [25.0286564, 121.4197624],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_966f60578f25a9048adf7837d9637538.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區明志路1號466 巷 21 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fcece72b557e9a1383b3ec909e00dd86 = L.marker(
+                [24.9940076, 121.464866],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_fcece72b557e9a1383b3ec909e00dd86.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區五權街45巷
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b5c9ab228b31104a0bef68458849be4d = L.marker(
+                [24.9937741, 121.4648091],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b5c9ab228b31104a0bef68458849be4d.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區五權街45巷2號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_18065820b4d9856499af4ef6cf4f108c = L.marker(
+                [25.0298474, 121.4456257],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_18065820b4d9856499af4ef6cf4f108c.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區豐年街124巷18號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8773d102925d85be620cd1cf52732788 = L.marker(
+                [25.0298474, 121.4456257],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_8773d102925d85be620cd1cf52732788.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區豐年街124巷18號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9bae1a4ab346c32c24d760a0af63c77e = L.marker(
+                [24.9718074, 121.5170603],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9bae1a4ab346c32c24d760a0af63c77e.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安民街205號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8a132504d5def33585f960703e15ae3a = L.marker(
+                [24.9719142, 121.5170006],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_8a132504d5def33585f960703e15ae3a.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安民街231號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_54dcf1a0ce9fea09dbc5bdf3efadce23 = L.marker(
+                [24.9941938, 121.4817462],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_54dcf1a0ce9fea09dbc5bdf3efadce23.bindTooltip(
+                `<div>
+                     235台灣新北市中和區連城路523巷11弄2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a2bcad0cfb42152d29036187ab5ec4ef = L.marker(
+                [24.9941938, 121.4817462],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_a2bcad0cfb42152d29036187ab5ec4ef.bindTooltip(
+                `<div>
+                     235台灣新北市中和區連城路523巷11弄2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_194885bb011e0896bf7f5bbc49615cb2 = L.marker(
+                [24.9847269, 121.4653213],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_194885bb011e0896bf7f5bbc49615cb2.bindTooltip(
+                `<div>
+                     236台灣新北市土城區明德路一段53號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_60f300461bf1cb5342994be8b93313fc = L.marker(
+                [24.9847269, 121.4653213],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_60f300461bf1cb5342994be8b93313fc.bindTooltip(
+                `<div>
+                     236台灣新北市土城區明德路一段53號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_be4030f3b5930db8499c7d83602d865e = L.marker(
+                [25.0611346, 121.4836879],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_be4030f3b5930db8499c7d83602d865e.bindTooltip(
+                `<div>
+                     241台灣新北市三重區新北大道一段115號等
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8f2b950ddfc139c726d1abc0b85f9c23 = L.marker(
+                [25.0607165, 121.4835883],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_8f2b950ddfc139c726d1abc0b85f9c23.bindTooltip(
+                `<div>
+                     241台灣新北市三重區中華路3號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cb00714e92c666491ea8ce3e8d163b15 = L.marker(
+                [25.0626012, 121.4835199],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_cb00714e92c666491ea8ce3e8d163b15.bindTooltip(
+                `<div>
+                     241台灣新北市三重區中華路
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_23f9bcb27fc7dac25eb34b1a9acc2d85 = L.marker(
+                [25.0607471, 121.4836765],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_23f9bcb27fc7dac25eb34b1a9acc2d85.bindTooltip(
+                `<div>
+                     241台灣新北市三重區中華路1號八
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_43ec2c384157772adf4d94c63f832626 = L.marker(
+                [25.0191206, 121.4795679],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_43ec2c384157772adf4d94c63f832626.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區中山路二段359號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b100aac48cce0309b88d09853fb6fb4d = L.marker(
+                [24.9111328, 121.3660975],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b100aac48cce0309b88d09853fb6fb4d.bindTooltip(
+                `<div>
+                     237台灣新北市三峽區中正路二段287號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3bce7e85ab2de5dc48f9a141ff19913e = L.marker(
+                [24.9852468, 121.5075421],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_3bce7e85ab2de5dc48f9a141ff19913e.bindTooltip(
+                `<div>
+                     235台灣新北市中和區華新街7號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bc261f4cd7c08870abc0166252a58b27 = L.marker(
+                [25.0751423, 121.4800092],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_bc261f4cd7c08870abc0166252a58b27.bindTooltip(
+                `<div>
+                     241台灣新北市三重區力行路二段136巷36弄5號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7f22c985e7ce5305d3eb568fd5898c53 = L.marker(
+                [25.0751423, 121.4800092],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_7f22c985e7ce5305d3eb568fd5898c53.bindTooltip(
+                `<div>
+                     241台灣新北市三重區力行路二段136巷36弄5號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_286f1e00868b0e811c13a5bdaefda3b3 = L.marker(
+                [25.0016161, 121.4996425],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_286f1e00868b0e811c13a5bdaefda3b3.bindTooltip(
+                `<div>
+                     235台灣新北市中和區中和路26巷1號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_27e2d7b108fab4ec7aa39079d51d648d = L.marker(
+                [25.0016161, 121.4996425],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_27e2d7b108fab4ec7aa39079d51d648d.bindTooltip(
+                `<div>
+                     235台灣新北市中和區中和路26巷1號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_012d9fb03e17a80c2b7806e207151c7c = L.marker(
+                [25.0016161, 121.4996425],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_012d9fb03e17a80c2b7806e207151c7c.bindTooltip(
+                `<div>
+                     235台灣新北市中和區中和路26巷1號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_94b742e3fb51f1188be37690bb225b3e = L.marker(
+                [25.0016161, 121.4996425],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_94b742e3fb51f1188be37690bb225b3e.bindTooltip(
+                `<div>
+                     235台灣新北市中和區中和路26巷1號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c50533885ef8b0066dec3ef3777676b8 = L.marker(
+                [24.9936472, 121.4218457],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_c50533885ef8b0066dec3ef3777676b8.bindTooltip(
+                `<div>
+                     238台灣新北市樹林區復興路92號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_443c3a61c3d8172917ab1a4f58703adc = L.marker(
+                [24.9640908, 121.5135905],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_443c3a61c3d8172917ab1a4f58703adc.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安光路43號18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_688a41f588c233aa2172c922d3e8a53d = L.marker(
+                [24.9586405, 121.4752388],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_688a41f588c233aa2172c922d3e8a53d.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安祥路109巷2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b77418af8efe2f24992eeb9196f24498 = L.marker(
+                [24.9599824, 121.4783752],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b77418af8efe2f24992eeb9196f24498.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安祥路109巷85弄3號一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0329450ed9a8da3e6ff3a515fb349f6b = L.marker(
+                [24.9585167, 121.4752761],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_0329450ed9a8da3e6ff3a515fb349f6b.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安祥路109號51 之 1 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ef172856b1ae463ad31229d6827bbc61 = L.marker(
+                [24.9587125, 121.4760782],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ef172856b1ae463ad31229d6827bbc61.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安祥路109巷90弄74號一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_edcb1cfd460769871fcb3c787c3d6807 = L.marker(
+                [24.9600103, 121.4776866],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_edcb1cfd460769871fcb3c787c3d6807.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安祥路109巷110號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f3726139ed26825c2852a7a8830d7768 = L.marker(
+                [24.9600183, 121.4776696],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_f3726139ed26825c2852a7a8830d7768.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安祥路109巷90號63 之 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4c832c28baf9e42d5ab083181e9933b1 = L.marker(
+                [24.9480832, 121.5286761],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_4c832c28baf9e42d5ab083181e9933b1.bindTooltip(
+                `<div>
+                     231台灣新北市新店區永業路117號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e40837df53b85049e87b1c98daa774cf = L.marker(
+                [24.8803784, 121.5427753],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e40837df53b85049e87b1c98daa774cf.bindTooltip(
+                `<div>
+                     233台灣新北市烏來區新烏路五段53號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dd293a6b5b07e2fd789a7de0a9fc971a = L.marker(
+                [25.1108702, 121.8472474],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_dd293a6b5b07e2fd789a7de0a9fc971a.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區汽車路7號3 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_208d6dc27a496ff41a091f7ed5b967f6 = L.marker(
+                [25.1110581, 121.8459937],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_208d6dc27a496ff41a091f7ed5b967f6.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區汽車路9-14號一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_06a9da7c2f684504d39d531fdc5a13a5 = L.marker(
+                [24.9641076, 121.5127715],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_06a9da7c2f684504d39d531fdc5a13a5.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安光路21-47號22
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e35d2c235ecc3d351d9cc2061ca14978 = L.marker(
+                [24.9641076, 121.5127715],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e35d2c235ecc3d351d9cc2061ca14978.bindTooltip(
+                `<div>
+                     231台灣新北市新店區安光路21-47號22 增
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d9050641f24b124408a768b161c3834c = L.marker(
+                [25.0775376, 121.6250707],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_d9050641f24b124408a768b161c3834c.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區忠三街10巷37號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_02d0e51c6a86f55694493f8a307cd416 = L.marker(
+                [25.0775185, 121.6251034],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_02d0e51c6a86f55694493f8a307cd416.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區忠三街10巷35號之 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c75175fc63270fda21cc45489d500bbe = L.marker(
+                [25.0785829, 121.6252709],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_c75175fc63270fda21cc45489d500bbe.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區忠三街10巷1號二
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3ce0665ca77a9c323d127ec657ce2a63 = L.marker(
+                [25.0775376, 121.6250707],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_3ce0665ca77a9c323d127ec657ce2a63.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區忠三街10巷37號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e44bf5e10b1edba54cb8a55bc8ead382 = L.marker(
+                [24.9605266, 121.3359699],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e44bf5e10b1edba54cb8a55bc8ead382.bindTooltip(
+                `<div>
+                     239台灣新北市鶯歌區鶯桃路268巷17號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1eab1729910c15a81c266949723b41e6 = L.marker(
+                [24.9605266, 121.3359699],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1eab1729910c15a81c266949723b41e6.bindTooltip(
+                `<div>
+                     239台灣新北市鶯歌區鶯桃路268巷17號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fab12e166ca616dda86dcbc716e721aa = L.marker(
+                [25.1789217, 121.4382412],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_fab12e166ca616dda86dcbc716e721aa.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區新民街152巷37號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6387fd293d0da407d7bedd8bb7132eff = L.marker(
+                [25.1789217, 121.4382412],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_6387fd293d0da407d7bedd8bb7132eff.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區新民街152巷37號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d440563d2a452ab5a11d9d6db0f8211f = L.marker(
+                [25.1756127, 121.6819393],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_d440563d2a452ab5a11d9d6db0f8211f.bindTooltip(
+                `<div>
+                     207台灣新北市萬里區仁四街8號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8537e7ee30212a7a0b5c0b4f1544ef75 = L.marker(
+                [25.1317683, 121.5035428],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_8537e7ee30212a7a0b5c0b4f1544ef75.bindTooltip(
+                `<div>
+                     112台灣臺北市北投區磺港路25號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3dba5c66d66103b1e2e417143fdeab8d = L.marker(
+                [24.9991749, 121.4853966],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_3dba5c66d66103b1e2e417143fdeab8d.bindTooltip(
+                `<div>
+                     235台灣新北市中和區中正路758號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3f5bf25d962884ef70c7373dbc5264cb = L.marker(
+                [24.999295, 121.4855054],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_3f5bf25d962884ef70c7373dbc5264cb.bindTooltip(
+                `<div>
+                     235台灣新北市中和區中正路760號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_22874bf43ef647249497abaf24a2843d = L.marker(
+                [25.0767013, 121.4929186],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_22874bf43ef647249497abaf24a2843d.bindTooltip(
+                `<div>
+                     241台灣新北市三重區仁政街44巷2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_913449f1922ef37ef78f83818d65a1fe = L.marker(
+                [25.0767013, 121.4929186],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_913449f1922ef37ef78f83818d65a1fe.bindTooltip(
+                `<div>
+                     241台灣新北市三重區仁政街44巷2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7039bc163865569686a5fc35db485640 = L.marker(
+                [25.0314414, 121.4800556],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_7039bc163865569686a5fc35db485640.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區懷德街127巷36號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a2296b7397dde3a8abbe254e224379f7 = L.marker(
+                [25.0314414, 121.4800556],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_a2296b7397dde3a8abbe254e224379f7.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區懷德街127巷36號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_009b12c2c25cbbb4fd14406db72b0781 = L.marker(
+                [25.1448588, 121.3968011],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_009b12c2c25cbbb4fd14406db72b0781.bindTooltip(
+                `<div>
+                     249台灣新北市八里區商港路32號十 一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_843ef2f62ae915dfe182b5b867d55431 = L.marker(
+                [25.1453646, 121.3963334],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_843ef2f62ae915dfe182b5b867d55431.bindTooltip(
+                `<div>
+                     249台灣新北市八里區中山路二段459號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_79b453f872f423af71aa8cb6ccb66ad9 = L.marker(
+                [25.1451039, 121.3964911],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_79b453f872f423af71aa8cb6ccb66ad9.bindTooltip(
+                `<div>
+                     249台灣新北市八里區商港路38號六
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_36659befd7c0124d49faa6fdff55dda2 = L.marker(
+                [25.1760868, 121.6822255],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_36659befd7c0124d49faa6fdff55dda2.bindTooltip(
+                `<div>
+                     207台灣新北市萬里區仁二街15號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_170d4f500e25ea08dfafd357f25001e5 = L.marker(
+                [23.5721164, 120.3001859],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_170d4f500e25ea08dfafd357f25001e5.bindTooltip(
+                `<div>
+                     651台灣雲林縣北港鎮北港
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_29e951c4d345079e2c08b65f303b2021 = L.marker(
+                [23.5721164, 120.3001859],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_29e951c4d345079e2c08b65f303b2021.bindTooltip(
+                `<div>
+                     651台灣雲林縣北港鎮北港
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_50ce1ca2cd1b355975f538d3e6393591 = L.marker(
+                [25.036519, 121.860924],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_50ce1ca2cd1b355975f538d3e6393591.bindTooltip(
+                `<div>
+                     227台灣新北市雙溪區梅竹蹊
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bc6a1fc0e56145b81d383abab444c7e6 = L.marker(
+                [25.1037395, 121.7598025],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_bc6a1fc0e56145b81d383abab444c7e6.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區中央路48巷86號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5cb04a108b661e83f6efcfcc17c10763 = L.marker(
+                [25.0052074, 121.4075912],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_5cb04a108b661e83f6efcfcc17c10763.bindTooltip(
+                `<div>
+                     238台灣新北市樹林區光興街242號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1d80d1f03985c096ef3aaaa12a04946e = L.marker(
+                [25.0052074, 121.4075912],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1d80d1f03985c096ef3aaaa12a04946e.bindTooltip(
+                `<div>
+                     238台灣新北市樹林區光興街242號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_45b91245c45d64fc803d36be4d09d971 = L.marker(
+                [25.0050329, 121.50077],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_45b91245c45d64fc803d36be4d09d971.bindTooltip(
+                `<div>
+                     235台灣新北市中和區莊敬路35號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fe6d3896f90890945d33af917e53cfce = L.marker(
+                [25.1761925, 121.6849834],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_fe6d3896f90890945d33af917e53cfce.bindTooltip(
+                `<div>
+                     207台灣新北市萬里區忠四街36號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fad97bf0bbb5ff267c5d6a6635fd65f0 = L.marker(
+                [25.1698151, 121.4515092],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_fad97bf0bbb5ff267c5d6a6635fd65f0.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區鄧公路27號4 之 1 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9fd84b15e9754067486fce8673d1c0f2 = L.marker(
+                [25.1698151, 121.4515092],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9fd84b15e9754067486fce8673d1c0f2.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區鄧公路27號4 之 1 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3442bdcaf2410d38649049f4e29c5055 = L.marker(
+                [25.1760789, 121.6817243],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_3442bdcaf2410d38649049f4e29c5055.bindTooltip(
+                `<div>
+                     207台灣新北市萬里區仁四街26號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4dfc4eedc0b845d4476d18c0e9ada3b1 = L.marker(
+                [25.0398764, 121.6342016],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_4dfc4eedc0b845d4476d18c0e9ada3b1.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區東勢街216巷22弄2號22
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1c6c566a37bce46db17e609c9da395bf = L.marker(
+                [25.161429, 121.4560194],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1c6c566a37bce46db17e609c9da395bf.bindTooltip(
+                `<div>
+                     251006台灣新北市淡水區淡金路59-61號8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4d1490e2d635a827b0a957ba1be36f36 = L.marker(
+                [25.252072, 121.6047761],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_4d1490e2d635a827b0a957ba1be36f36.bindTooltip(
+                `<div>
+                     208台灣新北市金山區7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eaa174536e6003cf37bea90b5b5c1396 = L.marker(
+                [25.1770368, 121.6836958],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_eaa174536e6003cf37bea90b5b5c1396.bindTooltip(
+                `<div>
+                     207台灣新北市萬里區孝三街20號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e1a8f4c31ba758e3ccf5f48bd1ecdf2a = L.marker(
+                [24.9782066, 121.4218011],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e1a8f4c31ba758e3ccf5f48bd1ecdf2a.bindTooltip(
+                `<div>
+                     238台灣新北市樹林區八德街275號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ca4ce3121af5a39fbc47d07f8a82cf3a = L.marker(
+                [25.105776, 121.8118137],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ca4ce3121af5a39fbc47d07f8a82cf3a.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區三爪子坑路205號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b11548b08f5a356abdf0a05295485ed3 = L.marker(
+                [25.105776, 121.8118137],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b11548b08f5a356abdf0a05295485ed3.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區三爪子坑路205號二
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d6cd51a538cda317e8d54e8b3637cf5c = L.marker(
+                [25.16372, 121.4868868],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_d6cd51a538cda317e8d54e8b3637cf5c.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區興福寮88巷7號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6753baab94c0302b7d47c70844e7f9c6 = L.marker(
+                [25.0606616, 121.4989999],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_6753baab94c0302b7d47c70844e7f9c6.bindTooltip(
+                `<div>
+                     241台灣新北市三重區文化南路65巷40號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a493f52f1e73834a88a48e1efb5a6ff9 = L.marker(
+                [25.0606616, 121.4989999],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_a493f52f1e73834a88a48e1efb5a6ff9.bindTooltip(
+                `<div>
+                     241台灣新北市三重區文化南路65巷40號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_55aae3f47df7c9b7d70d11d97bc50e8d = L.marker(
+                [25.0530176, 121.491017],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_55aae3f47df7c9b7d70d11d97bc50e8d.bindTooltip(
+                `<div>
+                     241台灣新北市三重區成功路41巷64號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_70a87f5c06598627a7330a370263a179 = L.marker(
+                [25.0530176, 121.491017],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_70a87f5c06598627a7330a370263a179.bindTooltip(
+                `<div>
+                     241台灣新北市三重區成功路41巷64號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_29bbdd1a2da931226cf8e694b869cf2c = L.marker(
+                [24.9760434, 121.4438312],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_29bbdd1a2da931226cf8e694b869cf2c.bindTooltip(
+                `<div>
+                     236台灣新北市土城區中央路二段177巷44號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f4edd74344741f7516e47e5bed31fb21 = L.marker(
+                [25.0981064, 121.7825458],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_f4edd74344741f7516e47e5bed31fb21.bindTooltip(
+                `<div>
+                     224台灣新北市瑞芳區大寮路49巷9號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b10de74d982e6030276380dfbc857f95 = L.marker(
+                [25.0034798, 121.4492329],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b10de74d982e6030276380dfbc857f95.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區大觀路二段3巷55號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_90c3724bb170e1d0b016b9df903d0d6a = L.marker(
+                [25.0034798, 121.4492329],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_90c3724bb170e1d0b016b9df903d0d6a.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區大觀路二段3巷55號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c2a3ebe44c1dc3dfd5d235390621490b = L.marker(
+                [24.9537635, 121.5633152],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_c2a3ebe44c1dc3dfd5d235390621490b.bindTooltip(
+                `<div>
+                     231台灣新北市新店區北宜路二段503號8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6149fdc688e226cea8ab020ca782eb14 = L.marker(
+                [24.9839908, 121.5102515],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_6149fdc688e226cea8ab020ca782eb14.bindTooltip(
+                `<div>
+                     235台灣新北市中和區忠孝街31巷14號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4699b078a92929a0ebcd9806a4ed0d23 = L.marker(
+                [24.9312889, 121.378628],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_4699b078a92929a0ebcd9806a4ed0d23.bindTooltip(
+                `<div>
+                     237台灣新北市三峽區長泰街19號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_95ac076d79177e61d6b015d084dc8517 = L.marker(
+                [25.2604021, 121.5036439],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_95ac076d79177e61d6b015d084dc8517.bindTooltip(
+                `<div>
+                     252台灣新北市三芝區淡金路二段47號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_43841af8a764c9eebb21dbc02f525d79 = L.marker(
+                [25.2603969, 121.503703],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_43841af8a764c9eebb21dbc02f525d79.bindTooltip(
+                `<div>
+                     252台灣新北市三芝區淡金路二段51號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ed5bff1261fe5c6345bc668a0c817854 = L.marker(
+                [25.2605439, 121.5038733],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ed5bff1261fe5c6345bc668a0c817854.bindTooltip(
+                `<div>
+                     252台灣新北市三芝區淡金路二段77號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_194a42e928666faf48b44663c9f5a6ac = L.marker(
+                [25.1848127, 121.4432361],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_194a42e928666faf48b44663c9f5a6ac.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區中山北路二段189巷15弄2-26號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_40c71ee0b4df6886348c65a7645119d7 = L.marker(
+                [25.1848127, 121.4432361],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_40c71ee0b4df6886348c65a7645119d7.bindTooltip(
+                `<div>
+                     251台灣新北市淡水區中山北路二段189巷15弄2-26號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_29eed19c517b707642032c8cbbb7fa79 = L.marker(
+                [25.0024746, 121.6175386],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_29eed19c517b707642032c8cbbb7fa79.bindTooltip(
+                `<div>
+                     222台灣新北市深坑區文化街84巷17號七
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4138d4569051105a533d12e8c38d23d3 = L.marker(
+                [23.3105665, 120.309652],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_4138d4569051105a533d12e8c38d23d3.bindTooltip(
+                `<div>
+                     730台灣臺南市新營區周武街11號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b65e4ef136fdceca4f566114539ddd90 = L.marker(
+                [23.3105665, 120.309652],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b65e4ef136fdceca4f566114539ddd90.bindTooltip(
+                `<div>
+                     730台灣臺南市新營區周武街11號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_42de2473837f629cfc3cbdf1edd7e261 = L.marker(
+                [24.9784232, 121.4430012],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_42de2473837f629cfc3cbdf1edd7e261.bindTooltip(
+                `<div>
+                     236台灣新北市土城區中央路二段61巷24弄8號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8599d05c6db2644095e166ecfed7d66b = L.marker(
+                [25.0194589, 121.422931],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_8599d05c6db2644095e166ecfed7d66b.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區八德街194號6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_30280874dbde7255f615c79864d771a7 = L.marker(
+                [25.0179141, 121.4608823],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_30280874dbde7255f615c79864d771a7.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區復興街128號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6eee1907d3785f64441d93d85f6092aa = L.marker(
+                [25.0179141, 121.4608823],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_6eee1907d3785f64441d93d85f6092aa.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區復興街128號未
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1a8a1f1d8d1349c79a942ccd2d6d6ef1 = L.marker(
+                [25.0123241, 121.4676684],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1a8a1f1d8d1349c79a942ccd2d6d6ef1.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區中山路一段170號板橋世界花園橋峰大樓B棟七
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e7a057c8dee1765155cd1383f1b9636b = L.marker(
+                [25.0272171, 121.4589414],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e7a057c8dee1765155cd1383f1b9636b.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區裕民街139號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e71c55c7cde8f9811c4ce87c1dd22c07 = L.marker(
+                [25.0652962, 121.635712],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_e71c55c7cde8f9811c4ce87c1dd22c07.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區福德一路201巷12號7 之 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3c6bced977a19338f6ab0bd96a475bf1 = L.marker(
+                [25.0050649, 121.5175054],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_3c6bced977a19338f6ab0bd96a475bf1.bindTooltip(
+                `<div>
+                     234台灣新北市永和區永利路4巷15號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_855f1137067195a11ba19097a8119ed1 = L.marker(
+                [25.0804996, 121.374929],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_855f1137067195a11ba19097a8119ed1.bindTooltip(
+                `<div>
+                     244台灣新北市林口區文化三路二段58號十一樓號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a95df76799a6458addc4c7d9394423c4 = L.marker(
+                [24.9900725, 121.4999369],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_a95df76799a6458addc4c7d9394423c4.bindTooltip(
+                `<div>
+                     235台灣新北市中和區中興街204號14 之 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4591ea37e58c1525901cb5b4823e48df = L.marker(
+                [25.0030163, 121.4725593],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_4591ea37e58c1525901cb5b4823e48df.bindTooltip(
+                `<div>
+                     235台灣新北市中和區莒光路95號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_da849dca18afd0d3a0998ec098b800f4 = L.marker(
+                [25.0822615, 121.4895889],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_da849dca18afd0d3a0998ec098b800f4.bindTooltip(
+                `<div>
+                     241台灣新北市三重區仁愛街480號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6ef4ed4c5b982f6c8706f788bfcc34a8 = L.marker(
+                [25.0443676, 121.6338919],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_6ef4ed4c5b982f6c8706f788bfcc34a8.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區東勢街201巷309-1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cda4a0f38c7c0d5a3d05884a42b25350 = L.marker(
+                [25.0443676, 121.6338919],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_cda4a0f38c7c0d5a3d05884a42b25350.bindTooltip(
+                `<div>
+                     221台灣新北市汐止區東勢街201巷309-1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1221ad25d481a3d30425dda91fa8d685 = L.marker(
+                [25.1026185, 121.4512236],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1221ad25d481a3d30425dda91fa8d685.bindTooltip(
+                `<div>
+                     248台灣新北市五股區成泰路三段559巷22號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1823f4bc5335a4ca747b38ceccec839f = L.marker(
+                [25.1026185, 121.4512236],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1823f4bc5335a4ca747b38ceccec839f.bindTooltip(
+                `<div>
+                     248台灣新北市五股區成泰路三段559巷22號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9996b3abffdf2af49fbd6295e428e2d7 = L.marker(
+                [25.0730735, 121.6580707],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9996b3abffdf2af49fbd6295e428e2d7.bindTooltip(
+                `<div>
+                     221台灣新北市汐止区长江街99號遠上樓3 之 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_758243e43cfec7fc8cd9db876214716a = L.marker(
+                [24.9968955, 121.4831858],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_758243e43cfec7fc8cd9db876214716a.bindTooltip(
+                `<div>
+                     235台灣新北市中和區連城路340巷12弄6號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_872bff727449360da29670c2d3d4f93f = L.marker(
+                [25.0809098, 121.4730765],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_872bff727449360da29670c2d3d4f93f.bindTooltip(
+                `<div>
+                     247台灣新北市蘆洲區成功路77號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_763b549e688715bd3807008b63ea636f = L.marker(
+                [24.9925415, 121.4520854],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_763b549e688715bd3807008b63ea636f.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區四川路二段245巷49號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1f2e6c8d75542607c90a8e98e7d5963b = L.marker(
+                [25.033235, 121.4458884],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1f2e6c8d75542607c90a8e98e7d5963b.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區新莊路522號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7c10606c2a919b65d5cb38606a423a4f = L.marker(
+                [25.033235, 121.4458884],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_7c10606c2a919b65d5cb38606a423a4f.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區新莊路522號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_21bc98bca19d94a4d658d3a11b4a8bf1 = L.marker(
+                [25.0430557, 121.4484451],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_21bc98bca19d94a4d658d3a11b4a8bf1.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區中和街8號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dd27728dfb7a1b7adaa46e732b30a390 = L.marker(
+                [25.0434552, 121.4573971],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_dd27728dfb7a1b7adaa46e732b30a390.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區民樂街87巷10號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c160efa0c5d63e75a76461532ae62984 = L.marker(
+                [25.0430557, 121.4484451],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_c160efa0c5d63e75a76461532ae62984.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區中和街8號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bd113913ca75c5ee5e98ad5d4fd2ca9a = L.marker(
+                [25.021987, 121.4825953],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_bd113913ca75c5ee5e98ad5d4fd2ca9a.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區中山路二段531巷17弄9號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_866bc00142b321b9b5f97b02e45d4638 = L.marker(
+                [25.0221434, 121.4827797],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_866bc00142b321b9b5f97b02e45d4638.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區中山路二段531巷15號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_912f5ad3df054f2bfede40d2e05ce7cc = L.marker(
+                [25.0860435, 121.4863413],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_912f5ad3df054f2bfede40d2e05ce7cc.bindTooltip(
+                `<div>
+                     241台灣新北市三重區集英路62號12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b52487a0c66d824af05df1b93f8d78a5 = L.marker(
+                [25.0008753, 121.4313372],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_b52487a0c66d824af05df1b93f8d78a5.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區新樹路785號一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_63fe63830c4c0820d43f8e88d0c899b8 = L.marker(
+                [24.9905691, 121.5030633],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_63fe63830c4c0820d43f8e88d0c899b8.bindTooltip(
+                `<div>
+                     235台灣新北市中和區復興路268號12 之 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1e46b1a6f2cc7087451c4ea4e9659ee3 = L.marker(
+                [24.9905691, 121.5030633],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_1e46b1a6f2cc7087451c4ea4e9659ee3.bindTooltip(
+                `<div>
+                     235台灣新北市中和區復興路268號12 之 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c5e7a5733fd2226d6aaa6c8780c9603d = L.marker(
+                [25.0108556, 121.4651213],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_c5e7a5733fd2226d6aaa6c8780c9603d.bindTooltip(
+                `<div>
+                     220台灣新北市板橋區新府路68號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_daa92ebb74902dc95f8917ef8813c089 = L.marker(
+                [25.012836, 121.5154203],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_daa92ebb74902dc95f8917ef8813c089.bindTooltip(
+                `<div>
+                     23449台灣新北市永和區永和路二段168號頂溪捷運站19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5c1cf9a212bcc13b062203ba8a88faa0 = L.marker(
+                [25.252072, 121.6047761],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_5c1cf9a212bcc13b062203ba8a88faa0.bindTooltip(
+                `<div>
+                     208台灣新北市金山區2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_63b92d7e94bfa118ad2c0ec7cdf3f8ae = L.marker(
+                [25.0535163, 121.4465777],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_63b92d7e94bfa118ad2c0ec7cdf3f8ae.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區中榮街122巷21號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ccdcd2b671cad60e2bef36dfbf21c00f = L.marker(
+                [25.0535163, 121.4465777],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_ccdcd2b671cad60e2bef36dfbf21c00f.bindTooltip(
+                `<div>
+                     242台灣新北市新莊區中榮街122巷21號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9efb4aab80aea1a8267b3d8afd52b12d = L.marker(
+                [24.9498067, 121.3776766],
+                {
+}
+            ).addTo(map_5b35e76951006f31b5fb7bcbb661af28);
+        
+    
+            marker_9efb4aab80aea1a8267b3d8afd52b12d.bindTooltip(
+                `<div>
+                     237台灣新北市樹林區學府路210號六
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

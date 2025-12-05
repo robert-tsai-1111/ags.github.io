@@ -40,9 +40,11 @@ AGS 代表: robert.tsai.1111@gmail.com
 [新竹法院 法拍屋-應買 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_Hsinchu.html)
 
 ### AGS Estate - Taoyuan 桃園房產資料洞察
+[桃園法院 法拍屋-程序 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_C521_Taoyuan.html)
 [桃園法院 法拍屋-應買 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_Taoyuan.html)
 
 ### AGS Estate - New Taipei 新北房產資料洞察
+[新北法院 法拍屋-程序 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_C521_NewTaipei.html)
 [新北法院 法拍屋-應買 資料洞察](https://robert-tsai-1111.github.io/ags.github.io/ags_jud_NewTaipei.html)
 
 
