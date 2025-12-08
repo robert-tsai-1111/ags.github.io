@@ -1,0 +1,122 @@
+.ags-svc-book-link {
+    display: inline-block; 
+    padding: 10px 15px;
+    background-color: #4285F4; /* Google 藍色 */
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* **關鍵**：顯示可點擊的游標 */
+    transition: background-color 0.2s;
+    text-align: center;
+}
+.ags-svc-book-link:hover {
+    background-color: #3367d6; 
+}
+.ags-svc-book {
+    /* 啟用 Flexbox 讓文字和區塊保持在同一行並對齊 */
+    align-items: center;
+    text-align: center;
+}
+
+.meeting-link-wrapper {
+    /* 定義這個 "sub div" 的外觀和邊界 */
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.meeting-link-wrapper a {
+    /* 樣式化內部的超連結文字 */
+    color: black; 
+    padding: 4px 8px; 
+    text-decoration: none;
+    display: block; /* 讓 <a> 填滿父層 div */
+}
+.book-meeting-btn {
+    /* 轉為可設定尺寸的區塊元素，但仍與文字在同一行 */
+    display: inline-block; 
+    
+    /* 按鈕外觀 */
+    background-color: #DB4437; /* Google Calendar 常用的紅色 */
+    color: white; 
+    padding: 4px 8px; /* 內部空間 */
+    border-radius: 4px; /* 圓角 */
+    text-decoration: none; /* 移除超連結下劃線 */
+    font-size: 14px;
+    margin-left: 10px; /* 與前一個文字的間距 */
+    
+    /* 滑鼠懸停效果 */
+    transition: background-color 0.3s;
+}
+
+.book-meeting-btn:hover {
+    background-color: #c0392b; /* 懸停時顏色變深 */
+}
+/* 容器樣式: 讓子項目水平排列並均勻分佈 */
+#ags-service {
+    display: flex; /* 啟用 Flexbox 佈局 */
+    flex-wrap: wrap; /* 允許項目換行 (用於響應式設計) */
+    justify-content: space-between; /* 項目之間均勻分佈空間 */
+    align-items: center;
+    padding: 20px 5%; /* 上下 20px, 左右 5% 邊距 */
+    background-color: #f8f8f8; /* 淺灰色背景 */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, sans-serif; /* 專業字體 */
+}
+
+/* 服務項目通用樣式: 讓每個選項看起來像一個可點擊的按鈕/卡片 */
+#ags-service > div {
+    /* 計算每個項目的寬度，使其在同一行顯示6個，並留出一些間隔 */
+    width: calc(100% / 6 - 10px); 
+    /* 或者使用 Grid 佈局更方便: grid-template-columns: repeat(6, 1fr); */
+    
+    padding: 15px 10px;
+    margin-bottom: 10px; /* 項目之間的底部間隔 */
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* 文字顏色 */
+    background-color: #fff; /* 白色背景 */
+    border-radius: 5px; /* 圓角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 輕微陰影 */
+    transition: all 0.3s ease; /* 平滑過渡效果 */
+    cursor: pointer; /* 鼠標懸停時顯示手型 */
+}
+
+/* 鼠標懸停 (Hover) 效果: 增加互動感 */
+#ags-service > div:hover {
+    background-color: #0056b3; /* 藍色背景 (專業感) */
+    color: #fff; /* 白色文字 */
+    transform: translateY(-2px); /* 輕微上移 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 增加陰影 */
+}
+
+/* 響應式調整 (讓手機上更容易點擊) */
+@media (max-width: 768px) {
+    #ags-service > div {
+        /* 在小屏幕上，每行顯示 3 個 */
+        width: calc(100% / 3 - 10px); 
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #ags-service > div {
+        /* 在極小屏幕上，每行顯示 2 個 */
+        width: calc(50% - 10px);
+        font-size: 11px;
+    }
+}
+
+/* 特別樣式：強調第一個詢問服務 */
+.ags-svc-req {
+    background-color: #ff9900 !important; /* 顯眼的橘色 */
+    color: #fff !important;
+}
+
+.ags-svc-req:hover {
+     background-color: #cc7a00 !important;
+}
+

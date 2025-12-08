@@ -5,187 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGS 台灣房產數據洞察 - Index </title>
-    <style>
-        .map-container {
-            width: 100%;
-            height: 600px; /* 設定地圖顯示高度 */
-            display: none;
-        }
-        /* 橙色主題顏色定義 */
-        :root {
-            --apple-orange: #ff9500; 
-            --apple-orange-hover: #e58700;
-            --background-light: #f5f5f7; 
-            --text-dark: #1d1d1f;
-            --border-light: #d2d2d7; 
-        }
-
-        /* 1. 全局和排版設定 */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-            background-color: var(--background-light); 
-            margin: 0; 
-            /* 讓出置頂欄位的高度 */
-            padding-top: 70px; 
-        }
-
-        /* 2. 置頂容器樣式 (Fixed Header) */
-        .button-container {
-                /* 關鍵：固定在視窗頂部 */
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%; 
-                z-index: 1000; 
-
-                /* 保持 Apple 風格的導航列樣式 */
-                padding: 15px 30px; /* 增加左右邊距 */
-                background-color: #ffffff; 
-                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); 
-                
-                /* 關鍵修改：使用 Flex 佈局來對齊 Logo 和按鈕組 */
-                display: flex;
-                justify-content: space-between; /* 讓 Logo 在左側，按鈕組在右側 */
-                align-items: center; /* 垂直居中對齊 */
-        }
-
-        /* 3. Logo 樣式 */
-        .logo-text {
-            color: var(--text-dark);
-            font-size: 18px; /* 比按鈕文字稍大 */
-            font-weight: 600; /* 加粗，突出 Logo */
-            letter-spacing: -0.01em; /* 輕微緊縮字距，更現代 */
-            /* 在手機上，Logo 和按鈕的間距可能需要調整，但我們先讓按鈕組處理好空間 */
-            margin-right: 15px; /* 略微縮小間距，讓更多空間給按鈕 */
-            flex-shrink: 0; /* 確保 Logo 在空間不足時也不會被壓縮 */
-        }
-        
-        /* 4. 按鈕列和按鈕樣式 */
-        .button-row {
-            display: flex;
-            gap: 12px; 
-            align-items: center; /* 確保按鈕列內部也垂直對齊 */
-            /* * ***** 響應式優化：允許水平滾動 *****
-            * * 這是解決按鈕溢出最常見且有效的方法，特別是對於導航列。
-            */
-            /* 讓按鈕組佔用剩餘的空間 */
-            flex-grow: 1; 
-            
-            /* 啟用水平滾動 */
-            overflow-x: auto; 
-            
-            /* 移除手機上不必要的滾動條 (Webkit 核心瀏覽器) */
-            -webkit-overflow-scrolling: touch; 
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE and Edge */
-        }
-        /* 隱藏 Webkit 瀏覽器的滾動條 */
-        .button-row::-webkit-scrollbar {
-            display: none;
-        }
-
-        .button-container button {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            padding: 8px 16px;
-            font-size: 15px;
-            font-weight: 500; 
-            cursor: pointer;
-            border: 1px solid transparent; 
-            border-radius: 6px; 
-            transition: all 0.2s ease-in-out; 
-            white-space: nowrap; 
-            flex-shrink: 0; /* 確保按鈕在空間不足時不會被壓縮 */
-        }
-
-        @media (max-width: 768px) {
-            
-            /* A. 調整整體 Header 佈局為垂直 (Logo 在上，按鈕組在下) */
-            .button-container {
-                flex-direction: column; /* 垂直堆疊 */
-                align-items: flex-start; /* 靠左對齊 */
-                padding: 15px; /* 縮小左右邊距 */
-            }
-
-            /* B. 調整 Logo 樣式，佔滿寬度並在下方留出間距 */
-            .logo-text {
-                margin-bottom: 15px; /* 在 Logo 下方增加間隔 */
-                margin-right: 0; /* 移除右側間距 */
-                width: 100%; /* 讓 Logo 佔滿一行 */
-            }
-            
-            /* C. 讓按鈕列自動換行 */
-            .button-row {
-                width: 100%; /* 讓按鈕列佔滿 Header 寬度 */
-                flex-wrap: wrap; /* *** 核心修正：允許按鈕在空間不足時換行 *** */
-                justify-content: flex-start; /* 按鈕靠左對齊 */
-                gap: 8px; /* 略微縮小換行按鈕之間的間距 */
-            }
-            
-            /* D. 調整按鈕在小螢幕上的間距和大小 */
-            .button-container button {
-                /* 讓按鈕文字更小一些，騰出空間 */
-                font-size: 14px; 
-                padding: 7px 12px; 
-                /* 移除 white-space: nowrap; 讓按鈕名稱可以換行 (如果名稱過長)
-                * 但因為我們使用了 flex-wrap，且按鈕名稱不長，保留 white-space: nowrap; 更美觀
-                * 這裡我們保留 white-space: nowrap; 並依賴 flex-wrap: wrap; 處理溢出。
-                */
-                white-space: nowrap; 
-            }
-
-            /* E. 調整 Body 頂部內距 */
-            /* 由於 Header 變成多行，高度會增加，需要動態調整 body padding-top */
-            /* 這裡很難給出精確值，使用一個足夠大的值或依賴 JS 計算。
-            * 暫時設置為 100px 作為安全值，以確保內容不會被遮擋。
-            */
-            body {
-                padding-top: 120px; 
-            }
-        }
-
-        /* 主要按鈕樣式 (橙色) */
-        .primary-button {
-            background-color: var(--apple-orange); 
-            color: #ffffff !important; 
-        }
-
-        /* 次要按鈕樣式 (簡約線框) */
-        .secondary-button {
-             background-color: #ffffff;
-             border: 1px solid var(--border-light); 
-             color: var(--text-dark);
-        }
-
-        /* 懸停/互動效果 */
-        .primary-button:hover {
-            background-color: var(--apple-orange-hover); 
-        }
-        .secondary-button:hover {
-            background-color: var(--background-light); 
-            border-color: #c7c7cc;
-        }
-        .button-container button:active {
-            transform: scale(0.98); 
-        }
-        
-        /* 5. 主要內容區塊 */
-        .main-content {
-            padding: 20px;
-            max-width: 1000px; 
-            margin: 0 auto; 
-        }
-
-        .placeholder {
-            background-color: white;
-            padding: 40px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-            min-height: 800px; /* 確保頁面可捲動 */
-        }
-    </style>
+    <link rel="stylesheet" href="ags-service.css">
+    <link rel="stylesheet" href="ags-logo.css">
+    <script src="ags-function.js" defer></script>
 </head>
 <body>
 
@@ -194,14 +16,25 @@
             <a href="https://robert-tsai-1111.github.io/ags.github.io/" class="logo-text" style="text-decoration: none; color: inherit;">AGS房產資料洞察</a>
             <button onclick="showMap('taipei_map')" class="secondary-button">台北</button>
             <button onclick="window.location.href='ags_jud_NewTaipei.html'" class="primary-button">新北 法拍屋-應買</button>
-            <button onclick="window.location.href='ags_jud_Taoyuan.html'" class="primary-button">桃園 法拍屋-應買</button>
             <button onclick="window.location.href='ags_jud_C521_NewTaipei.html'" class="primary-button">新北 法拍屋-程序</button>
+            <button onclick="window.location.href='ags_jud_Taoyuan.html'" class="primary-button">桃園 法拍屋-應買</button>
             <button onclick="window.location.href='ags_jud_C521_Taoyuan.html'" class="primary-button">桃園 法拍屋-程序</button>
             <button onclick="window.location.href='ags_jud_Hsinchu.html'" class="primary-button">新竹 法拍屋-應買</button>
             <button onclick="showMap('taichung_map')" class="secondary-button">台中</button>
             <button onclick="showMap('tainan_map')" class="secondary-button">台南</button>
             <button onclick="showMap('kaohsiung_map')" class="secondary-button">高雄</button>
         </div>
+    </div>
+    
+    <div id="ags-service">
+        <h3>你需要什麼服務?</h3>
+        <div class="ags-svc-status">查詢進度</div>
+        <div class="ags-svc-menu">查詢服務菜單</div>
+        <div class="ags-svc-book-link" onclick="createMeetingLink();">預約AGS專家會議</div>
+        <div class="ags-svc-resource">下載AGS線上資源</div>
+        <div class="ags-svc-god">股東專區</div>
+        <div class="ags-svc-partner">合作夥伴專區</div>
+        <div class="ags-svc-employee">員工專區</div>
     </div>
 
     <div class="main-content">
