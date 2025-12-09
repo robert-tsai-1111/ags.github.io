@@ -1,0 +1,2408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e7a070df28c328bde3231b7ded59f303 {
+                    position: relative;
+                    width: 90.0%;
+                    height: 500.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+<style> table{ border:1px solid #000; max-width: 100%; height: auto; margin-left: auto; margin-right: auto; } td{ border:1px solid #000; padding:10px; } .container { max-width: 960px; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; margin-top: 20px; margin-bottom: 20px; } </style> <div class=container> <p><small>資料區域:新竹<br>資料日期:2025-12-09<br>系統版本:0.5.1201<br>識別碼:7BCF5C55-CDF9-498E-A81C-691B233D41F6</small></p> <p><table> <thead> <tr> <th>法院</th> <th>案號</th> <th>縣市</th> <th>地址</th> <th>拍次</th> <th class='price'>總拍賣底價 (NTD)</th> <th>点交状况</th> <th>停拍</th> </tr> </thead> <tbody> <tr> <td>臺灣臺中地方法院</td> <td>111司執字第170593號</td> <td>臺中市</td> <td><a href='http://maps.google.com/?q=臺中市沙鹿區中山路53巷10號'>臺中市沙鹿區中山路53巷10號</a>&nbsp;<br>16坪(55.06平方公尺) X 3分之1</td> <td>1141210&nbsp;<br>第3拍</td> <td class='price'>1,998000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣臺中地方法院</td> <td>111司執字第170593號</td> <td>臺中市</td> <td><a href='http://maps.google.com/?q=臺中市沙鹿區中山路53巷10號'>臺中市沙鹿區中山路53巷10號</a>&nbsp;<br>13坪(44.13平方公尺) X 3分之1</td> <td>1141210&nbsp;<br>第3拍</td> <td class='price'>1,998000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第013765號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市中正西路555巷78弄15號'>新竹縣竹北市中正西路555巷78弄15號</a>&nbsp;<br>34坪(112.84平方公尺) X 5分之2</td> <td>1141230&nbsp;<br>第2拍</td> <td class='price'>11,096000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第013765號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市中正西路555巷78弄18號'>新竹縣竹北市中正西路555巷78弄18號</a>&nbsp;<br>46坪(152.38平方公尺) X 5分之2</td> <td>1141230&nbsp;<br>第2拍</td> <td class='price'>11,096000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第013765號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市中正西路555巷78弄20號'>新竹縣竹北市中正西路555巷78弄20號</a>&nbsp;<br>29坪(97.97平方公尺) X 5分之2</td> <td>1141230&nbsp;<br>第2拍</td> <td class='price'>11,096000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第046449號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉上坑村10鄰坑子口553號'>新竹縣新豐鄉上坑村10鄰坑子口553號</a>&nbsp;<br>132坪(437.33平方公尺) X 4分之1</td> <td>1141209&nbsp;<br>第4拍</td> <td class='price'>256,000</td> <td>不點交</td> <td>停拍公告:/scd/11411/25092824449.009.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第055456號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉蘭州街51號'>新竹縣湖口鄉蘭州街51號</a>&nbsp;<br>48坪(160.37平方公尺) X 3分之1</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>3,560000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>112司執字第055456號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉蘭州街51號'>新竹縣湖口鄉蘭州街51號</a>&nbsp;<br>1坪(6.60平方公尺) X 3分之1</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>3,560000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第006942號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉新庄路135巷23號10 樓'>新竹縣新豐鄉新庄路135巷23號10 樓</a>&nbsp;<br>28坪(93.64平方公尺) X 全部</td> <td>1141217&nbsp;<br>第4拍</td> <td class='price'>4,385100</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第006942號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮金福街8巷37號'>新竹縣竹東鎮金福街8巷37號</a>&nbsp;<br>96坪(317.63平方公尺) X 全部</td> <td>1141217&nbsp;<br>第4拍</td> <td class='price'>11,103600</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第006942號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮金福街8巷37號'>新竹縣竹東鎮金福街8巷37號</a>&nbsp;<br>8坪(26.90平方公尺) X 全部</td> <td>1141217&nbsp;<br>第4拍</td> <td class='price'>11,103600</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第016974號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市國興街60巷9號'>新竹縣竹北市國興街60巷9號</a>&nbsp;<br>36坪(120.10平方公尺) X 全部</td> <td>1141209&nbsp;<br>第3拍</td> <td class='price'>10,444800</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第016974號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市國興街60巷9號'>新竹縣竹北市國興街60巷9號</a>&nbsp;<br>13坪(46.07平方公尺) X 全部</td> <td>1141209&nbsp;<br>第3拍</td> <td class='price'>10,444800</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第018851號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=無門牌(稅籍資料為新竹縣寶山鄉大崎村二坪段109-2地號土地上建築物)'>無門牌(稅籍資料為新竹縣寶山鄉大崎村二坪段109-2地號土地上建築物)</a>&nbsp;<br>98坪(324.77平方公尺) X 全部</td> <td>1150114&nbsp;<br>第4拍</td> <td class='price'>2,916000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第020196號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市金竹路186巷10號2樓'>新竹市金竹路186巷10號2樓</a>&nbsp;<br>18坪(62.75平方公尺) X 18分之17</td> <td>1150108&nbsp;<br>第4拍</td> <td class='price'>3,571200</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第033028號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=吳濁流路88號'>吳濁流路88號</a>&nbsp;<br>108坪(360.21平方公尺) X 全部</td> <td>1141212&nbsp;<br>第2拍</td> <td class='price'>39,330000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第033028號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=吳濁流路88號'>吳濁流路88號</a>&nbsp;<br>2坪(6.77平方公尺) X 全部</td> <td>1141212&nbsp;<br>第2拍</td> <td class='price'>39,330000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第033033號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣芎林鄉文山路262號'>新竹縣芎林鄉文山路262號</a>&nbsp;<br>168坪(556.10平方公尺) X 全部</td> <td>1141216&nbsp;<br>第2拍</td> <td class='price'>36,800000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第033093號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市大庄路228巷45號'>新竹市大庄路228巷45號</a>&nbsp;<br>15坪(52.04平方公尺) X 3分之1</td> <td>1141230&nbsp;<br>第1拍</td> <td class='price'>4,540000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第033093號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市大庄路228巷45號'>新竹市大庄路228巷45號</a>&nbsp;<br>58坪(192.49平方公尺) X 3分之1</td> <td>1141230&nbsp;<br>第1拍</td> <td class='price'>4,540000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第034394號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣橫山鄉豐鄉村3鄰大山背29號'>新竹縣橫山鄉豐鄉村3鄰大山背29號</a>&nbsp;<br>119坪(395.16平方公尺) X 全部</td> <td>1141211&nbsp;<br>第4拍</td> <td class='price'>23,189900</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第034394號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣橫山鄉豐鄉村3鄰大山背29號'>新竹縣橫山鄉豐鄉村3鄰大山背29號</a>&nbsp;<br>14坪(47.30平方公尺) X 全部</td> <td>1141211&nbsp;<br>第4拍</td> <td class='price'>23,189900</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第036149號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣芎林鄉文衡路126巷8之1號'>新竹縣芎林鄉文衡路126巷8之1號</a>&nbsp;<br>64坪(213.77平方公尺) X 2分之1</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>3,680000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第037064號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮和江街487巷9弄40號'>新竹縣竹東鎮和江街487巷9弄40號</a>&nbsp;<br>28坪(93.50平方公尺) X 全部</td> <td>1141222&nbsp;<br>第4拍</td> <td class='price'>5,011200</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第037064號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮和江街487巷9弄40號'>新竹縣竹東鎮和江街487巷9弄40號</a>&nbsp;<br>22坪(73.62平方公尺) X 全部</td> <td>1141222&nbsp;<br>第4拍</td> <td class='price'>5,011200</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第038226號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮生產街138號'>新竹縣竹東鎮生產街138號</a>&nbsp;<br>35坪(116.54平方公尺) X 全部</td> <td>1141230&nbsp;<br>第3拍</td> <td class='price'>5,297600</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第038226號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮生產街138號'>新竹縣竹東鎮生產街138號</a>&nbsp;<br>20坪(67.68平方公尺) X 全部</td> <td>1141230&nbsp;<br>第3拍</td> <td class='price'>5,297600</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第039881號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮和江街42巷5弄17號'>新竹縣竹東鎮和江街42巷5弄17號</a>&nbsp;<br>21坪(70.40平方公尺) X 全部</td> <td>1150114&nbsp;<br>第3拍</td> <td class='price'>12,300800</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第039881號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮和江街42巷5弄17號'>新竹縣竹東鎮和江街42巷5弄17號</a>&nbsp;<br>88坪(291.70平方公尺) X 全部</td> <td>1150114&nbsp;<br>第3拍</td> <td class='price'>12,300800</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第039991號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉十一股56之8號'>新竹縣新豐鄉十一股56之8號</a>&nbsp;<br>44坪(145.74平方公尺) X 全部</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>10,750000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第044221號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市明湖路393巷11號'>新竹市明湖路393巷11號</a>&nbsp;<br>11坪(37.14平方公尺) X 120分之1</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>337,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第044221號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市明湖路393巷11號'>新竹市明湖路393巷11號</a>&nbsp;<br>212坪(704.10平方公尺) X 120分之1</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>337,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第045847號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市南外街41號'>新竹市南外街41號</a>&nbsp;<br>34坪(113.30平方公尺) X 2分之1</td> <td>1141222&nbsp;<br>第2拍</td> <td class='price'>11,680000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第045847號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市南外街41號'>新竹市南外街41號</a>&nbsp;<br>57坪(191.44平方公尺) X 2分之1</td> <td>1141222&nbsp;<br>第2拍</td> <td class='price'>11,680000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第048297號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮五豐街3巷25弄9號'>新竹縣竹東鎮五豐街3巷25弄9號</a>&nbsp;<br>36坪(119.90平方公尺) X 4分之1</td> <td>1141209&nbsp;<br>第4拍</td> <td class='price'>959,700</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第048297號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮五豐街3巷25弄9號'>新竹縣竹東鎮五豐街3巷25弄9號</a>&nbsp;<br>22坪(73.16平方公尺) X 4分之1</td> <td>1141209&nbsp;<br>第4拍</td> <td class='price'>959,700</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第048703號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣芎林鄉富林路一段138巷75號'>新竹縣芎林鄉富林路一段138巷75號</a>&nbsp;<br>55坪(181.89平方公尺) X 全部</td> <td>1141230&nbsp;<br>第2拍</td> <td class='price'>6,180800</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第048703號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣芎林鄉富林路1段138巷75號'>新竹縣芎林鄉富林路1段138巷75號</a>&nbsp;<br>13坪(43.25平方公尺) X 全部</td> <td>1141230&nbsp;<br>第2拍</td> <td class='price'>6,180800</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第049531號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市中山路155號'>新竹縣竹北市中山路155號</a>&nbsp;<br>96坪(320.21平方公尺) X 4分之1</td> <td>1141218&nbsp;<br>第3拍</td> <td class='price'>9,287200</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第050901號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市東區光復路二段206號左邊'>新竹市東區光復路二段206號左邊</a>&nbsp;<br>19坪(63.58平方公尺) X 全部</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>320,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第052539號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市新泰路31號地下一樓'>新竹縣竹北市新泰路31號地下一樓</a>&nbsp;<br>862坪(2851.56平方公尺) X 全部</td> <td>1141210&nbsp;<br>第2拍</td> <td class='price'>118,377000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第053524號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市學府路153號'>新竹市學府路153號</a>&nbsp;<br>68坪(225.58平方公尺) X 4分之1</td> <td>1141211&nbsp;<br>第4拍</td> <td class='price'>5,034800</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第053524號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市學府路153號'>新竹市學府路153號</a>&nbsp;<br>47坪(157.83平方公尺) X 4分之1</td> <td>1141211&nbsp;<br>第4拍</td> <td class='price'>5,034800</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第054668號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市東大路3段291巷9弄1號3樓'>新竹市東大路3段291巷9弄1號3樓</a>&nbsp;<br>19坪(63.73平方公尺) X 全部</td> <td>1141210&nbsp;<br>第3拍</td> <td class='price'>3,132000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第056953號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉建興路1段146巷16弄22號'>新竹縣新豐鄉建興路1段146巷16弄22號</a>&nbsp;<br>51坪(170.76平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>15,246300</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第056953號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉建興路1段146巷16弄22號'>新竹縣新豐鄉建興路1段146巷16弄22號</a>&nbsp;<br>10坪(35.94平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>15,246300</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第059011號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣尖石鄉嘉樂村6鄰嘉樂21號'>新竹縣尖石鄉嘉樂村6鄰嘉樂21號</a>&nbsp;<br>29坪(98.27平方公尺) X 35分之6</td> <td>1150105&nbsp;<br>第2拍</td> <td class='price'>1,280000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第060078號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉建興路一段146巷16弄20號'>新竹縣新豐鄉建興路一段146巷16弄20號</a>&nbsp;<br>45坪(148.77平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>10,600000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第060078號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉建興路一段146巷16弄20號'>新竹縣新豐鄉建興路一段146巷16弄20號</a>&nbsp;<br>8坪(29.36平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>10,600000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第060782號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉龍江街133巷30號1樓'>新竹縣湖口鄉龍江街133巷30號1樓</a>&nbsp;<br>25坪(84.36平方公尺) X 全部</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>7,574000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第060782號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉龍江街133巷30號1樓'>新竹縣湖口鄉龍江街133巷30號1樓</a>&nbsp;<br>6坪(21.00平方公尺) X 全部</td> <td>1141209&nbsp;<br>第1拍</td> <td class='price'>7,574000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第060882號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣北埔鄉埔心街47號'>新竹縣北埔鄉埔心街47號</a>&nbsp;<br>57坪(189.73平方公尺) X 全部</td> <td>1141211&nbsp;<br>第4拍</td> <td class='price'>6,026400</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第061677號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市公道五路二段263號'>新竹市公道五路二段263號</a>&nbsp;<br>23坪(78.90平方公尺) X 全部</td> <td>1150114&nbsp;<br>第2拍</td> <td class='price'>15,464000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第061677號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市公道五路二段263號'>新竹市公道五路二段263號</a>&nbsp;<br>21坪(69.92平方公尺) X 全部</td> <td>1150114&nbsp;<br>第2拍</td> <td class='price'>15,464000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第061857號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮光明路579號'>新竹縣竹東鎮光明路579號</a>&nbsp;<br>32坪(106.01平方公尺) X 7分之1</td> <td>1141218&nbsp;<br>第2拍</td> <td class='price'>9,906400</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第061857號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮光明路579號'>新竹縣竹東鎮光明路579號</a>&nbsp;<br>67坪(221.89平方公尺) X 7分之1</td> <td>1141218&nbsp;<br>第2拍</td> <td class='price'>9,906400</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執字第061857號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮光明路581號'>新竹縣竹東鎮光明路581號</a>&nbsp;<br>77坪(254.90平方公尺) X 全部</td> <td>1141218&nbsp;<br>第2拍</td> <td class='price'>9,906400</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執助字第003213號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市民生路211巷2弄38號'>新竹市民生路211巷2弄38號</a>&nbsp;<br>35坪(118.65平方公尺) X 3分之1</td> <td>1141224&nbsp;<br>第2拍</td> <td class='price'>5,464000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>113司執助字第003213號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市民生路211巷2弄38號'>新竹市民生路211巷2弄38號</a>&nbsp;<br>36坪(120.77平方公尺) X 3分之1</td> <td>1141224&nbsp;<br>第2拍</td> <td class='price'>5,464000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第001571號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮中興路二段318巷32弄23號5樓之2'>新竹縣竹東鎮中興路二段318巷32弄23號5樓之2</a>&nbsp;<br>8坪(28.24平方公尺) X 全部</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>2,550700</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第001571號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮中興路二段318巷32弄15號地下一層'>新竹縣竹東鎮中興路二段318巷32弄15號地下一層</a>&nbsp;<br>32坪(108.50平方公尺) X 10萬分之1204</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>2,550700</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第001571號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮中興路二段318巷32弄15之1號地下一層'>新竹縣竹東鎮中興路二段318巷32弄15之1號地下一層</a>&nbsp;<br>154坪(510.81平方公尺) X 1萬分之76</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>2,550700</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第002570號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉民生街3巷18弄13號'>新竹縣湖口鄉民生街3巷18弄13號</a>&nbsp;<br>77坪(256.59平方公尺) X 全部</td> <td>1150108&nbsp;<br>第4拍</td> <td class='price'>18,005800</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第002570號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉民生街3巷18弄13號'>新竹縣湖口鄉民生街3巷18弄13號</a>&nbsp;<br>1坪(6.46平方公尺) X 全部</td> <td>1150108&nbsp;<br>第4拍</td> <td class='price'>18,005800</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第003713號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=仁屋二街47巷1號'>仁屋二街47巷1號</a>&nbsp;<br>29坪(97.66平方公尺) X 全部</td> <td>1141212&nbsp;<br>第2拍</td> <td class='price'>6,624000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第003713號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=仁屋二街47巷1號'>仁屋二街47巷1號</a>&nbsp;<br>27坪(92.40平方公尺) X 全部</td> <td>1141212&nbsp;<br>第2拍</td> <td class='price'>6,624000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第004942號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=中興路51號'>中興路51號</a>&nbsp;<br>47坪(158.29平方公尺) X 全部</td> <td>1141219&nbsp;<br>第3拍</td> <td class='price'>10,304000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第004942號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=中興路51號'>中興路51號</a>&nbsp;<br>5坪(17.99平方公尺) X 全部</td> <td>1141219&nbsp;<br>第3拍</td> <td class='price'>10,304000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第005154號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市明湖路486巷6號'>新竹市明湖路486巷6號</a>&nbsp;<br>74坪(247.52平方公尺) X 100000分之33333</td> <td>1141222&nbsp;<br>第4拍</td> <td class='price'>358,400</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第006567號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉青埔子10之19號'>新竹縣新豐鄉青埔子10之19號</a>&nbsp;<br>38坪(128.65平方公尺) X 全部</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>7,072000</td> <td>不點交</td> <td>停拍公告:/scd/11411/12182411564.01N.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第006567號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉青埔子10之19號'>新竹縣新豐鄉青埔子10之19號</a>&nbsp;<br>5坪(17.51平方公尺) X 全部</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>7,072000</td> <td>不點交</td> <td>停拍公告:/scd/11411/12182411564.01N.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第007468號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市十興路一段221號'>新竹縣竹北市十興路一段221號</a>&nbsp;<br>99坪(329.31平方公尺) X 全部</td> <td>1150108&nbsp;<br>第3拍</td> <td class='price'>28,160000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第009212號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉興華街69號4樓之1'>新竹縣湖口鄉興華街69號4樓之1</a>&nbsp;<br>22坪(73.12平方公尺) X 全部</td> <td>1150113&nbsp;<br>第1拍</td> <td class='price'>8,100000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第009358號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市文興路二段511號13樓'>新竹縣竹北市文興路二段511號13樓</a>&nbsp;<br>59坪(196.90平方公尺) X 全部</td> <td>1141222&nbsp;<br>第3拍</td> <td class='price'>55,809000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第009358號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市高鐵二路32號地下一層之一、地下一層之二'>新竹縣竹北市高鐵二路32號地下一層之一、地下一層之二</a>&nbsp;<br>3坪(12.59平方公尺) X 167分之1</td> <td>1141222&nbsp;<br>第3拍</td> <td class='price'>55,809000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第009601號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮長春路三段59號'>新竹縣竹東鎮長春路三段59號</a>&nbsp;<br>103坪(341.76平方公尺) X 全部</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>22,310000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第010420號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市光華南街55號5樓之5'>新竹市光華南街55號5樓之5</a>&nbsp;<br>5坪(18.56平方公尺) X 全部</td> <td>1150114&nbsp;<br>第1拍</td> <td class='price'>2,880000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第010469號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣橫山鄉永昌街143巷11號'>新竹縣橫山鄉永昌街143巷11號</a>&nbsp;<br>29坪(97.92平方公尺) X 全部</td> <td>1150105&nbsp;<br>第2拍</td> <td class='price'>4,400000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第010469號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣橫山鄉永昌街143巷11號'>新竹縣橫山鄉永昌街143巷11號</a>&nbsp;<br>29坪(99.12平方公尺) X 全部</td> <td>1150105&nbsp;<br>第2拍</td> <td class='price'>4,400000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第010743號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣關西鎮中山路193號6樓'>新竹縣關西鎮中山路193號6樓</a>&nbsp;<br>27坪(91.01平方公尺) X 2分之1</td> <td>1141230&nbsp;<br>第4拍</td> <td class='price'>4,070500</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第010743號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣關西鎮中山路179號'>新竹縣關西鎮中山路179號</a>&nbsp;<br>0坪(3.06平方公尺) X 10000分之106</td> <td>1141230&nbsp;<br>第4拍</td> <td class='price'>4,070500</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第012021號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉光復東路88號五樓之2'>新竹縣湖口鄉光復東路88號五樓之2</a>&nbsp;<br>17坪(57.67平方公尺) X 全部</td> <td>1150105&nbsp;<br>第3拍</td> <td class='price'>6,624000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第012632號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=(空白)'>(空白)</a>&nbsp;<br>209坪(693.37平方公尺) X 全部</td> <td>1150105&nbsp;<br>第2拍</td> <td class='price'>57,600000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第012703號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉中興四巷13弄24號'>新竹縣湖口鄉中興四巷13弄24號</a>&nbsp;<br>16坪(55.67平方公尺) X 全部</td> <td>1150108&nbsp;<br>第2拍</td> <td class='price'>2,936000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第012977號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市莊敬街108號3樓之3'>新竹市莊敬街108號3樓之3</a>&nbsp;<br>16坪(53.77平方公尺) X 全部</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>12,608000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第012977號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市莊敬街108號3樓之3'>新竹市莊敬街108號3樓之3</a>&nbsp;<br>16坪(53.77平方公尺) X 全部</td> <td>1141211&nbsp;<br>第2拍</td> <td class='price'>12,608000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第013697號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市西濱路一段126巷11弄21號'>新竹縣竹北市西濱路一段126巷11弄21號</a>&nbsp;<br>43坪(145.05平方公尺) X 全部</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>12,816000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第013697號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市西濱路一段126巷11弄2號'>新竹縣竹北市西濱路一段126巷11弄2號</a>&nbsp;<br>2坪(8.09平方公尺) X 30分之1</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>12,816000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第013982號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市香山區港南里港南一街112號'>新竹市香山區港南里港南一街112號</a>&nbsp;<br>23坪(78.04平方公尺) X 全部</td> <td>1150114&nbsp;<br>第1拍</td> <td class='price'>2,600000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第016445號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=關埔路內立段418號'>關埔路內立段418號</a>&nbsp;<br>26坪(89.22平方公尺) X 3分之1</td> <td>1141212&nbsp;<br>第2拍</td> <td class='price'>560,000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第016445號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=關埔路內立段418號'>關埔路內立段418號</a>&nbsp;<br>81坪(270.98平方公尺) X 3分之1</td> <td>1141212&nbsp;<br>第2拍</td> <td class='price'>560,000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第016481號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市湳雅街311巷36弄77號'>新竹市湳雅街311巷36弄77號</a>&nbsp;<br>31坪(103.76平方公尺) X 12分之1</td> <td>1150108&nbsp;<br>第2拍</td> <td class='price'>768,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第016481號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市湳雅街311巷36弄77號'>新竹市湳雅街311巷36弄77號</a>&nbsp;<br>25坪(84.67平方公尺) X 12分之1</td> <td>1150108&nbsp;<br>第2拍</td> <td class='price'>768,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第017199號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮員山路436巷50號'>新竹縣竹東鎮員山路436巷50號</a>&nbsp;<br>66坪(219.87平方公尺) X 3分之1</td> <td>1150115&nbsp;<br>第3拍</td> <td class='price'>381,500</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第017623號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣芎林鄉水坑村嘉慶62號'>新竹縣芎林鄉水坑村嘉慶62號</a>&nbsp;<br>26坪(86.24平方公尺) X 全部</td> <td>1150105&nbsp;<br>第3拍</td> <td class='price'>3,008000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第017623號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣芎林鄉嘉慶62號'>新竹縣芎林鄉嘉慶62號</a>&nbsp;<br>3坪(12.88平方公尺) X 全部</td> <td>1150105&nbsp;<br>第3拍</td> <td class='price'>3,008000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第017818號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣尖石鄉嘉樂村麥樹仁211號'>新竹縣尖石鄉嘉樂村麥樹仁211號</a>&nbsp;<br>51坪(171.31平方公尺) X 全部</td> <td>1141211&nbsp;<br>第3拍</td> <td class='price'>1,228800</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第018186號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉新生路113號二樓之1'>新竹縣湖口鄉新生路113號二樓之1</a>&nbsp;<br>18坪(59.76平方公尺) X 全部</td> <td>1150105&nbsp;<br>第2拍</td> <td class='price'>7,680000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第019371號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市莊敬南路152號19樓'>新竹縣竹北市莊敬南路152號19樓</a>&nbsp;<br>63坪(209.50平方公尺) X 全部</td> <td>1150105&nbsp;<br>第3拍</td> <td class='price'>45,864000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第020285號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市長春街76號'>新竹市長春街76號</a>&nbsp;<br>33坪(109.18平方公尺) X 2分之1</td> <td>1141210&nbsp;<br>第1拍</td> <td class='price'>12,470000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第020285號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市長春街76號'>新竹市長春街76號</a>&nbsp;<br>46坪(154.02平方公尺) X 2分之1</td> <td>1141210&nbsp;<br>第1拍</td> <td class='price'>12,470000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第020459號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮北興路一段563號11樓'>新竹縣竹東鎮北興路一段563號11樓</a>&nbsp;<br>64坪(214.62平方公尺) X 全部</td> <td>1141222&nbsp;<br>第2拍</td> <td class='price'>16,080000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第020573號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市西大路578號5樓A'>新竹市西大路578號5樓A</a>&nbsp;<br>28坪(95.86平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>15,750000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第020573號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市西大路578號5樓B'>新竹市西大路578號5樓B</a>&nbsp;<br>27坪(91.07平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>15,750000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第022701號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮世界街71巷35號四樓'>新竹縣竹東鎮世界街71巷35號四樓</a>&nbsp;<br>19坪(63.96平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>8,300000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第023494號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市武陵路86巷7號6樓'>新竹市武陵路86巷7號6樓</a>&nbsp;<br>26坪(88.07平方公尺) X 4分之1</td> <td>1150114&nbsp;<br>第3拍</td> <td class='price'>3,333600</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第023738號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉建興路二段205巷2弄12號'>新竹縣新豐鄉建興路二段205巷2弄12號</a>&nbsp;<br>33坪(110.38平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>12,100000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第023738號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新豐鄉建興路二段205巷2弄12號'>新竹縣新豐鄉建興路二段205巷2弄12號</a>&nbsp;<br>19坪(64.79平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>12,100000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第024972號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣新埔鎮義民路二段213巷12弄6號'>新竹縣新埔鎮義民路二段213巷12弄6號</a>&nbsp;<br>40坪(135.08平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>8,500000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第026463號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市麗山街201號'>新竹市麗山街201號</a>&nbsp;<br>98坪(325.31平方公尺) X 全部</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>25,540000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第026463號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市麗山街201號'>新竹市麗山街201號</a>&nbsp;<br>23坪(77.63平方公尺) X 全部</td> <td>1141211&nbsp;<br>第1拍</td> <td class='price'>25,540000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第027972號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市東大路一段232巷24號三樓'>新竹市東大路一段232巷24號三樓</a>&nbsp;<br>23坪(78.32平方公尺) X 2分之1</td> <td>1150105&nbsp;<br>第2拍</td> <td class='price'>5,040000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第028548號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市中華路1111號'>新竹縣竹北市中華路1111號</a>&nbsp;<br>40坪(134.34平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>12,041000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第028548號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市中華路1111號'>新竹縣竹北市中華路1111號</a>&nbsp;<br>21坪(70.38平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>12,041000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第029791號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市中山路431巷31號5樓'>新竹市中山路431巷31號5樓</a>&nbsp;<br>20坪(68.25平方公尺) X 全部</td> <td>1150114&nbsp;<br>第1拍</td> <td class='price'>4,708800</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第030766號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市新香街362號'>新竹市新香街362號</a>&nbsp;<br>62坪(205.38平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>18,880000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第031219號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市明湖路938之2號'>新竹市明湖路938之2號</a>&nbsp;<br>89坪(295.76平方公尺) X 2分之1</td> <td>1141210&nbsp;<br>第1拍</td> <td class='price'>12,590000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第031562號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市十興路310號七樓之一'>新竹縣竹北市十興路310號七樓之一</a>&nbsp;<br>16坪(54.13平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>20,600000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第032348號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市南大路617巷8號'>新竹市南大路617巷8號</a>&nbsp;<br>23坪(78.54平方公尺) X 3分之1</td> <td>1141224&nbsp;<br>第1拍</td> <td class='price'>2,779200</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第033138號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市香山區元培街323巷10之1號'>新竹市香山區元培街323巷10之1號</a>&nbsp;<br>43坪(144.94平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>2,700000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第035305號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉仁興路130號'>新竹縣湖口鄉仁興路130號</a>&nbsp;<br>336坪(1111.80平方公尺) X 全部</td> <td>1141224&nbsp;<br>第1拍</td> <td class='price'>21,980000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第035305號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣湖口鄉仁興路130號'>新竹縣湖口鄉仁興路130號</a>&nbsp;<br>243坪(804.99平方公尺) X 全部</td> <td>1141224&nbsp;<br>第1拍</td> <td class='price'>21,980000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第040389號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市林森路275號8樓之3'>新竹市林森路275號8樓之3</a>&nbsp;<br>6坪(20.81平方公尺) X 全部</td> <td>1150122&nbsp;<br>第1拍</td> <td class='price'>5,006000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第040389號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市中華路三段46號4樓'>新竹市中華路三段46號4樓</a>&nbsp;<br>112坪(371.55平方公尺) X 100000分之158</td> <td>1150122&nbsp;<br>第1拍</td> <td class='price'>5,006000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第040713號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮光明路126巷87弄25號四樓'>新竹縣竹東鎮光明路126巷87弄25號四樓</a>&nbsp;<br>25坪(84.85平方公尺) X 全部</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>27,205000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第040713號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮光明路126巷85號一樓'>新竹縣竹東鎮光明路126巷85號一樓</a>&nbsp;<br>4坪(14.93平方公尺) X 100300分之230</td> <td>1141222&nbsp;<br>第1拍</td> <td class='price'>27,205000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第043980號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=新竹市延平路三段667巷18-2號7樓'>新竹市延平路三段667巷18-2號7樓</a>&nbsp;<br>19坪(64.62平方公尺) X 全部</td> <td>1150114&nbsp;<br>第1拍</td> <td class='price'>7,260000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執字第045430號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹北市博愛街426之1號四樓之七'>新竹縣竹北市博愛街426之1號四樓之七</a>&nbsp;<br>14坪(48.82平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>5,727400</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執助字第000422號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮民德路66號五樓之2'>新竹縣竹東鎮民德路66號五樓之2</a>&nbsp;<br>25坪(85.12平方公尺) X 全部</td> <td>1141225&nbsp;<br>第1拍</td> <td class='price'>17,530000</td> <td>如備註或使用情形欄所示</td> <td>停拍公告:/scd/11411/26161544830.008.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執助字第000422號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮民德路66號六樓之2'>新竹縣竹東鎮民德路66號六樓之2</a>&nbsp;<br>25坪(85.12平方公尺) X 全部</td> <td>1141225&nbsp;<br>第1拍</td> <td class='price'>17,530000</td> <td>如備註或使用情形欄所示</td> <td>停拍公告:/scd/11411/26161544830.008.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執助字第000422號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮民德路64號六樓之3'>新竹縣竹東鎮民德路64號六樓之3</a>&nbsp;<br>20坪(69.25平方公尺) X 全部</td> <td>1141225&nbsp;<br>第1拍</td> <td class='price'>14,740000</td> <td>不點交</td> <td>停拍公告:/scd/11411/26161544830.008.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執助字第000422號</td> <td>新竹縣</td> <td><a href='http://maps.google.com/?q=新竹縣竹東鎮民德路68號五樓之1'>新竹縣竹東鎮民德路68號五樓之1</a>&nbsp;<br>21坪(71.76平方公尺) X 全部</td> <td>1141225&nbsp;<br>第1拍</td> <td class='price'>14,740000</td> <td>不點交</td> <td>停拍公告:/scd/11411/26161544830.008.pdf</td> </tr> <tr> <td>臺灣新竹地方法院</td> <td>114司執助字第001791號</td> <td>新竹市</td> <td><a href='http://maps.google.com/?q=水田街78號5樓'>水田街78號5樓</a>&nbsp;<br>24坪(81.53平方公尺) X 全部</td> <td>1141219&nbsp;<br>第1拍</td> <td class='price'>7,680000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> </tbody> </table></p> <br> <div id=ags-insight></div> </div>
+    
+    
+        <style>
+            #map_e7a070df28c328bde3231b7ded59f303 {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                /* 確保地圖作為區塊元素，才能應用 auto margin */
+                display: block !important;
+            }
+        </style>
+    
+    
+            <div class="folium-map" id="map_e7a070df28c328bde3231b7ded59f303" ></div>
+<br><br>
+<div class="container">
+    <div id="ags-greeting">
+    <p>您好，</p>
+    <p>
+    我們是 AGS 資料洞察團隊, 一家專注於運用科技,把原始資料轉換成高價值資訊,並精準交付 的資訊服務業者.
+    </p>
+    <p>
+    我們深知, 在您日常的決策中, 精準的數據與即時的市場洞察至關重要. 為了協助您更好地掌握市場動態並優化管理策略, 我們為您整理了以下一組最新數據:
+    </p>
+    </div>
+
+    <div id="ags-action">
+    我們的服務旨在將這些原始數據轉化為可執行(Actionable)的洞察報告，協助您：
+    <ul>
+    <li>優化決策流程</li>
+    <li>提升管理效率</li>
+    <li>降低潛在風險</li>
+    </ul>
+    </div>
+
+    <div id="ags-sponsor">
+    <p>
+    我們很樂意與您線上, 更深入地探討我們如何為您的工作帶來具體且實質的幫助, 請直接回覆此郵件，告訴我們您的方便時間.
+    </p>
+    <p>
+    歡迎支持我們, 讓團隊持續提供更好的服務與資訊價值給更多受眾, 謝謝您!
+    </p>
+    <p>
+    <a href=https://buymeacoffee.com/robert.tsai.1111 target='_blank'>進入贊助網站</a> (Buy Me A Coffee 為一小額贊助平台, 讓您可以輕鬆支持我們的工作)
+    </p>
+    AGS 資料洞察團隊 敬上
+    </p>
+    </div>
+</div>
+        
+</body>
+<script>
+    
+    
+            var map_e7a070df28c328bde3231b7ded59f303 = L.map(
+                "map_e7a070df28c328bde3231b7ded59f303",
+                {
+                    center: [24.8068, 120.969],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a80b512ca9568c67c077f0446507e3b8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a80b512ca9568c67c077f0446507e3b8.addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            var marker_3ce5e3f1ebffa84e606d0ada68d03bea = L.marker(
+                [24.2378731, 120.5740342],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_3ce5e3f1ebffa84e606d0ada68d03bea.bindTooltip(
+                `<div>
+                     433台灣臺中市沙鹿區中山路53巷10號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_46b81db279e4cb8d8f5cb210dd593d95 = L.marker(
+                [24.2378731, 120.5740342],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_46b81db279e4cb8d8f5cb210dd593d95.bindTooltip(
+                `<div>
+                     433台灣臺中市沙鹿區中山路53巷10號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_636035f9a31174a7f7f266df6f5eb80f = L.marker(
+                [24.8429263, 120.9903029],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_636035f9a31174a7f7f266df6f5eb80f.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市中正西路555號78 弄 15 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2bde6004fe9c22f098b473795ea1ab40 = L.marker(
+                [24.8429263, 120.9903029],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2bde6004fe9c22f098b473795ea1ab40.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市中正西路555號78 弄 18 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_df3c2fdfd9e60a69074b57681500ffc6 = L.marker(
+                [24.8429263, 120.9903029],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_df3c2fdfd9e60a69074b57681500ffc6.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市中正西路555號78 弄 20 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_258148d7fdf81637a0fb8aac8307ad74 = L.marker(
+                [24.8945251, 120.9694854],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_258148d7fdf81637a0fb8aac8307ad74.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉坑子口
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f322d7f9ea3cd595e3459b0f45283311 = L.marker(
+                [24.8694865, 121.0317861],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_f322d7f9ea3cd595e3459b0f45283311.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉蘭州街51號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b2a45ef433c67b79f32489649451346f = L.marker(
+                [24.8694865, 121.0317861],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b2a45ef433c67b79f32489649451346f.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉蘭州街51號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_00f3343fc670df29a5505c00d6a86c1d = L.marker(
+                [24.9015771, 120.9891014],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_00f3343fc670df29a5505c00d6a86c1d.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉新庄路135巷23號10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b2cc186279791a4ea58961114735d65e = L.marker(
+                [24.7532679, 121.0673089],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b2cc186279791a4ea58961114735d65e.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮金福街8巷37號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_46a2523b8fd39894bce126b523950dde = L.marker(
+                [24.7532679, 121.0673089],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_46a2523b8fd39894bce126b523950dde.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮金福街8巷37號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_00acff01fb011b45c5940994a747255d = L.marker(
+                [24.8427454, 121.003048],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_00acff01fb011b45c5940994a747255d.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市國興街60巷9號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5ecf9c793258900f54f8e86ab2e666f8 = L.marker(
+                [24.8427454, 121.003048],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_5ecf9c793258900f54f8e86ab2e666f8.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市國興街60巷9號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2ae64c43259572e67f7227536d254f66 = L.marker(
+                [24.7594758, 121.0077058],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2ae64c43259572e67f7227536d254f66.bindTooltip(
+                `<div>
+                     308台灣新竹縣寶山鄉大崎村
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f2e992cea67b071ba05cf8e0cc321e56 = L.marker(
+                [24.8246813, 120.9716484],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_f2e992cea67b071ba05cf8e0cc321e56.bindTooltip(
+                `<div>
+                     300台灣新竹市北區金竹路186巷10號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_91a236d23260a48467f15c746be0180b = L.marker(
+                [24.8316126, 121.01424],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_91a236d23260a48467f15c746be0180b.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市吳濁流路88號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7b2cfeeb73ff43b84448dddeede3fa88 = L.marker(
+                [24.8316126, 121.01424],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_7b2cfeeb73ff43b84448dddeede3fa88.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市吳濁流路88號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3cd89632a8b109be1e058847c788802a = L.marker(
+                [24.7735629, 121.0824043],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_3cd89632a8b109be1e058847c788802a.bindTooltip(
+                `<div>
+                     307台灣新竹縣芎林鄉文山路262號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8f97bc8f7bad86981bf07465b194c774 = L.marker(
+                [24.7930708, 120.922661],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_8f97bc8f7bad86981bf07465b194c774.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區大庄路228巷45號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0fb01e9f0fc1c759d3f6f6ea667fbde6 = L.marker(
+                [24.7930708, 120.922661],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_0fb01e9f0fc1c759d3f6f6ea667fbde6.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區大庄路228巷45號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3d715b1e1a4c94d1fe0af101b9f74382 = L.marker(
+                [24.698572, 121.141063],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_3d715b1e1a4c94d1fe0af101b9f74382.bindTooltip(
+                `<div>
+                     312台灣新竹縣橫山鄉29
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2bf593e8cf9ecea00c83c511543faea9 = L.marker(
+                [24.698572, 121.141063],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2bf593e8cf9ecea00c83c511543faea9.bindTooltip(
+                `<div>
+                     312台灣新竹縣橫山鄉29
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e318c7af31dea73304feba79e29ecd0e = L.marker(
+                [24.7661407, 121.0886036],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_e318c7af31dea73304feba79e29ecd0e.bindTooltip(
+                `<div>
+                     307台灣新竹縣芎林鄉文衡路126號8 之 1 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3cae61f068d606dcacc1b6c5e8aa93c0 = L.marker(
+                [24.7250724, 121.0844511],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_3cae61f068d606dcacc1b6c5e8aa93c0.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮和江街487巷9弄40號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_19b1e081ae73787e53bec3d65a67bf56 = L.marker(
+                [24.7250724, 121.0844511],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_19b1e081ae73787e53bec3d65a67bf56.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮和江街487巷9弄40號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f69823f0b3aa9afd90d89fcf37e5409b = L.marker(
+                [24.7152908, 121.0964868],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_f69823f0b3aa9afd90d89fcf37e5409b.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮生產街138號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_aaaabc153866b73454b4a14f2426a719 = L.marker(
+                [24.7152908, 121.0964868],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_aaaabc153866b73454b4a14f2426a719.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮生產街138號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_82b8e587c8a3435f33890bb01f50aded = L.marker(
+                [24.7203085, 121.0946844],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_82b8e587c8a3435f33890bb01f50aded.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮和江街42巷5弄17號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f6e2577a651f2ca9af37a0b95e7ac6c0 = L.marker(
+                [24.7203085, 121.0946844],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_f6e2577a651f2ca9af37a0b95e7ac6c0.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮和江街42巷5弄17號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8c0320c10b750aa53bef4901a699b8a6 = L.marker(
+                [24.9281525, 121.0322446],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_8c0320c10b750aa53bef4901a699b8a6.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉56之2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7ba3d148490f89dda0935a13098f0470 = L.marker(
+                [24.7836211, 120.9676198],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_7ba3d148490f89dda0935a13098f0470.bindTooltip(
+                `<div>
+                     300台灣新竹市東區明湖路393號11 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a9f31919cc8be3305f7b77af78fa7e57 = L.marker(
+                [24.7836211, 120.9676198],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_a9f31919cc8be3305f7b77af78fa7e57.bindTooltip(
+                `<div>
+                     300台灣新竹市東區明湖路393號11 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fe405ae7335697060138745621847766 = L.marker(
+                [24.8000559, 120.9648995],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_fe405ae7335697060138745621847766.bindTooltip(
+                `<div>
+                     300台灣新竹市東區南外街41號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9e5286f8f9e0275ae40f90a40adbe52e = L.marker(
+                [24.8000559, 120.9648995],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_9e5286f8f9e0275ae40f90a40adbe52e.bindTooltip(
+                `<div>
+                     300台灣新竹市東區南外街41號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c3bf9ba4112a4fea8cefcddfd793f7d4 = L.marker(
+                [24.74277, 121.08206],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c3bf9ba4112a4fea8cefcddfd793f7d4.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮五豐街3巷25弄9號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c8925aa58986b0e90cb8c6a15e734d58 = L.marker(
+                [24.74277, 121.08206],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c8925aa58986b0e90cb8c6a15e734d58.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮五豐街3巷25弄9號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bdc51ec1938e52d9daace65cd17f9653 = L.marker(
+                [24.7354156, 121.1193959],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_bdc51ec1938e52d9daace65cd17f9653.bindTooltip(
+                `<div>
+                     307台灣新竹縣芎林鄉富林路一段138號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_182d7815c9789c2003a2e2435680ac25 = L.marker(
+                [24.765792, 121.1080244],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_182d7815c9789c2003a2e2435680ac25.bindTooltip(
+                `<div>
+                     307台灣新竹縣芎林鄉
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_71848138c19720372e3964a3f554dc9e = L.marker(
+                [24.834791, 121.0218343],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_71848138c19720372e3964a3f554dc9e.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市中山路155號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d66356c21acac440ae4f25209d18b5f0 = L.marker(
+                [24.7942574, 121.0002794],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_d66356c21acac440ae4f25209d18b5f0.bindTooltip(
+                `<div>
+                     300台灣新竹市東區光復路二段206號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2e8e951508b9955c2a94008c594482f8 = L.marker(
+                [24.8405642, 121.0084221],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2e8e951508b9955c2a94008c594482f8.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市新泰路31號一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_172086ee84ec644dcd28d66104f6c198 = L.marker(
+                [24.7954018, 120.9800369],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_172086ee84ec644dcd28d66104f6c198.bindTooltip(
+                `<div>
+                     300台灣新竹市東區學府路153號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7dd81b7c3f5a85710fa4958c0dab11cb = L.marker(
+                [24.7954018, 120.9800369],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_7dd81b7c3f5a85710fa4958c0dab11cb.bindTooltip(
+                `<div>
+                     300台灣新竹市東區學府路153號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b7c484f5125084244a1418a69792e877 = L.marker(
+                [24.8098865, 120.9704055],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b7c484f5125084244a1418a69792e877.bindTooltip(
+                `<div>
+                     300台灣新竹市東區東大路一段215-3號3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ef15782157acc8b0f9ed09adb014268f = L.marker(
+                [24.8699849, 120.9962885],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_ef15782157acc8b0f9ed09adb014268f.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉建興路1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c16bffb7d03efb3f7addd1b9507f079e = L.marker(
+                [24.8699849, 120.9962885],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c16bffb7d03efb3f7addd1b9507f079e.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉建興路1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_766c46ad6777cc564c151ffc16e22ec8 = L.marker(
+                [24.729611, 121.227015],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_766c46ad6777cc564c151ffc16e22ec8.bindTooltip(
+                `<div>
+                     313台灣新竹縣尖石鄉嘉樂
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5a247624a48836dbd3924193966f427c = L.marker(
+                [24.8733869, 120.9954087],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_5a247624a48836dbd3924193966f427c.bindTooltip(
+                `<div>
+                     304台灣新竹县新丰乡建興路一段146巷16弄20號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_540db46132e6d1b36935166495a8a40f = L.marker(
+                [24.8733869, 120.9954087],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_540db46132e6d1b36935166495a8a40f.bindTooltip(
+                `<div>
+                     304台灣新竹县新丰乡建興路一段146巷16弄20號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_73125cb24b3ed2f4a84452f30d57f47b = L.marker(
+                [24.9063675, 121.0418456],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_73125cb24b3ed2f4a84452f30d57f47b.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉龍江街133巷30號1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ed8e03d0d72275d1ea9f9d50596afbe3 = L.marker(
+                [24.9063675, 121.0418456],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_ed8e03d0d72275d1ea9f9d50596afbe3.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉龍江街133巷30號1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8a7f5e76677f9ded3d5b11966adf1c2b = L.marker(
+                [24.7015672, 121.0527678],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_8a7f5e76677f9ded3d5b11966adf1c2b.bindTooltip(
+                `<div>
+                     314台灣新竹縣北埔鄉埔心街47號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2cdfa6378ee1517b811bd6672c4550ac = L.marker(
+                [24.8022205, 120.9986103],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2cdfa6378ee1517b811bd6672c4550ac.bindTooltip(
+                `<div>
+                     300台灣新竹市東區公道五路二段263號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4d129019fe371c6d3245e9597ea5f6d6 = L.marker(
+                [24.8022205, 120.9986103],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_4d129019fe371c6d3245e9597ea5f6d6.bindTooltip(
+                `<div>
+                     300台灣新竹市東區公道五路二段263號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5c72b36630c353339a62921a1c8eb0a5 = L.marker(
+                [24.7793693, 121.0554158],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_5c72b36630c353339a62921a1c8eb0a5.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮光明路579號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2483a3b854b83e9d4ae7c16cba63471a = L.marker(
+                [24.7793693, 121.0554158],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2483a3b854b83e9d4ae7c16cba63471a.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮光明路579號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3761e17b5ba354bcca7975bd3902b923 = L.marker(
+                [24.7796959, 121.0555932],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_3761e17b5ba354bcca7975bd3902b923.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮光明路581號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8da3469501b8acbd0e7169e405e16684 = L.marker(
+                [24.8113408, 120.9743168],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_8da3469501b8acbd0e7169e405e16684.bindTooltip(
+                `<div>
+                     300台灣新竹市東區民生路211巷2弄38號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cad883c95bbd54a83ea3ccd22fd85a3d = L.marker(
+                [24.8113408, 120.9743168],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_cad883c95bbd54a83ea3ccd22fd85a3d.bindTooltip(
+                `<div>
+                     300台灣新竹市東區民生路211巷2弄38號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e8c409c79d2d63dabd7102de29528497 = L.marker(
+                [24.7633609, 121.0607149],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_e8c409c79d2d63dabd7102de29528497.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮中興路二段318巷32弄15號5 之 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6dc1cef6ec613087ce8e08ba1269edd0 = L.marker(
+                [24.7633609, 121.0607149],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_6dc1cef6ec613087ce8e08ba1269edd0.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮中興路二段318巷32弄15號号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_27197f139974f4fa513cc31fe80da739 = L.marker(
+                [24.7633609, 121.0607149],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_27197f139974f4fa513cc31fe80da739.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮中興路二段318巷32弄15號15 之 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_80139baad3dee835a00b26edc9d26901 = L.marker(
+                [24.8997352, 121.0451804],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_80139baad3dee835a00b26edc9d26901.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉民生街3巷18號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_734258a6c6ea67b0d3f6da2b7deb83a1 = L.marker(
+                [24.8997352, 121.0451804],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_734258a6c6ea67b0d3f6da2b7deb83a1.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉民生街3巷18號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1a9a52d7e188610577114675c6e2772a = L.marker(
+                [24.8286411, 121.0852447],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_1a9a52d7e188610577114675c6e2772a.bindTooltip(
+                `<div>
+                     305台灣新竹縣新埔鎮仁屋二街47號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8d22584d9f605efb7cc5cb49fca3446f = L.marker(
+                [24.8286411, 121.0852447],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_8d22584d9f605efb7cc5cb49fca3446f.bindTooltip(
+                `<div>
+                     305台灣新竹縣新埔鎮仁屋二街47號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_24bfc31881d7ab5a864395bb970842b8 = L.marker(
+                [24.8138287, 120.9674798],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_24bfc31881d7ab5a864395bb970842b8.bindTooltip(
+                `<div>
+                     台灣新竹市北區新竹
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9575670d9b6d991185015144c0291f0e = L.marker(
+                [24.8138287, 120.9674798],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_9575670d9b6d991185015144c0291f0e.bindTooltip(
+                `<div>
+                     台灣新竹市北區新竹
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bbf978306d2e02b2aa0303864b8824a2 = L.marker(
+                [24.7783552, 120.9642306],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_bbf978306d2e02b2aa0303864b8824a2.bindTooltip(
+                `<div>
+                     300台灣新竹市東區明湖路486巷
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c2be1c5bb246fe1533294dc46e08f5b2 = L.marker(
+                [24.9212352, 121.0154215],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c2be1c5bb246fe1533294dc46e08f5b2.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉青埔子10號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2d2f2a27def6d78e5b64a2cf9d2d826c = L.marker(
+                [24.9212352, 121.0154215],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2d2f2a27def6d78e5b64a2cf9d2d826c.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉青埔子10號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b05ccddc9469fab952ef3b5dac6dbbf5 = L.marker(
+                [24.8300108, 121.0273375],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b05ccddc9469fab952ef3b5dac6dbbf5.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市十興路一段221號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_058c6faf12351dafddd9e54b72a39bca = L.marker(
+                [24.8708528, 121.0170156],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_058c6faf12351dafddd9e54b72a39bca.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉興華街69號4 之 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cbfbb93acd66242aa6e6570a6f93ebf0 = L.marker(
+                [24.8071982, 121.0365321],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_cbfbb93acd66242aa6e6570a6f93ebf0.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市文興路二段511號13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_244c03cf5427c88b157538a6a6da959e = L.marker(
+                [24.8072312, 121.0371307],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_244c03cf5427c88b157538a6a6da959e.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市高鐵二路32號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5341fe1b60f7593546beb3ca5e6465d5 = L.marker(
+                [24.7410156, 121.0856667],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_5341fe1b60f7593546beb3ca5e6465d5.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮長春路三段59號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b0d0cb074f5e00b1c2739922d23e39d3 = L.marker(
+                [24.8163961, 120.972922],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b0d0cb074f5e00b1c2739922d23e39d3.bindTooltip(
+                `<div>
+                     300台灣新竹市北區光華南街55號5 之 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2e451612994077a5b051e9e3bad85082 = L.marker(
+                [24.724137, 121.1314923],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2e451612994077a5b051e9e3bad85082.bindTooltip(
+                `<div>
+                     312台灣新竹縣橫山鄉永昌街143號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_40ad968f7f0d4fcd671eab02873b5e4d = L.marker(
+                [24.724137, 121.1314923],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_40ad968f7f0d4fcd671eab02873b5e4d.bindTooltip(
+                `<div>
+                     312台灣新竹縣橫山鄉永昌街143號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c570988cc6ab923baba24ab57d40ec12 = L.marker(
+                [24.7918386, 121.1728979],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c570988cc6ab923baba24ab57d40ec12.bindTooltip(
+                `<div>
+                     306台灣新竹縣關西鎮中山路193號6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_59a9606adc6cef4c59c26c237818d616 = L.marker(
+                [24.7918466, 121.1729843],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_59a9606adc6cef4c59c26c237818d616.bindTooltip(
+                `<div>
+                     306台灣新竹縣關西鎮中山路179號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a5729e76f7fa9a0c523bded1d84f1c50 = L.marker(
+                [24.870511, 121.0315256],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_a5729e76f7fa9a0c523bded1d84f1c50.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉光復東路88號五 之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f3888c5f7151b51731df39a0dd00b89f = L.marker(
+                [24.8387226, 121.0177246],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_f3888c5f7151b51731df39a0dd00b89f.bindTooltip(
+                `<div>
+                     台灣新竹縣
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c1df6088b97bc5e71b2bff105aa3d472 = L.marker(
+                [24.86756, 121.030037],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c1df6088b97bc5e71b2bff105aa3d472.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉中興四巷13弄24號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c411c90739688474461334b3c5e8574f = L.marker(
+                [24.794325, 120.925669],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c411c90739688474461334b3c5e8574f.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區莊敬街108號3 之 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ba2a729452c963d433694bec1c475bde = L.marker(
+                [24.794325, 120.925669],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_ba2a729452c963d433694bec1c475bde.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區莊敬街108號3 之 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_40aee55ebaf080a39e7b5d20e6f48173 = L.marker(
+                [24.8522415, 120.9445083],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_40aee55ebaf080a39e7b5d20e6f48173.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市西濱路一段126巷11弄21號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_23ffec7a0369d293b9985ed8fc5f9256 = L.marker(
+                [24.8520034, 120.9441325],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_23ffec7a0369d293b9985ed8fc5f9256.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市西濱路一段126巷11弄2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_53eb71dbb77f3ad55e2083af15b0b55a = L.marker(
+                [24.8149059, 120.9240103],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_53eb71dbb77f3ad55e2083af15b0b55a.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區港南一街112號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b8596aefe4572d6073fbfc851ef6f840 = L.marker(
+                [24.8158763, 121.0830447],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b8596aefe4572d6073fbfc851ef6f840.bindTooltip(
+                `<div>
+                     305台灣新竹縣新埔鎮關埔路內立段418號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_19604caf55feaacb53bcaa15fc6ccd74 = L.marker(
+                [24.8158763, 121.0830447],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_19604caf55feaacb53bcaa15fc6ccd74.bindTooltip(
+                `<div>
+                     305台灣新竹縣新埔鎮關埔路內立段418號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_15482713f034a79c3e2fd0334aa2168c = L.marker(
+                [24.8245969, 120.9752706],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_15482713f034a79c3e2fd0334aa2168c.bindTooltip(
+                `<div>
+                     300台灣新竹市北區湳雅街311巷36弄77號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7a9c83f3098f722a143f4f7efbe30dad = L.marker(
+                [24.8245969, 120.9752706],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_7a9c83f3098f722a143f4f7efbe30dad.bindTooltip(
+                `<div>
+                     300台灣新竹市北區湳雅街311巷36弄77號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1e545c546e39571c190743456858efa4 = L.marker(
+                [24.7824142, 121.0494392],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_1e545c546e39571c190743456858efa4.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮員山路436巷50號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8384cd8e5b86a795769b3bd9969186ac = L.marker(
+                [24.782562, 121.097368],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_8384cd8e5b86a795769b3bd9969186ac.bindTooltip(
+                `<div>
+                     307台灣新竹縣芎林鄉嘉慶
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_72f8ac8375ae5820cacf551d32ab9c45 = L.marker(
+                [24.782562, 121.097368],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_72f8ac8375ae5820cacf551d32ab9c45.bindTooltip(
+                `<div>
+                     307台灣新竹縣芎林鄉嘉慶
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_736665067c041b136b3ce80fb960f14a = L.marker(
+                [24.711876, 121.203854],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_736665067c041b136b3ce80fb960f14a.bindTooltip(
+                `<div>
+                     313台灣新竹縣尖石鄉麥樹仁
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c710cd01c74fef4d8616c041ca727f0c = L.marker(
+                [24.8663015, 121.0266099],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c710cd01c74fef4d8616c041ca727f0c.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉新生路113號二 之 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6ec824f2fdb0910eb50d77aac998d33e = L.marker(
+                [24.8167124, 121.0198718],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_6ec824f2fdb0910eb50d77aac998d33e.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市莊敬南路152號19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_40cc71c46ccf35b7200c396789e32c99 = L.marker(
+                [24.7869105, 121.0153771],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_40cc71c46ccf35b7200c396789e32c99.bindTooltip(
+                `<div>
+                     300台灣新竹市東區長春街76號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3abfc830da3e4bcb8b37c6c4a1ce2b4d = L.marker(
+                [24.7869105, 121.0153771],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_3abfc830da3e4bcb8b37c6c4a1ce2b4d.bindTooltip(
+                `<div>
+                     300台灣新竹市東區長春街76號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a8f57d06c28ee218bbff1c88d83f500b = L.marker(
+                [24.7356032, 121.0963992],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_a8f57d06c28ee218bbff1c88d83f500b.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮北興路一段563號11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5221c4d08b8d92b7bba9ca229162809c = L.marker(
+                [24.8065742, 120.9622908],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_5221c4d08b8d92b7bba9ca229162809c.bindTooltip(
+                `<div>
+                     300台灣新竹市北區西大路578號5 a
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e644ded57de2ff14e27c4b19c076b0cf = L.marker(
+                [24.8065742, 120.9622908],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_e644ded57de2ff14e27c4b19c076b0cf.bindTooltip(
+                `<div>
+                     300台灣新竹市北區西大路578號5 b
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_184628496e9fa78da1d1ae7f369f231a = L.marker(
+                [24.7369815, 121.084861],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_184628496e9fa78da1d1ae7f369f231a.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮世界街71巷35號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_acf997160336b2f5d8aae9efae714581 = L.marker(
+                [24.817882, 120.96645],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_acf997160336b2f5d8aae9efae714581.bindTooltip(
+                `<div>
+                     300台灣新竹市北區武陵路86巷7號6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_048fcc0eba1d84d0be8fd666188f2f8f = L.marker(
+                [24.8857772, 120.9883893],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_048fcc0eba1d84d0be8fd666188f2f8f.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉建興路二段205巷2弄12號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b582869759682266f38414145ac80590 = L.marker(
+                [24.8857772, 120.9883893],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b582869759682266f38414145ac80590.bindTooltip(
+                `<div>
+                     304台灣新竹縣新豐鄉建興路二段205巷2弄12號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_745b4418137493e49c9b3861f08a0389 = L.marker(
+                [24.8358811, 121.0537844],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_745b4418137493e49c9b3861f08a0389.bindTooltip(
+                `<div>
+                     305台灣新竹縣新埔鎮義民路二段213號6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_15e6828cafe0c5e3d83dc95cd07a145a = L.marker(
+                [24.7743899, 120.9359856],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_15e6828cafe0c5e3d83dc95cd07a145a.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區麗山街201號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_16f4c81f68be65ea0e2894cb21b8043c = L.marker(
+                [24.7743899, 120.9359856],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_16f4c81f68be65ea0e2894cb21b8043c.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區麗山街201號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1d2f674e505de94d5188131f15baada3 = L.marker(
+                [24.8108134, 120.9711629],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_1d2f674e505de94d5188131f15baada3.bindTooltip(
+                `<div>
+                     300台灣新竹市東區東大路一段232巷24號三
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_82c8a4acedb79a979e60ee5ea0ed3cbb = L.marker(
+                [24.8540725, 121.0033016],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_82c8a4acedb79a979e60ee5ea0ed3cbb.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市中華路1111號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b8e89ea0bed7b56c0b3dd34d76a46379 = L.marker(
+                [24.8540725, 121.0033016],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b8e89ea0bed7b56c0b3dd34d76a46379.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市中華路1111號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6ceb4e50f42edb75bcd4785384b78f9a = L.marker(
+                [24.8000307, 120.9587446],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_6ceb4e50f42edb75bcd4785384b78f9a.bindTooltip(
+                `<div>
+                     300台灣新竹市北區中山路431巷31號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_41f5a903956205d20c421fab46147799 = L.marker(
+                [24.7768714, 120.9607213],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_41f5a903956205d20c421fab46147799.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區新香街362號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d6e20cf0836a06708a2878c1dffcdd9c = L.marker(
+                [24.7707687, 120.9729039],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_d6e20cf0836a06708a2878c1dffcdd9c.bindTooltip(
+                `<div>
+                     300台灣新竹市東區明湖路938之8號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f3446ed63c4799830b9f5dfd26b54953 = L.marker(
+                [24.8332048, 121.0237149],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_f3446ed63c4799830b9f5dfd26b54953.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市十興路310-324號七,之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e3a13092e9031fdd2c9cec5c5e28cb0b = L.marker(
+                [24.788229, 120.9675335],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_e3a13092e9031fdd2c9cec5c5e28cb0b.bindTooltip(
+                `<div>
+                     300台灣新竹市東區南大路617巷8號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c58958ed6c2d4615d13a1da0ac615eda = L.marker(
+                [24.7792677, 120.9393508],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c58958ed6c2d4615d13a1da0ac615eda.bindTooltip(
+                `<div>
+                     300台灣新竹市香山區元培街323巷10之1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d5dce1788a74394c4f7a872e01a21f74 = L.marker(
+                [24.873225, 121.0166456],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_d5dce1788a74394c4f7a872e01a21f74.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉仁興路130號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2d35e4de25d7990620be92647982e510 = L.marker(
+                [24.873225, 121.0166456],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_2d35e4de25d7990620be92647982e510.bindTooltip(
+                `<div>
+                     303台灣新竹縣湖口鄉仁興路130號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_97f8bdd6947b13207336d701e7870889 = L.marker(
+                [24.7975192, 120.962247],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_97f8bdd6947b13207336d701e7870889.bindTooltip(
+                `<div>
+                     300台灣新竹市北區林森路275~281號8 之 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c05bffb81a73b9caadba89106c8340af = L.marker(
+                [24.7971812, 120.9625243],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_c05bffb81a73b9caadba89106c8340af.bindTooltip(
+                `<div>
+                     300台灣新竹市北區中華路三段46號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0e666fd287b2412fd4dd80950e52ddc1 = L.marker(
+                [24.7679855, 121.0606708],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_0e666fd287b2412fd4dd80950e52ddc1.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮光明路126巷87號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_873fc94323af2fc91eb7714a65b0651a = L.marker(
+                [24.7679359, 121.0608531],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_873fc94323af2fc91eb7714a65b0651a.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮光明路126巷85號一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b31082e6cc3f7ab43ffbc041675486ce = L.marker(
+                [24.8406367, 120.9357655],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_b31082e6cc3f7ab43ffbc041675486ce.bindTooltip(
+                `<div>
+                     300台灣新竹市北區延平路三段667巷18號7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fe00fddce48f74da891349c465b8dd66 = L.marker(
+                [24.8377507, 121.0096506],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_fe00fddce48f74da891349c465b8dd66.bindTooltip(
+                `<div>
+                     302台灣新竹縣竹北市博愛街426號四
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d9952f6d72f73ad7cea5901a42634584 = L.marker(
+                [24.7446569, 121.0849816],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_d9952f6d72f73ad7cea5901a42634584.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮民德路66號五 之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_51be432177bbe1635d468dced0fb2690 = L.marker(
+                [24.7446569, 121.0849816],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_51be432177bbe1635d468dced0fb2690.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮民德路66號六 之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_48a57c44bf99912a2367caf41e263dd4 = L.marker(
+                [24.7443702, 121.0848696],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_48a57c44bf99912a2367caf41e263dd4.bindTooltip(
+                `<div>
+                     310台灣新竹縣竹東鎮民德路64號六 之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_395718560351b693444c633c1512fe34 = L.marker(
+                [24.7443791, 121.0848275],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_395718560351b693444c633c1512fe34.bindTooltip(
+                `<div>
+                     31048台灣新竹縣竹東鎮民德路68號五 之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f6146b11737df3d2f075d774882f39c8 = L.marker(
+                [24.8136151, 120.9662612],
+                {
+}
+            ).addTo(map_e7a070df28c328bde3231b7ded59f303);
+        
+    
+            marker_f6146b11737df3d2f075d774882f39c8.bindTooltip(
+                `<div>
+                     300台灣新竹市北區水田街78號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
