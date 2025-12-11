@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c6b6911060375aeebaf876bbb06693a8 {
+                    position: relative;
+                    width: 90.0%;
+                    height: 500.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+<style> table{ border:1px solid #000; max-width: 100%; height: auto; margin-left: auto; margin-right: auto; } td{ border:1px solid #000; padding:10px; } .container { max-width: 960px; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; margin-top: 20px; margin-bottom: 20px; } </style> <div class=container> <p><small>資料區域:高雄<br>資料日期:2025-12-11<br>系統版本:0.5.1201<br>識別碼:527493DF-6706-49C7-A761-23B4735C1677</small></p> <p><table> <thead> <tr> <th>法院</th> <th>案號</th> <th>縣市</th> <th>地址</th> <th>拍次</th> <th class='price'>總拍賣底價 (NTD)</th> <th>点交状况</th> <th>停拍</th> </tr> </thead> <tbody> <tr> <td>臺灣高雄地方法院</td> <td>112司執字第109545號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市苓雅區福安路252巷6號' target='_blank'>高雄市苓雅區福安路252巷6號</a>&nbsp;<br>20坪(68.44平方公尺) X 6分之1</td> <td>1141219&nbsp;<br>特別程序</td> <td class='price'>839,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>112司執字第109545號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物未保存登記部分' target='_blank'>同上建物未保存登記部分</a>&nbsp;<br>28坪(95.22平方公尺) X 6分之1</td> <td>1141219&nbsp;<br>特別程序</td> <td class='price'>839,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第059695號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市左營區至聖路2號6樓之2' target='_blank'>高雄市左營區至聖路2號6樓之2</a>&nbsp;<br>33坪(110.99平方公尺) X 全部</td> <td>1141121&nbsp;<br>特別程序</td> <td class='price'>9,248000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第059695號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物共同使用部分' target='_blank'>同上建物共同使用部分</a>&nbsp;<br>630坪(2084.08平方公尺) X 10000分之207</td> <td>1141121&nbsp;<br>特別程序</td> <td class='price'>9,248000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第060337號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市美濃區文化街6巷17號' target='_blank'>高雄市美濃區文化街6巷17號</a>&nbsp;<br>117坪(387.70平方公尺) X 2分之1</td> <td>1141121&nbsp;<br>特別程序</td> <td class='price'>1,888000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第065508號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上門牌建物未辦保存登記部分' target='_blank'>同上門牌建物未辦保存登記部分</a>&nbsp;<br>7坪(25.42平方公尺) X 2分之1</td> <td>1141022&nbsp;<br>特別程序</td> <td class='price'>1,644800</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第065508號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市左營區屏山新村28之1號' target='_blank'>高雄市左營區屏山新村28之1號</a>&nbsp;<br>17坪(58.63平方公尺) X 2分之1</td> <td>1141022&nbsp;<br>特別程序</td> <td class='price'>1,644800</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第082091號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市楠梓區和光街109巷28號' target='_blank'>高雄市楠梓區和光街109巷28號</a>&nbsp;<br>29坪(96.82平方公尺) X 全部</td> <td>1141216&nbsp;<br>特別程序</td> <td class='price'>10,800000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第082091號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市楠梓區和光街109巷28號' target='_blank'>高雄市楠梓區和光街109巷28號</a>&nbsp;<br>15坪(50.59平方公尺) X 全部</td> <td>1141216&nbsp;<br>特別程序</td> <td class='price'>10,800000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第082201號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市大樹區中山路134巷43號' target='_blank'>高雄市大樹區中山路134巷43號</a>&nbsp;<br>60坪(199.76平方公尺) X 全部</td> <td>1140919&nbsp;<br>特別程序</td> <td class='price'>1,984000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>113司執字第093019號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市岡山區本洲一街262號(未辦保存登記建物)' target='_blank'>高雄市岡山區本洲一街262號(未辦保存登記建物)</a>&nbsp;<br>52坪(174.02平方公尺) X 2分之1</td> <td>1141219&nbsp;<br>特別程序</td> <td class='price'>672,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第094159號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市前鎮區鎮川三巷42號' target='_blank'>高雄市前鎮區鎮川三巷42號</a>&nbsp;<br>22坪(75.06平方公尺) X 全部</td> <td>1141023&nbsp;<br>特別程序</td> <td class='price'>6,016000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第094159號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市前鎮區鎮川三巷42號(未保存登記建物)' target='_blank'>高雄市前鎮區鎮川三巷42號(未保存登記建物)</a>&nbsp;<br>29坪(97.37平方公尺) X 全部</td> <td>1141023&nbsp;<br>特別程序</td> <td class='price'>6,016000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第098444號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市三民區大昌二路266號地下1層之78' target='_blank'>高雄市三民區大昌二路266號地下1層之78</a>&nbsp;<br>3坪(12.83平方公尺) X 3分之1</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>352,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第098444號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物之共同使用部分' target='_blank'>同上建物之共同使用部分</a>&nbsp;<br>5750坪(19009.08平方公尺) X 10000分之9</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>352,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第112515號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市鼓山區中華一路1496號四樓之3' target='_blank'>高雄市鼓山區中華一路1496號四樓之3</a>&nbsp;<br>12坪(41.85平方公尺) X 2分之1</td> <td>1141023&nbsp;<br>特別程序</td> <td class='price'>832,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第120314號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市鳳山區中山東路136巷84號' target='_blank'>高雄市鳳山區中山東路136巷84號</a>&nbsp;<br>24坪(82.62平方公尺) X 全部</td> <td>1140925&nbsp;<br>特別程序</td> <td class='price'>5,248000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第120314號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物未辦保存登記部分' target='_blank'>同上建物未辦保存登記部分</a>&nbsp;<br>21坪(72.36平方公尺) X 全部</td> <td>1140925&nbsp;<br>特別程序</td> <td class='price'>5,248000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第145127號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市苓雅區福德一路134巷12弄25之3號' target='_blank'>高雄市苓雅區福德一路134巷12弄25之3號</a>&nbsp;<br>27坪(89.87平方公尺) X 全部</td> <td>1141007&nbsp;<br>特別程序</td> <td class='price'>3,424000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第145127號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市苓雅區福德一路134巷12弄25之3號未保存登記建物' target='_blank'>高雄市苓雅區福德一路134巷12弄25之3號未保存登記建物</a>&nbsp;<br>0坪(0.00平方公尺) X 全部</td> <td>1141007&nbsp;<br>特別程序</td> <td class='price'>3,424000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第154479號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市三民區建德路34號10樓' target='_blank'>高雄市三民區建德路34號10樓</a>&nbsp;<br>40坪(135.53平方公尺) X 全部</td> <td>1141120&nbsp;<br>特別程序</td> <td class='price'>9,588000</td> <td>點交</td> <td>停拍公告:/ksd/11412/01171411534.031.pdf</td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第154479號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物之共有部分' target='_blank'>同上建物之共有部分</a>&nbsp;<br>1576坪(5212.64平方公尺) X 100000分之1237</td> <td>1141120&nbsp;<br>特別程序</td> <td class='price'>9,588000</td> <td>點交</td> <td>停拍公告:/ksd/11412/01171411534.031.pdf</td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第154479號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市三民區建德路40號地下室二樓' target='_blank'>高雄市三民區建德路40號地下室二樓</a>&nbsp;<br>6坪(22.45平方公尺) X 57分之1</td> <td>1141120&nbsp;<br>特別程序</td> <td class='price'>9,588000</td> <td>點交</td> <td>停拍公告:/ksd/11412/01171411534.031.pdf</td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>113司執字第154479號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物之共有部分' target='_blank'>同上建物之共有部分</a>&nbsp;<br>1576坪(5212.64平方公尺) X 100000分之6348</td> <td>1141120&nbsp;<br>特別程序</td> <td class='price'>9,588000</td> <td>點交</td> <td>停拍公告:/ksd/11412/01171411534.031.pdf</td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第007808號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市林園區潭頭路168巷58號' target='_blank'>高雄市林園區潭頭路168巷58號</a>&nbsp;<br>28坪(94.80平方公尺) X 4分之1</td> <td>1141023&nbsp;<br>特別程序</td> <td class='price'>487,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第007808號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物未辦保存登記部分' target='_blank'>同上建物未辦保存登記部分</a>&nbsp;<br>39坪(130.20平方公尺) X 4分之1</td> <td>1141023&nbsp;<br>特別程序</td> <td class='price'>487,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第008611號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市美濃區中興路一段698號' target='_blank'>高雄市美濃區中興路一段698號</a>&nbsp;<br>17坪(57.20平方公尺) X 全部</td> <td>1141028&nbsp;<br>特別程序</td> <td class='price'>384,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第008973號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市前鎮區崗山東街34號4樓' target='_blank'>高雄市前鎮區崗山東街34號4樓</a>&nbsp;<br>15坪(52.51平方公尺) X 3分之1</td> <td>1140919&nbsp;<br>特別程序</td> <td class='price'>1,600000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第008973號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物共同使用部分' target='_blank'>同上建物共同使用部分</a>&nbsp;<br>1363坪(4505.83平方公尺) X 10000分之30</td> <td>1140919&nbsp;<br>特別程序</td> <td class='price'>1,600000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第012759號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市鳥松區圓山路33號19樓' target='_blank'>高雄市鳥松區圓山路33號19樓</a>&nbsp;<br>67坪(224.24平方公尺) X 全部</td> <td>1141023&nbsp;<br>特別程序</td> <td class='price'>25,600000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第012759號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物共同使用部分' target='_blank'>同上建物共同使用部分</a>&nbsp;<br>1987坪(6571.84平方公尺) X 10000分之363</td> <td>1141023&nbsp;<br>特別程序</td> <td class='price'>25,600000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第014856號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市旗山區中洲路370號未辦保存登記建物' target='_blank'>高雄市旗山區中洲路370號未辦保存登記建物</a>&nbsp;<br>39坪(130.06平方公尺) X 2分之1</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>3,616000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第017564號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市大寮區鳳林一路128巷61之13號' target='_blank'>高雄市大寮區鳳林一路128巷61之13號</a>&nbsp;<br>22坪(73.99平方公尺) X 2分之1</td> <td>1140925&nbsp;<br>特別程序</td> <td class='price'>1,952000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第017564號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上門牌之未保存登記建物' target='_blank'>同上門牌之未保存登記建物</a>&nbsp;<br>26坪(88.85平方公尺) X 2分之1</td> <td>1140925&nbsp;<br>特別程序</td> <td class='price'>1,952000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第021952號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄巿阿蓮區仁愛路1226巷3號' target='_blank'>高雄巿阿蓮區仁愛路1226巷3號</a>&nbsp;<br>37坪(122.96平方公尺) X 4分之1</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>928,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第021952號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄巿阿蓮區仁愛路1226巷3號(其上未保存登記建物部分)' target='_blank'>高雄巿阿蓮區仁愛路1226巷3號(其上未保存登記建物部分)</a>&nbsp;<br>24坪(80.62平方公尺) X 4分之1</td> <td>1141127&nbsp;<br>特別程序</td> <td class='price'>928,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第030109號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市阿蓮區信義路95號(未保存登記建物)' target='_blank'>高雄市阿蓮區信義路95號(未保存登記建物)</a>&nbsp;<br>58坪(193.53平方公尺) X 3分之1</td> <td>1141028&nbsp;<br>特別程序</td> <td class='price'>512,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第048555號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市三民區寧夏街1巷52之4號' target='_blank'>高雄市三民區寧夏街1巷52之4號</a>&nbsp;<br>16坪(55.35平方公尺) X 3分之1</td> <td>1140925&nbsp;<br>特別程序</td> <td class='price'>736,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第053005號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=明華一路152號3樓之1' target='_blank'>明華一路152號3樓之1</a>&nbsp;<br>12坪(42.90平方公尺) X 全部</td> <td>1141021&nbsp;<br>特別程序</td> <td class='price'>14,500000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣橋頭地方法院</td> <td>114司執字第053005號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物共同使用部分' target='_blank'>同上建物共同使用部分</a>&nbsp;<br>1664坪(5501.85平方公尺) X 100000分之506</td> <td>1141021&nbsp;<br>特別程序</td> <td class='price'>14,500000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第053994號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物共同使用部分' target='_blank'>同上建物共同使用部分</a>&nbsp;<br>1313坪(4343.04平方公尺) X 10000分之28</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>87,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第053994號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市前金區六合二路107之1號8樓之37' target='_blank'>高雄市前金區六合二路107之1號8樓之37</a>&nbsp;<br>2坪(7.95平方公尺) X 全部</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>498,000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第053994號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物共同使用部分' target='_blank'>同上建物共同使用部分</a>&nbsp;<br>1313坪(4343.04平方公尺) X 10000分之28</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>498,000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第053994號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市前金區六合二路107之1號4樓之2' target='_blank'>高雄市前金區六合二路107之1號4樓之2</a>&nbsp;<br>2坪(8.55平方公尺) X 全部</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>498,000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第053994號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物共同使用部分' target='_blank'>同上建物共同使用部分</a>&nbsp;<br>1313坪(4343.04平方公尺) X 10000分之29</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>498,000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第053994號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市前金區六合二路107之1號8樓之4' target='_blank'>高雄市前金區六合二路107之1號8樓之4</a>&nbsp;<br>2坪(8.05平方公尺) X 全部</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>498,000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第053994號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=同上建物共同使用部分' target='_blank'>同上建物共同使用部分</a>&nbsp;<br>1313坪(4343.04平方公尺) X 10000分之28</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>498,000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第053994號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市前金區六合二路107之1號八樓之35' target='_blank'>高雄市前金區六合二路107之1號八樓之35</a>&nbsp;<br>2坪(7.95平方公尺) X 10000分之5066</td> <td>1141212&nbsp;<br>特別程序</td> <td class='price'>87,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣高雄地方法院</td> <td>114司執字第065583號</td> <td>高雄市</td> <td><a href='http://maps.google.com/?q=高雄市鳳山區五福二路100巷19之3號' target='_blank'>高雄市鳳山區五福二路100巷19之3號</a>&nbsp;<br>21坪(69.52平方公尺) X 全部</td> <td>1141128&nbsp;<br>特別程序</td> <td class='price'>3,600000</td> <td>不點交</td> <td></td> </tr> </tbody> </table></p> <br> <div id=ags-insight></div> </div>
+    
+    
+        <style>
+            #map_c6b6911060375aeebaf876bbb06693a8 {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                /* 確保地圖作為區塊元素，才能應用 auto margin */
+                display: block !important;
+            }
+        </style>
+    
+    
+            <div class="folium-map" id="map_c6b6911060375aeebaf876bbb06693a8" ></div>
+<br><br>
+<div class="container">
+    <div id="ags-greeting">
+    <p>您好，</p>
+    <p>
+    我們是 AGS 資料洞察團隊, 一家專注於運用科技,把原始資料轉換成高價值資訊,並精準交付 的資訊服務業者.
+    </p>
+    <p>
+    我們深知, 在您日常的決策中, 精準的數據與即時的市場洞察至關重要. 為了協助您更好地掌握市場動態並優化管理策略, 我們為您整理了以下一組最新數據:
+    </p>
+    </div>
+
+    <div id="ags-action">
+    我們的服務旨在將這些原始數據轉化為可執行(Actionable)的洞察報告，協助您：
+    <ul>
+    <li>優化決策流程</li>
+    <li>提升管理效率</li>
+    <li>降低潛在風險</li>
+    </ul>
+    </div>
+
+    <div id="ags-sponsor">
+    <p>
+    我們很樂意與您線上, 更深入地探討我們如何為您的工作帶來具體且實質的幫助, 請直接回覆此郵件，告訴我們您的方便時間.
+    </p>
+    <p>
+    歡迎支持我們, 讓團隊持續提供更好的服務與資訊價值給更多受眾, 謝謝您!
+    </p>
+    <p>
+    <a href=https://buymeacoffee.com/robert.tsai.1111 target='_blank'>進入贊助網站</a> (Buy Me A Coffee 為一小額贊助平台, 讓您可以輕鬆支持我們的工作)
+    </p>
+    AGS 資料洞察團隊 敬上
+    </p>
+    </div>
+</div>
+        
+</body>
+<script>
+    
+    
+            var map_c6b6911060375aeebaf876bbb06693a8 = L.map(
+                "map_c6b6911060375aeebaf876bbb06693a8",
+                {
+                    center: [22.6224, 120.3163],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c65a936c7b613f1291198add24a7eba7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c65a936c7b613f1291198add24a7eba7.addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            var marker_df25d186fd4ba5065a25fe22921b3d55 = L.marker(
+                [22.6267528, 120.3304023],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_df25d186fd4ba5065a25fe22921b3d55.bindTooltip(
+                `<div>
+                     802台灣高雄市苓雅區福安路252巷6號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_58fca680f5c24638c5c543af31857233 = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_58fca680f5c24638c5c543af31857233.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cfc0909cccb8f2cc3add0c59fa028d43 = L.marker(
+                [22.659685, 120.3114152],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_cfc0909cccb8f2cc3add0c59fa028d43.bindTooltip(
+                `<div>
+                     813台灣高雄市左營區至聖路2號6 之 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_452fbdbef759611289641f5ebc7328ca = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_452fbdbef759611289641f5ebc7328ca.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e4d6bd9073963450c5081191ac424b16 = L.marker(
+                [22.8827413, 120.5725189],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_e4d6bd9073963450c5081191ac424b16.bindTooltip(
+                `<div>
+                     843台灣高雄市美濃區文化街6巷17號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_306e1dc295d2e17eceb6a251c776af7a = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_306e1dc295d2e17eceb6a251c776af7a.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d389a707b4f5fbce09fe987f29bd50b1 = L.marker(
+                [22.6954907, 120.3011815],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_d389a707b4f5fbce09fe987f29bd50b1.bindTooltip(
+                `<div>
+                     813台灣高雄市左營區28
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_75a0b36e8b564d0d9719644d0826d5ee = L.marker(
+                [22.7081008, 120.2943914],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_75a0b36e8b564d0d9719644d0826d5ee.bindTooltip(
+                `<div>
+                     811台灣高雄市楠梓區和光街109巷28號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a9a3f3a3714d51c73e930e0dced11f5b = L.marker(
+                [22.7081008, 120.2943914],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_a9a3f3a3714d51c73e930e0dced11f5b.bindTooltip(
+                `<div>
+                     811台灣高雄市楠梓區和光街109巷28號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7df3ef6e54e74efc32ff60878dd8583e = L.marker(
+                [22.6653125, 120.4114852],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_7df3ef6e54e74efc32ff60878dd8583e.bindTooltip(
+                `<div>
+                     840台灣高雄市大樹區中山路134巷43號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b5961f57538e0ebe0ceecb7c29102e77 = L.marker(
+                [22.8137011, 120.2565377],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_b5961f57538e0ebe0ceecb7c29102e77.bindTooltip(
+                `<div>
+                     820台灣高雄市岡山區本洲一街262號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_99c4f2a62d64709f4048d23ce7dcfe80 = L.marker(
+                [22.5918434, 120.3104329],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_99c4f2a62d64709f4048d23ce7dcfe80.bindTooltip(
+                `<div>
+                     806台灣高雄市前鎮區鎮川三巷42號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fff166abb543e6100683321c9662b86f = L.marker(
+                [22.5918434, 120.3104329],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_fff166abb543e6100683321c9662b86f.bindTooltip(
+                `<div>
+                     806台灣高雄市前鎮區鎮川三巷42號未
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6be68615496626a0dc1dee6acf463a97 = L.marker(
+                [22.646089, 120.3324136],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_6be68615496626a0dc1dee6acf463a97.bindTooltip(
+                `<div>
+                     807台灣高雄市三民區大昌二路266號1 之 78
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_58d790fa9dfaa2579326d9cf79269fab = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_58d790fa9dfaa2579326d9cf79269fab.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ed81994fdfca57c33f8f6029da5f8b70 = L.marker(
+                [22.654123, 120.2918016],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_ed81994fdfca57c33f8f6029da5f8b70.bindTooltip(
+                `<div>
+                     804台灣高雄市鼓山區中華一路1496號四 之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d8fb4132f40406c588456d9c43abcf57 = L.marker(
+                [22.6242204, 120.3756254],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_d8fb4132f40406c588456d9c43abcf57.bindTooltip(
+                `<div>
+                     830台灣高雄市鳳山區中山東路136巷84號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2ae52b3bc978f1169dd7687657615f5b = L.marker(
+                [22.6272772, 120.3014375],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_2ae52b3bc978f1169dd7687657615f5b.bindTooltip(
+                `<div>
+                     台灣高雄市鼓山區高雄
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d1b62c7737401fa6a3bd8c425687d400 = L.marker(
+                [22.6350444, 120.3340544],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_d1b62c7737401fa6a3bd8c425687d400.bindTooltip(
+                `<div>
+                     802台灣高雄市苓雅區福德一路134巷12弄25之1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b4708615dd70495a45efdefb9ce3de06 = L.marker(
+                [22.6350444, 120.3340544],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_b4708615dd70495a45efdefb9ce3de06.bindTooltip(
+                `<div>
+                     802台灣高雄市苓雅區福德一路134巷12弄25之1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_20b9218dddeba5075a54d8d1d8cf0e88 = L.marker(
+                [22.6483776, 120.3229807],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_20b9218dddeba5075a54d8d1d8cf0e88.bindTooltip(
+                `<div>
+                     807台灣高雄市三民區建德路34號10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_070c060f13fcdda8bb4d5815e8fd2822 = L.marker(
+                [22.6272772, 120.3014375],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_070c060f13fcdda8bb4d5815e8fd2822.bindTooltip(
+                `<div>
+                     台灣高雄市鼓山區高雄
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_50b41f2316873776b95b438e8bfb5aee = L.marker(
+                [22.6484119, 120.3230207],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_50b41f2316873776b95b438e8bfb5aee.bindTooltip(
+                `<div>
+                     807台灣高雄市三民區建德路40號二
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1b75f3efe56037f48d54b558a7bddd26 = L.marker(
+                [22.6272772, 120.3014375],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_1b75f3efe56037f48d54b558a7bddd26.bindTooltip(
+                `<div>
+                     台灣高雄市鼓山區高雄
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a6217ed8840e8c6edf18a24b02e1382d = L.marker(
+                [22.5237459, 120.3958085],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_a6217ed8840e8c6edf18a24b02e1382d.bindTooltip(
+                `<div>
+                     832台灣高雄市林園區潭頭路168巷58號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bc1035728e003871547c0360e3735f59 = L.marker(
+                [22.6272772, 120.3014375],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_bc1035728e003871547c0360e3735f59.bindTooltip(
+                `<div>
+                     台灣高雄市鼓山區高雄
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_77a848950e21124e163a28bacd90a8a4 = L.marker(
+                [22.8864593, 120.5329357],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_77a848950e21124e163a28bacd90a8a4.bindTooltip(
+                `<div>
+                     843台灣高雄市美濃區中興路一段698號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d6d8c9f1f5f8e802ed411873e3f61ba1 = L.marker(
+                [22.608351, 120.3368906],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_d6d8c9f1f5f8e802ed411873e3f61ba1.bindTooltip(
+                `<div>
+                     806台灣高雄市前鎮區崗山東街34號4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_34debf776cf66c62381710f4a2954a07 = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_34debf776cf66c62381710f4a2954a07.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_95f010ac65b849a20c20401efa0d5857 = L.marker(
+                [22.6573332, 120.3429811],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_95f010ac65b849a20c20401efa0d5857.bindTooltip(
+                `<div>
+                     833台灣高雄市鳥松區圓山路33號19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e9f70763c914df22e943592127382f5f = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_e9f70763c914df22e943592127382f5f.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_631d0842f0e8de0ce9094026ccef96cd = L.marker(
+                [22.8424216, 120.4679321],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_631d0842f0e8de0ce9094026ccef96cd.bindTooltip(
+                `<div>
+                     842台灣高雄市旗山區中洲路370號未 办
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cb5da58a84c624e6017252be5c7bc2e6 = L.marker(
+                [22.5402313, 120.4065969],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_cb5da58a84c624e6017252be5c7bc2e6.bindTooltip(
+                `<div>
+                     831台灣高雄市大寮區鳳林一路128巷
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6f866a688ebc100697eec8018b1d9ad9 = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_6f866a688ebc100697eec8018b1d9ad9.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ee1041d6f59e5fb50b9a825771c3c027 = L.marker(
+                [22.8552226, 120.3327364],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_ee1041d6f59e5fb50b9a825771c3c027.bindTooltip(
+                `<div>
+                     822台灣高雄市阿蓮區仁愛路１２２６巷3號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ff7251c382f70eeef0c97db6cecd383c = L.marker(
+                [22.8552226, 120.3327364],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_ff7251c382f70eeef0c97db6cecd383c.bindTooltip(
+                `<div>
+                     822台灣高雄市阿蓮區仁愛路１２２６巷3號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e9bbc78e55169acdc1bc9c7fdf93a16c = L.marker(
+                [22.8795045, 120.3266252],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_e9bbc78e55169acdc1bc9c7fdf93a16c.bindTooltip(
+                `<div>
+                     822台灣高雄市阿蓮區信義路95號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6240f1ee3b756b4d76ba3e8cb6ad551b = L.marker(
+                [22.6395497, 120.3149279],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_6240f1ee3b756b4d76ba3e8cb6ad551b.bindTooltip(
+                `<div>
+                     807台灣高雄市三民區寧夏街1巷52之3號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9100efec077589ec4dcfa861be89458c = L.marker(
+                [22.6630421, 120.3072512],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_9100efec077589ec4dcfa861be89458c.bindTooltip(
+                `<div>
+                     81359台灣高雄市左營區明華一路152號3 之 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_67a7af724b6f65596aae6238bd881668 = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_67a7af724b6f65596aae6238bd881668.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b2e55b676b86b65f6f197d2e999e21b9 = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_b2e55b676b86b65f6f197d2e999e21b9.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3a20923da4dee04774aadaa398432544 = L.marker(
+                [22.6315997, 120.2980717],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_3a20923da4dee04774aadaa398432544.bindTooltip(
+                `<div>
+                     801台灣高雄市前金區六合二路107-9號8 之 37
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_289919e580f80d94adccfec906643e43 = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_289919e580f80d94adccfec906643e43.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3e0ea795290648665d2bcd1edbac5394 = L.marker(
+                [22.6315997, 120.2980717],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_3e0ea795290648665d2bcd1edbac5394.bindTooltip(
+                `<div>
+                     801台灣高雄市前金區六合二路107-9號4 之 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c7eae5619ad9cbf090465f557ffb8ef6 = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_c7eae5619ad9cbf090465f557ffb8ef6.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_75b54c5767640149623193d134a8a322 = L.marker(
+                [22.6315997, 120.2980717],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_75b54c5767640149623193d134a8a322.bindTooltip(
+                `<div>
+                     801台灣高雄市前金區六合二路107-9號8 之 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bf4e4fb00904923afe5120a7030ce914 = L.marker(
+                [22.6272784, 120.3014353],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_bf4e4fb00904923afe5120a7030ce914.bindTooltip(
+                `<div>
+                     台灣高雄市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6423f341e44d49bc3192ca6f26c0da9c = L.marker(
+                [22.6315997, 120.2980717],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_6423f341e44d49bc3192ca6f26c0da9c.bindTooltip(
+                `<div>
+                     801台灣高雄市前金區六合二路107-9號八
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_130e61e557aefae907415953ba0e98ba = L.marker(
+                [22.5873871, 120.3257552],
+                {
+}
+            ).addTo(map_c6b6911060375aeebaf876bbb06693a8);
+        
+    
+            marker_130e61e557aefae907415953ba0e98ba.bindTooltip(
+                `<div>
+                     830台灣高雄市鳳山區五福二路100巷19之2號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

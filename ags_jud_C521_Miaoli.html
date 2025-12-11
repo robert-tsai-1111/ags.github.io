@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a3b12777df2ee7cea7cda1a1dffd3720 {
+                    position: relative;
+                    width: 90.0%;
+                    height: 500.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+<style> table{ border:1px solid #000; max-width: 100%; height: auto; margin-left: auto; margin-right: auto; } td{ border:1px solid #000; padding:10px; } .container { max-width: 960px; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; margin-top: 20px; margin-bottom: 20px; } </style> <div class=container> <p><small>資料區域:苗栗<br>資料日期:2025-12-11<br>系統版本:0.5.1201<br>識別碼:43D12008-E665-4B22-AB11-DF0918646092</small></p> <p><table> <thead> <tr> <th>法院</th> <th>案號</th> <th>縣市</th> <th>地址</th> <th>拍次</th> <th class='price'>總拍賣底價 (NTD)</th> <th>点交状况</th> <th>停拍</th> </tr> </thead> <tbody> <tr> <td>臺灣苗栗地方法院</td> <td>112司執字第027504號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮聖福里16鄰三泰街208號'>苗栗縣竹南鎮聖福里16鄰三泰街208號</a>&nbsp;<br>194坪(644.40平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>56,200000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>112司執字第027504號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮聖福里16鄰三泰街208號'>苗栗縣竹南鎮聖福里16鄰三泰街208號</a>&nbsp;<br>9坪(32.47平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>56,200000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第009523號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣獅潭鄉新店153號'>苗栗縣獅潭鄉新店153號</a>&nbsp;<br>68坪(227.34平方公尺) X 公同共有1/1</td> <td>1150106&nbsp;<br>第4拍</td> <td class='price'>2,967000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第009523號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣獅潭鄉新店153號'>苗栗縣獅潭鄉新店153號</a>&nbsp;<br>14坪(47.32平方公尺) X 公同共有1/1</td> <td>1150106&nbsp;<br>第4拍</td> <td class='price'>2,967000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第018795號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣苑裡鎮房裡里14鄰北房11之44號'>苗栗縣苑裡鎮房裡里14鄰北房11之44號</a>&nbsp;<br>37坪(123.42平方公尺) X 公同共有1分之1</td> <td>1141223&nbsp;<br>第13拍</td> <td class='price'>4,443000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第018795號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣苑裡鎮房裡里14鄰北房11之44號'>苗栗縣苑裡鎮房裡里14鄰北房11之44號</a>&nbsp;<br>9坪(30.56平方公尺) X 公同共有1分之1</td> <td>1141223&nbsp;<br>第13拍</td> <td class='price'>4,443000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第025513號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=嘉新里4鄰五谷路52號'>嘉新里4鄰五谷路52號</a>&nbsp;<br>40坪(134.13平方公尺) X 全部</td> <td>1141218&nbsp;<br>第3拍</td> <td class='price'>2,688000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第035151號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=中港里15鄰新生路106巷5弄19號'>中港里15鄰新生路106巷5弄19號</a>&nbsp;<br>51坪(169.68平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>13,090000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第035151號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=中港里15鄰新生路106巷5弄19號'>中港里15鄰新生路106巷5弄19號</a>&nbsp;<br>2坪(8.88平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>13,090000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第035528號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣苗栗市清華里5鄰福星街36巷1號1樓'>苗栗縣苗栗市清華里5鄰福星街36巷1號1樓</a>&nbsp;<br>32坪(107.61平方公尺) X 全部</td> <td>1141218&nbsp;<br>第4拍</td> <td class='price'>5,184000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第035863號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮中美里10鄰保安林57之2號'>苗栗縣竹南鎮中美里10鄰保安林57之2號</a>&nbsp;<br>46坪(153.82平方公尺) X 全部</td> <td>1141218&nbsp;<br>第3拍</td> <td class='price'>12,480000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第035863號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=中美里10鄰保安林57之2號'>中美里10鄰保安林57之2號</a>&nbsp;<br>108坪(360.24平方公尺) X 全部</td> <td>1141218&nbsp;<br>第3拍</td> <td class='price'>12,480000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第036697號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=館東村7鄰富東街72號'>館東村7鄰富東街72號</a>&nbsp;<br>52坪(175.02平方公尺) X 3分之1</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>2,256000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第036697號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=館東村7鄰富東街72號'>館東村7鄰富東街72號</a>&nbsp;<br>31坪(104.10平方公尺) X 3分之1</td> <td>1141217&nbsp;<br>第3拍</td> <td class='price'>2,256000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第039772號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣後龍鎮豐富里5鄰新東路54之1號'>苗栗縣後龍鎮豐富里5鄰新東路54之1號</a>&nbsp;<br>49坪(162.96平方公尺) X 2分之1</td> <td>1141216&nbsp;<br>第4拍</td> <td class='price'>1,588000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第039996號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=中美里14鄰澎湖厝13之13號'>中美里14鄰澎湖厝13之13號</a>&nbsp;<br>43坪(143.85平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>5,728000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第039996號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮中美里14鄰澎湖厝13之13號'>苗栗縣竹南鎮中美里14鄰澎湖厝13之13號</a>&nbsp;<br>8坪(28.65平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>5,728000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第040663號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣南庄鄉獅山村12鄰獅山110號'>苗栗縣南庄鄉獅山村12鄰獅山110號</a>&nbsp;<br>140坪(463.38平方公尺) X 3分之1</td> <td>1141216&nbsp;<br>第4拍</td> <td class='price'>641,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執字第040663號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣南庄鄉獅山村12鄰獅山110號'>苗栗縣南庄鄉獅山村12鄰獅山110號</a>&nbsp;<br>0坪(0.00平方公尺) X 3分之1</td> <td>1141216&nbsp;<br>第4拍</td> <td class='price'>641,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>113司執助字第001436號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣苗栗市青苗里9鄰中山路606號2樓'>苗栗縣苗栗市青苗里9鄰中山路606號2樓</a>&nbsp;<br>144坪(478.14平方公尺) X 47814分之3042</td> <td>1141216&nbsp;<br>第4拍</td> <td class='price'>589,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第003239號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=竹興里17鄰竹圍街231巷16號'>竹興里17鄰竹圍街231巷16號</a>&nbsp;<br>34坪(113.74平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>7,814000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第003239號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=竹興里17鄰竹圍街231巷16號'>竹興里17鄰竹圍街231巷16號</a>&nbsp;<br>23坪(77.55平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>7,814000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第004022號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣公館鄉福星村12鄰福星145號'>苗栗縣公館鄉福星村12鄰福星145號</a>&nbsp;<br>89坪(294.40平方公尺) X 全部</td> <td>1141223&nbsp;<br>第3拍</td> <td class='price'>7,040000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第006449號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮大厝里24鄰國昌街225巷15號'>苗栗縣竹南鎮大厝里24鄰國昌街225巷15號</a>&nbsp;<br>48坪(159.92平方公尺) X 全部</td> <td>1150106&nbsp;<br>第1拍</td> <td class='price'>21,600000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第006449號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮大厝里24鄰國昌街225巷15號'>苗栗縣竹南鎮大厝里24鄰國昌街225巷15號</a>&nbsp;<br>11坪(37.36平方公尺) X 全部</td> <td>1150106&nbsp;<br>第1拍</td> <td class='price'>21,600000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第006736號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣大湖鄉靜湖村社寮角18號'>苗栗縣大湖鄉靜湖村社寮角18號</a>&nbsp;<br>87坪(288.18平方公尺) X 3分之1</td> <td>1150108&nbsp;<br>第2拍</td> <td class='price'>492,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第007936號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=大埔街50號5樓'>大埔街50號5樓</a>&nbsp;<br>27坪(92.08平方公尺) X 全部</td> <td>1141217&nbsp;<br>第4拍</td> <td class='price'>2,136000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第008322號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣西湖鄉三湖村5鄰東三湖12之1號'>苗栗縣西湖鄉三湖村5鄰東三湖12之1號</a>&nbsp;<br>77坪(256.09平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>15,800000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第008322號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣西湖鄉三湖村5鄰東三湖12之1號'>苗栗縣西湖鄉三湖村5鄰東三湖12之1號</a>&nbsp;<br>51坪(168.65平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>15,800000</td> <td>部份點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第009381號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣通霄鎮通西里18鄰光復路46號'>苗栗縣通霄鎮通西里18鄰光復路46號</a>&nbsp;<br>46坪(155.28平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>7,550000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第009381號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣通霄鎮福源里10鄰福源108之24號'>苗栗縣通霄鎮福源里10鄰福源108之24號</a>&nbsp;<br>29坪(98.96平方公尺) X 3分之1</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>1,200000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第009381號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣通霄鎮通西里18鄰光復路46號'>苗栗縣通霄鎮通西里18鄰光復路46號</a>&nbsp;<br>8坪(27.24平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>7,550000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第009816號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=土牛里土牛69之2號'>土牛里土牛69之2號</a>&nbsp;<br>92坪(305.64平方公尺) X 6分之3</td> <td>1141217&nbsp;<br>第2拍</td> <td class='price'>5,464000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第010236號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣三義鄉西湖村17鄰伯公坑200號'>苗栗縣三義鄉西湖村17鄰伯公坑200號</a>&nbsp;<br>463坪(1531.00平方公尺) X 全部</td> <td>1141230&nbsp;<br>第1拍</td> <td class='price'>17,800000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第010236號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣三義鄉西湖村17鄰伯公坑200號'>苗栗縣三義鄉西湖村17鄰伯公坑200號</a>&nbsp;<br>18坪(60.52平方公尺) X 全部</td> <td>1141230&nbsp;<br>第1拍</td> <td class='price'>17,800000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第011700號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=石墻村14鄰293號'>石墻村14鄰293號</a>&nbsp;<br>64坪(212.15平方公尺) X 5分之1</td> <td>1141223&nbsp;<br>第4拍</td> <td class='price'>1,084000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第011700號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=石墻村14鄰293號'>石墻村14鄰293號</a>&nbsp;<br>6坪(20.27平方公尺) X 5分之1</td> <td>1141223&nbsp;<br>第4拍</td> <td class='price'>1,084000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第011757號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=自立街31巷8號'>自立街31巷8號</a>&nbsp;<br>0坪(0.00平方公尺) X 全部</td> <td>1141216&nbsp;<br>第3拍</td> <td class='price'>29,952000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第011757號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=中興里2鄰自立街31巷8號'>中興里2鄰自立街31巷8號</a>&nbsp;<br>124坪(409.98平方公尺) X 全部</td> <td>1141216&nbsp;<br>第3拍</td> <td class='price'>29,952000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第012075號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=清華里21鄰紫園街68巷30號'>清華里21鄰紫園街68巷30號</a>&nbsp;<br>49坪(162.86平方公尺) X 全部</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>7,000000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第012075號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=清華里21鄰紫園街68巷30號'>清華里21鄰紫園街68巷30號</a>&nbsp;<br>5坪(17.51平方公尺) X 全部(公同共有1/1)</td> <td>1141218&nbsp;<br>第1拍</td> <td class='price'>7,000000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第015623號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣通霄鎮通東里19鄰仁愛路63號'>苗栗縣通霄鎮通東里19鄰仁愛路63號</a>&nbsp;<br>36坪(121.62平方公尺) X 4分之1</td> <td>1141216&nbsp;<br>第2拍</td> <td class='price'>2,320000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第015623號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣通霄鎮通東里19鄰仁愛路63號'>苗栗縣通霄鎮通東里19鄰仁愛路63號</a>&nbsp;<br>64坪(213.95平方公尺) X 4分之1</td> <td>1141216&nbsp;<br>第2拍</td> <td class='price'>2,320000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第016199號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣南庄鄉獅山村1鄰田美16之2號'>苗栗縣南庄鄉獅山村1鄰田美16之2號</a>&nbsp;<br>83坪(276.21平方公尺) X 全部</td> <td>1141223&nbsp;<br>第1拍</td> <td class='price'>43,800000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第017506號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=建國里7鄰建國路8號'>建國里7鄰建國路8號</a>&nbsp;<br>126坪(417.97平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>34,951000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第017506號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=建國路8號'>建國路8號</a>&nbsp;<br>61坪(202.08平方公尺) X 全部</td> <td>1141217&nbsp;<br>第1拍</td> <td class='price'>34,951000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第017572號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮正南里26鄰和平街17號五樓之三'>苗栗縣竹南鎮正南里26鄰和平街17號五樓之三</a>&nbsp;<br>20坪(67.72平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>2,300000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第017572號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮正南里26鄰和平街17號五樓之五'>苗栗縣竹南鎮正南里26鄰和平街17號五樓之五</a>&nbsp;<br>23坪(79.24平方公尺) X 全部</td> <td>1150108&nbsp;<br>第1拍</td> <td class='price'>2,300000</td> <td>點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第019222號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣苗栗市北苗里28鄰北安街156號'>苗栗縣苗栗市北苗里28鄰北安街156號</a>&nbsp;<br>60坪(201.45平方公尺) X 全部</td> <td>1141216&nbsp;<br>第3拍</td> <td class='price'>10,752000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第021272號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=勝興村11鄰勝興25號'>勝興村11鄰勝興25號</a>&nbsp;<br>36坪(120.69平方公尺) X 6分之1</td> <td>1141230&nbsp;<br>第1拍</td> <td class='price'>100,000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第021579號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=鳳形5之9號'>鳳形5之9號</a>&nbsp;<br>37坪(122.40平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>4,350000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第021579號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=鳳形5之9號'>鳳形5之9號</a>&nbsp;<br>24坪(79.68平方公尺) X 全部</td> <td>1150107&nbsp;<br>第1拍</td> <td class='price'>4,350000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第022059號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=玉谷村1鄰14之5號'>玉谷村1鄰14之5號</a>&nbsp;<br>25坪(84.98平方公尺) X 全部</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>11,300000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第022059號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=玉谷村1鄰14之5號'>玉谷村1鄰14之5號</a>&nbsp;<br>28坪(92.77平方公尺) X 全部</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>11,300000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第024363號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=山下里9鄰永忠街38之1號二樓'>山下里9鄰永忠街38之1號二樓</a>&nbsp;<br>24坪(81.61平方公尺) X 全部</td> <td>1141230&nbsp;<br>第2拍</td> <td class='price'>12,000000</td> <td>如備註或使用情形欄所示</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第025240號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=斗煥里11鄰介壽路12巷15號'>斗煥里11鄰介壽路12巷15號</a>&nbsp;<br>48坪(161.20平方公尺) X 5分之1</td> <td>1150106&nbsp;<br>第1拍</td> <td class='price'>2,450000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第025240號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=介壽路12巷15號'>介壽路12巷15號</a>&nbsp;<br>5坪(16.77平方公尺) X 5分之1</td> <td>1150106&nbsp;<br>第1拍</td> <td class='price'>2,450000</td> <td>不點交</td> <td></td> </tr> <tr> <td>臺灣苗栗地方法院</td> <td>114司執字第025243號</td> <td>苗栗縣</td> <td><a href='http://maps.google.com/?q=苗栗縣竹南鎮中華里16鄰博愛街125號一樓之七地下室(現址為:苗栗縣竹南鎮博愛街313巷地下一樓商F)'>苗栗縣竹南鎮中華里16鄰博愛街125號一樓之七地下室(現址為:苗栗縣竹南鎮博愛街313巷地下一樓商F)</a>&nbsp;<br>13坪(44.56平方公尺) X 全部</td> <td>1141216&nbsp;<br>第1拍</td> <td class='price'>900,000</td> <td>不點交</td> <td></td> </tr> </tbody> </table></p> <br> <div id=ags-insight></div> </div>
+    
+    
+        <style>
+            #map_a3b12777df2ee7cea7cda1a1dffd3720 {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                /* 確保地圖作為區塊元素，才能應用 auto margin */
+                display: block !important;
+            }
+        </style>
+    
+    
+            <div class="folium-map" id="map_a3b12777df2ee7cea7cda1a1dffd3720" ></div>
+<br><br>
+<div class="container">
+    <div id="ags-greeting">
+    <p>您好，</p>
+    <p>
+    我們是 AGS 資料洞察團隊, 一家專注於運用科技,把原始資料轉換成高價值資訊,並精準交付 的資訊服務業者.
+    </p>
+    <p>
+    我們深知, 在您日常的決策中, 精準的數據與即時的市場洞察至關重要. 為了協助您更好地掌握市場動態並優化管理策略, 我們為您整理了以下一組最新數據:
+    </p>
+    </div>
+
+    <div id="ags-action">
+    我們的服務旨在將這些原始數據轉化為可執行(Actionable)的洞察報告，協助您：
+    <ul>
+    <li>優化決策流程</li>
+    <li>提升管理效率</li>
+    <li>降低潛在風險</li>
+    </ul>
+    </div>
+
+    <div id="ags-sponsor">
+    <p>
+    我們很樂意與您線上, 更深入地探討我們如何為您的工作帶來具體且實質的幫助, 請直接回覆此郵件，告訴我們您的方便時間.
+    </p>
+    <p>
+    歡迎支持我們, 讓團隊持續提供更好的服務與資訊價值給更多受眾, 謝謝您!
+    </p>
+    <p>
+    <a href=https://buymeacoffee.com/robert.tsai.1111 target='_blank'>進入贊助網站</a> (Buy Me A Coffee 為一小額贊助平台, 讓您可以輕鬆支持我們的工作)
+    </p>
+    AGS 資料洞察團隊 敬上
+    </p>
+    </div>
+</div>
+        
+</body>
+<script>
+    
+    
+            var map_a3b12777df2ee7cea7cda1a1dffd3720 = L.map(
+                "map_a3b12777df2ee7cea7cda1a1dffd3720",
+                {
+                    center: [24.8068, 120.969],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5040b0eea08bec8640e64f4392f20015 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5040b0eea08bec8640e64f4392f20015.addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            var marker_3e60345e9cede98a796ef659382661f6 = L.marker(
+                [24.6914371, 120.8746718],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_3e60345e9cede98a796ef659382661f6.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮三泰街208號16 邻
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_85e9ce6d1b82a3d42ec0d50c26314064 = L.marker(
+                [24.6914371, 120.8746718],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_85e9ce6d1b82a3d42ec0d50c26314064.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮三泰街208號16 邻
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_97a284b2f38199905ca0322c209e50e2 = L.marker(
+                [24.5412079, 120.9217256],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_97a284b2f38199905ca0322c209e50e2.bindTooltip(
+                `<div>
+                     354台灣苗栗縣獅潭鄉新店153號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d857e5c2fb62b49a3800c5f2eccb42df = L.marker(
+                [24.5412079, 120.9217256],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_d857e5c2fb62b49a3800c5f2eccb42df.bindTooltip(
+                `<div>
+                     354台灣苗栗縣獅潭鄉新店153號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e0a06e42e2304195a8f742899e984f51 = L.marker(
+                [24.4366361, 120.6475612],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_e0a06e42e2304195a8f742899e984f51.bindTooltip(
+                `<div>
+                     358台灣苗栗县苑里镇北房11號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_287cbf72904c83bd7aca8cf51dcfe0a6 = L.marker(
+                [24.4366361, 120.6475612],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_287cbf72904c83bd7aca8cf51dcfe0a6.bindTooltip(
+                `<div>
+                     358台灣苗栗县苑里镇北房11號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7a4470cdbc5e7769306e6bb66ad8e6e8 = L.marker(
+                [24.5853147, 120.8382847],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_7a4470cdbc5e7769306e6bb66ad8e6e8.bindTooltip(
+                `<div>
+                     360台灣苗栗縣苗栗市五谷路52號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b9e8dc83bdd897bfdbdccc2667333c3b = L.marker(
+                [24.6830453, 120.8677843],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_b9e8dc83bdd897bfdbdccc2667333c3b.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮新生路１０６巷５弄19號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7c71d1d388dde4c44b792396a73c0f46 = L.marker(
+                [24.6830453, 120.8677843],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_7c71d1d388dde4c44b792396a73c0f46.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮新生路１０６巷５弄19號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_be47512387c57bdb7d1f75828a53fb88 = L.marker(
+                [24.5710677, 120.8258135],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_be47512387c57bdb7d1f75828a53fb88.bindTooltip(
+                `<div>
+                     360台灣苗栗縣苗栗市福星街 36巷1號1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3ddb23d5781a2e8329fc363182f5753c = L.marker(
+                [24.686888, 120.8606944],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_3ddb23d5781a2e8329fc363182f5753c.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮保安林57號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6b6593b8b8694da64e1023293f705de6 = L.marker(
+                [24.686888, 120.8606944],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_6b6593b8b8694da64e1023293f705de6.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮保安林57號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_73f0135172bf79fc0402181aee984f01 = L.marker(
+                [24.5008611, 120.8293236],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_73f0135172bf79fc0402181aee984f01.bindTooltip(
+                `<div>
+                     363台灣苗栗縣公館鄉富東街72號7 邻
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fbadaa391bbae5d485aefe0494d5d6cc = L.marker(
+                [24.5008611, 120.8293236],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_fbadaa391bbae5d485aefe0494d5d6cc.bindTooltip(
+                `<div>
+                     363台灣苗栗縣公館鄉富東街72號7 邻
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6090bbcfdc1d25a9d2e3f9b819dbff5a = L.marker(
+                [24.5987647, 120.8326326],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_6090bbcfdc1d25a9d2e3f9b819dbff5a.bindTooltip(
+                `<div>
+                     356台灣苗栗縣後龍鎮新東路54之1號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0d9aae545430377b499dfc53f72fb748 = L.marker(
+                [24.682778, 120.859632],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_0d9aae545430377b499dfc53f72fb748.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮澎湖厝
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_70d292656dd296a1a4854b730ac0f38e = L.marker(
+                [24.682778, 120.859632],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_70d292656dd296a1a4854b730ac0f38e.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮澎湖厝
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f358132a762534eab980f9bd6314af73 = L.marker(
+                [24.634544, 121.011901],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_f358132a762534eab980f9bd6314af73.bindTooltip(
+                `<div>
+                     353台灣苗栗縣南庄鄉獅山路口(龍門口)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_333081b141e8e939f7088faa844faea2 = L.marker(
+                [24.634544, 121.011901],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_333081b141e8e939f7088faa844faea2.bindTooltip(
+                `<div>
+                     353台灣苗栗縣南庄鄉獅山路口(龍門口)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_049101c95bcab00fcd7b87e488a6b09c = L.marker(
+                [24.5574975, 120.8192705],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_049101c95bcab00fcd7b87e488a6b09c.bindTooltip(
+                `<div>
+                     360台灣苗栗縣苗栗市中山路606號2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4a14811be2ecfaf4f51020b858899469 = L.marker(
+                [24.6905738, 120.8609525],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_4a14811be2ecfaf4f51020b858899469.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮竹圍街231號231巷19號16 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7bba6131c67e4263e6aff5269cdf5c3b = L.marker(
+                [24.6905738, 120.8609525],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_7bba6131c67e4263e6aff5269cdf5c3b.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮竹圍街231號231巷19號16 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a84bb6c8b6a645e4b7878e09926692fa = L.marker(
+                [24.479475, 120.829765],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_a84bb6c8b6a645e4b7878e09926692fa.bindTooltip(
+                `<div>
+                     363台灣苗栗縣公館鄉福星
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f1f00a9724c2827a8e51a4fc650ea5a2 = L.marker(
+                [24.6753157, 120.8697403],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_f1f00a9724c2827a8e51a4fc650ea5a2.bindTooltip(
+                `<div>
+                     350025台灣苗栗縣竹南鎮國昌街225巷15號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0081b80f4b0714545cfa6b5d578bb2b9 = L.marker(
+                [24.6753157, 120.8697403],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_0081b80f4b0714545cfa6b5d578bb2b9.bindTooltip(
+                `<div>
+                     350025台灣苗栗縣竹南鎮國昌街225巷15號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fa99929fca5998296fef93cb1d505f8f = L.marker(
+                [24.424545, 120.875062],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_fa99929fca5998296fef93cb1d505f8f.bindTooltip(
+                `<div>
+                     364台灣苗栗縣大湖鄉社寮角
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_995182fa7d67585c577855b37b59f1ad = L.marker(
+                [24.5625916, 120.8177917],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_995182fa7d67585c577855b37b59f1ad.bindTooltip(
+                `<div>
+                     360台灣苗栗縣苗栗市大埔街50號5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_abc488fe7347a6575846b3dd2b330eb4 = L.marker(
+                [24.545832, 120.752012],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_abc488fe7347a6575846b3dd2b330eb4.bindTooltip(
+                `<div>
+                     368台灣苗栗縣西湖鄉東三湖
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_482c077291e072dd891a7ee766778113 = L.marker(
+                [24.545832, 120.752012],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_482c077291e072dd891a7ee766778113.bindTooltip(
+                `<div>
+                     368台灣苗栗縣西湖鄉東三湖
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2719f8af0f1867c42c691bcab9fd721c = L.marker(
+                [24.4895102, 120.6794501],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_2719f8af0f1867c42c691bcab9fd721c.bindTooltip(
+                `<div>
+                     357台灣苗栗縣通霄鎮光復路46號18 邻
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8be38e5cceeae6fd80af4a6634f3ca97 = L.marker(
+                [24.5135783, 120.703379],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_8be38e5cceeae6fd80af4a6634f3ca97.bindTooltip(
+                `<div>
+                     357台灣苗栗縣通霄鎮福源里
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_69e3eda3c6efd9617faeda139c4103c8 = L.marker(
+                [24.4895102, 120.6794501],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_69e3eda3c6efd9617faeda139c4103c8.bindTooltip(
+                `<div>
+                     357台灣苗栗縣通霄鎮光復路46號18 邻
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_028a23d2b8665df3c8049949dcbe162f = L.marker(
+                [24.687858, 120.92192],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_028a23d2b8665df3c8049949dcbe162f.bindTooltip(
+                `<div>
+                     351台灣苗栗縣頭份市土牛
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_862cc203bddb85defd9d729fe5524ae1 = L.marker(
+                [24.3651558, 120.741398],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_862cc203bddb85defd9d729fe5524ae1.bindTooltip(
+                `<div>
+                     367台灣苗栗縣三義鄉伯公坑
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_51e2ed9b23cf7e20388ac87c7a8cb6ed = L.marker(
+                [24.3651558, 120.741398],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_51e2ed9b23cf7e20388ac87c7a8cb6ed.bindTooltip(
+                `<div>
+                     367台灣苗栗縣三義鄉伯公坑
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c867309201a705c82324f0694a7dab0a = L.marker(
+                [24.4770882, 120.8183077],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_c867309201a705c82324f0694a7dab0a.bindTooltip(
+                `<div>
+                     363台灣苗栗縣公館鄉石墻村
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a998d105a3c2a137cff33a95d7bec364 = L.marker(
+                [24.4770882, 120.8183077],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_a998d105a3c2a137cff33a95d7bec364.bindTooltip(
+                `<div>
+                     363台灣苗栗縣公館鄉石墻村
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1dd775aaff0f4c753a2d3187330e5043 = L.marker(
+                [24.6915572, 120.9037011],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_1dd775aaff0f4c753a2d3187330e5043.bindTooltip(
+                `<div>
+                     351台灣苗栗縣頭份市自立街31巷8號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2a50569ecce6450ed4c9d5d679234b60 = L.marker(
+                [24.6915572, 120.9037011],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_2a50569ecce6450ed4c9d5d679234b60.bindTooltip(
+                `<div>
+                     351台灣苗栗縣頭份市自立街31巷8號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_009f0b58a1de1dc6f21f2f51fccb7cbb = L.marker(
+                [24.5691984, 120.82664],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_009f0b58a1de1dc6f21f2f51fccb7cbb.bindTooltip(
+                `<div>
+                     360台灣苗栗縣苗栗市紫園街68號30 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_755a4a8d4352704b02c32b5f15c406e0 = L.marker(
+                [24.5691984, 120.82664],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_755a4a8d4352704b02c32b5f15c406e0.bindTooltip(
+                `<div>
+                     360台灣苗栗縣苗栗市紫園街68號30 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_52743494bfb622e0de6106860cff4d88 = L.marker(
+                [24.4894765, 120.6812896],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_52743494bfb622e0de6106860cff4d88.bindTooltip(
+                `<div>
+                     357台灣苗栗縣通霄鎮仁愛路63號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_df47c3c2377a6d391eba29b682edc766 = L.marker(
+                [24.4894765, 120.6812896],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_df47c3c2377a6d391eba29b682edc766.bindTooltip(
+                `<div>
+                     357台灣苗栗縣通霄鎮仁愛路63號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_69b4a767d46eb6bdccf6829fcc131f76 = L.marker(
+                [24.630411, 121.011155],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_69b4a767d46eb6bdccf6829fcc131f76.bindTooltip(
+                `<div>
+                     353台灣苗栗縣南庄鄉田美
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d82f7e58771b8b52ef54c6c774f92678 = L.marker(
+                [24.6933491, 120.9142377],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_d82f7e58771b8b52ef54c6c774f92678.bindTooltip(
+                `<div>
+                     351台灣苗栗縣頭份市建國路8號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f86fe3c4bed8c747363215f430b6b097 = L.marker(
+                [24.6933491, 120.9142377],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_f86fe3c4bed8c747363215f430b6b097.bindTooltip(
+                `<div>
+                     351台灣苗栗縣頭份市建國路8號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b932ee189bc14517696380f815418070 = L.marker(
+                [24.6835453, 120.8770726],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_b932ee189bc14517696380f815418070.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮和平街17號五 之
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_37fc6cdcdf389fe97a7a8eeb63498bc9 = L.marker(
+                [24.6835453, 120.8770726],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_37fc6cdcdf389fe97a7a8eeb63498bc9.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮和平街17號五
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d0f1384ff1286642b0ad416d77e07519 = L.marker(
+                [24.5647188, 120.8168036],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_d0f1384ff1286642b0ad416d77e07519.bindTooltip(
+                `<div>
+                     360台灣苗栗縣苗栗市北安街156號
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_78d9f291dea2eabe8e13b9ff4c206052 = L.marker(
+                [24.3879902, 120.781772],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_78d9f291dea2eabe8e13b9ff4c206052.bindTooltip(
+                `<div>
+                     367台灣苗栗縣三義鄉勝興
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_70d5430e5b086d1c2ffb3c5e70cda4da = L.marker(
+                [24.560159, 120.8214265],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_70d5430e5b086d1c2ffb3c5e70cda4da.bindTooltip(
+                `<div>
+                     台灣苗栗縣
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b7b6ec535fcaa88a1d59df156742cda0 = L.marker(
+                [24.560159, 120.8214265],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_b7b6ec535fcaa88a1d59df156742cda0.bindTooltip(
+                `<div>
+                     台灣苗栗縣
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bf9dd806173d6c4735c3010a4e2d8ed4 = L.marker(
+                [24.5195108, 120.8254872],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_bf9dd806173d6c4735c3010a4e2d8ed4.bindTooltip(
+                `<div>
+                     363台灣苗栗縣公館鄉玉谷村
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a8e90fee25011399a6133de72a08d390 = L.marker(
+                [24.5195108, 120.8254872],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_a8e90fee25011399a6133de72a08d390.bindTooltip(
+                `<div>
+                     363台灣苗栗縣公館鄉玉谷村
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1ac3dc5bb9cc822b962bd9c0a40aae55 = L.marker(
+                [24.6982039, 120.9029748],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_1ac3dc5bb9cc822b962bd9c0a40aae55.bindTooltip(
+                `<div>
+                     351台灣苗栗縣頭份市永忠街38之1號八樓號二
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f1ec7501f13743f4f0c0dee26ab65bff = L.marker(
+                [24.4439385, 120.6485655],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_f1ec7501f13743f4f0c0dee26ab65bff.bindTooltip(
+                `<div>
+                     358台灣苗栗縣苑裡鎮介壽路12號里 11 邻
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_030671e05e839510a21f1bcd1a692587 = L.marker(
+                [24.4439385, 120.6485655],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_030671e05e839510a21f1bcd1a692587.bindTooltip(
+                `<div>
+                     358台灣苗栗縣苑裡鎮介壽路12號15 号
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_622d2904a96e01b110c6eeb93c2af0a1 = L.marker(
+                [24.6869082, 120.8755207],
+                {
+}
+            ).addTo(map_a3b12777df2ee7cea7cda1a1dffd3720);
+        
+    
+            marker_622d2904a96e01b110c6eeb93c2af0a1.bindTooltip(
+                `<div>
+                     350台灣苗栗縣竹南鎮博愛街125號一
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
