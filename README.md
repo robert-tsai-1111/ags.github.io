@@ -1,3 +1,15 @@
+# About ApexTech
+
+ApexTech.AI 以AI助力的台灣資工專家群,提供企業資訊工程專案服務，從分析規劃到建置與落地，加速價值實現
+
+## Catalog
+
+ApexTender 公部門標案公開資訊
+
+apextender.github.io
+
+
+
 # About AGS. 
 
 All Good.AI 秉持著以客戶為中心的服務宗旨，努力成為 AI 設計與建置的領導者, 讓 AI 為生命服務
@@ -99,12 +111,12 @@ AGS Estate - New Taipei 新北房產資料洞察.
   
 
   
-## Sponsor AGS. 
+## Support Us 
   
 歡迎支持我們, 讓團隊持續提供更好的服務與資訊價值給更多受眾, 謝謝您!  
   
 進入 [贊助網站](https://buymeacoffee.com/robert.tsai.1111) (Buy Me A Coffee 為一小額贊助平台, 讓您可以輕鬆支持我們的工作). 
   
-AGS 團隊 敬上. 
+AGS/ApexTech 團隊 敬上. 
 
 

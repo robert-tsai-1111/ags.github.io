@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法拍屋查詢全分頁彙總結果</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            table-layout: auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            position: sticky;
+            top: 0;
+            white-space: nowrap;
+            z-index: 1;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        /* 房屋/土地地址專用欄位 */
+        .property-address {
+            width: 360px;
+            min-width: 360px;
+            white-space: normal;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            line-height: 1.6;
+        }
+
+        /* 公告文件欄位 */
+        .document-file {
+            min-width: 120px;
+            white-space: normal;
+            overflow-wrap: anywhere;
+        }
+
+        /* 表格外層容器 */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>
+        法拍屋/土地查詢全分頁彙總列表
+        (共 23 筆)
+    </h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>rowid</th>
+                    <th>公告文件</th>
+                    <th>年度</th>
+                    <th>字軌</th>
+                    <th>案號</th>
+                    <th>拍賣日期</th>
+                    <th>拍次</th>
+                    <th>area3</th>
+                    <th>總坪數/面積</th>
+                    <th>總底價(元)</th>
+                    <th>縣市</th>
+                    <th>鄉鎮市區</th>
+                    <th>地段</th>
+                    <th>房屋/土地地址</th>
+                    <th>saledate1</th>
+                    <th>dpt</th>
+                    <th>subsec</th>
+                    <th>地號</th>
+                    <th>checkyn</th>
+                    <th>emptyyn</th>
+                    <th>sumprice</th>
+                    <th>rrange</th>
+                    <th>minprice</th>
+                    <th>batchno</th>
+                    <th>saleamt</th>
+                    <th>comm_yn</th>
+                    <th>longitude</th>
+                    <th>latitude</th>
+                    <th>crtid</th>
+                    <th>ordno</th>
+                    <th>crtnm</th>
+                    <th>summinprcstr</th>
+                    <th>sumpricestr</th>
+                    <th>checkynstr</th>
+                    <th>emptyynstr</th>
+                    <th>commynstr</th>
+                    <th>crm</th>
+                    <th>dptstr</th>
+                    <th>qtystr</th>
+                    <th>salenostr</th>
+                    <th>secstr</th>
+                    <th>area3str</th>
+                    <th>saleamtstr</th>
+                    <th>rmk</th>
+                    <th>rmkexcel</th>
+                    <th>para</th>
+                    <th>pic_cnt</th>
+                    <th>newareano</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>870304</td>
+                    <td class="document-file">/pcd/11511/12104520290.000.pdf</td>
+                    <td>113</td>
+                    <td>司執</td>
+                    <td>054112</td>
+                    <td>1151210</td>
+                    <td>4</td>
+                    <td></td>
+                    <td>91.8</td>
+                    <td>18920000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>埔墘</td>
+                    <td class="property-address">新北市板橋區三民路二段居仁巷2弄22號</td>
+                    <td>1151210</td>
+                    <td>正</td>
+                    <td></td>
+                    <td>217-32</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>1分之1</td>
+                    <td>240000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>2</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>18,920,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>113司執字第054112號</td>
+                    <td>(正股)</td>
+                    <td> x </td>
+                    <td>第4拍</td>
+                    <td>埔墘</td>
+                    <td>27坪(91.80平方公尺) X 1分之1</td>
+                    <td>建物拍賣底價:新台幣 240,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTEzfDqlcbD1fDowNTQxMTJ8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>870305</td>
+                    <td class="document-file">/pcd/11511/12104520290.000.pdf</td>
+                    <td>113</td>
+                    <td>司執</td>
+                    <td>054112</td>
+                    <td>1151210</td>
+                    <td>4</td>
+                    <td></td>
+                    <td>116.66</td>
+                    <td>18920000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>埔墘</td>
+                    <td class="property-address">新北市板橋區三民路二段居仁巷2弄22號(未登記部分)</td>
+                    <td>1151210</td>
+                    <td>正</td>
+                    <td></td>
+                    <td>217-32</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>1分之1</td>
+                    <td>240000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>3</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>18,920,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>113司執字第054112號</td>
+                    <td>(正股)</td>
+                    <td> x </td>
+                    <td>第4拍</td>
+                    <td>埔墘</td>
+                    <td>35坪(116.66平方公尺) X 1分之1</td>
+                    <td>建物拍賣底價:新台幣 240,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTEzfDqlcbD1fDowNTQxMTJ8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>857365</td>
+                    <td class="document-file">/pcd/11511/17093600160.000.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>098490</td>
+                    <td>1151217</td>
+                    <td>4</td>
+                    <td></td>
+                    <td>51.72</td>
+                    <td>7920000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>府中</td>
+                    <td class="property-address">新北市板橋區後菜園街4號4樓</td>
+                    <td>1151217</td>
+                    <td>守</td>
+                    <td></td>
+                    <td>1052、1052-1、1053</td>
+                    <td>N</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>160000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>4</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>7,920,000</td>
+                    <td>0</td>
+                    <td>不點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第098490號</td>
+                    <td>(守股)</td>
+                    <td> x </td>
+                    <td>第4拍</td>
+                    <td>府中</td>
+                    <td>15坪(51.72平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 160,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDowOTg0OTB8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>857366</td>
+                    <td class="document-file">/pcd/11511/17093600160.000.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>098490</td>
+                    <td>1151217</td>
+                    <td>4</td>
+                    <td></td>
+                    <td>10.44</td>
+                    <td>7920000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>府中</td>
+                    <td class="property-address">新北市板橋區後菜園街4號4樓(未登記建物)</td>
+                    <td>1151217</td>
+                    <td>守</td>
+                    <td></td>
+                    <td>1052、1052-1</td>
+                    <td>N</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>110000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>5</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>7,920,000</td>
+                    <td>0</td>
+                    <td>不點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第098490號</td>
+                    <td>(守股)</td>
+                    <td> x </td>
+                    <td>第4拍</td>
+                    <td>府中</td>
+                    <td>3坪(10.44平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 110,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDowOTg0OTB8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>862587</td>
+                    <td class="document-file">/pcd/11511/19104837944.000.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>139977</td>
+                    <td>1151216</td>
+                    <td>2</td>
+                    <td></td>
+                    <td>73.2</td>
+                    <td>4560000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>大庭</td>
+                    <td class="property-address">新北市板橋區金華街85巷19號五樓</td>
+                    <td>1151216</td>
+                    <td>實</td>
+                    <td></td>
+                    <td>373</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>2分之1</td>
+                    <td>400000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>3</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>4,560,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第139977號</td>
+                    <td>(實股)</td>
+                    <td> x </td>
+                    <td>第2拍</td>
+                    <td>大庭</td>
+                    <td>22坪(73.20平方公尺) X 2分之1</td>
+                    <td>建物拍賣底價:新台幣 400,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxMzk5Nzd8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>870962</td>
+                    <td class="document-file">/pcd/11511/16210837064.019.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>145626</td>
+                    <td>1151217</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>80.4</td>
+                    <td>23100000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>港子嘴</td>
+                    <td class="property-address">新北市板橋區縣民大道三段245巷17號</td>
+                    <td>1151217</td>
+                    <td>宿</td>
+                    <td></td>
+                    <td>131-2</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>950000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>2</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>23,100,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第145626號</td>
+                    <td>(宿股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>港子嘴</td>
+                    <td>24坪(80.40平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 950,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxNDU2MjZ8OlBDRA==</td>
+                    <td>6</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>870963</td>
+                    <td class="document-file">/pcd/11511/16210837064.019.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>145626</td>
+                    <td>1151217</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>15.01</td>
+                    <td>23100000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>港子嘴</td>
+                    <td class="property-address">新北市板橋區縣民大道三段245巷17號（未登記部分）</td>
+                    <td>1151217</td>
+                    <td>宿</td>
+                    <td></td>
+                    <td>131-2</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>150000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>3</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>23,100,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第145626號</td>
+                    <td>(宿股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>港子嘴</td>
+                    <td>4坪(15.01平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 150,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxNDU2MjZ8OlBDRA==</td>
+                    <td>6</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>863308</td>
+                    <td class="document-file">/pcd/11510/22173615564.000.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>153576</td>
+                    <td>1151126</td>
+                    <td>2</td>
+                    <td></td>
+                    <td>124.12</td>
+                    <td>16744000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>府中</td>
+                    <td class="property-address">新北市板橋區文昌街6之1號3樓</td>
+                    <td>1151126</td>
+                    <td>天</td>
+                    <td></td>
+                    <td>951、952</td>
+                    <td>Y</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>800000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>3</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>16,744,000</td>
+                    <td>0</td>
+                    <td>點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第153576號</td>
+                    <td>(天股)</td>
+                    <td> x </td>
+                    <td>第2拍</td>
+                    <td>府中</td>
+                    <td>37坪(124.12平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 800,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxNTM1NzZ8OlBDRA==</td>
+                    <td>2</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>863309</td>
+                    <td class="document-file">/pcd/11510/22173615564.000.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>153576</td>
+                    <td>1151126</td>
+                    <td>2</td>
+                    <td></td>
+                    <td>12.56</td>
+                    <td>16744000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>府中</td>
+                    <td class="property-address">新北市板橋區文昌街6之1號3樓（未登記部分）</td>
+                    <td>1151126</td>
+                    <td>天</td>
+                    <td></td>
+                    <td>951、952</td>
+                    <td>Y</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>24000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>4</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>16,744,000</td>
+                    <td>0</td>
+                    <td>點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第153576號</td>
+                    <td>(天股)</td>
+                    <td> x </td>
+                    <td>第2拍</td>
+                    <td>府中</td>
+                    <td>3坪(12.56平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 24,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxNTM1NzZ8OlBDRA==</td>
+                    <td>2</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871209</td>
+                    <td class="document-file">/pcd/11511/17164221845.043.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>178271</td>
+                    <td>1151224</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>77.48</td>
+                    <td>17000000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>幸福</td>
+                    <td class="property-address">新北市板橋區新海路374號5樓之1</td>
+                    <td>1151224</td>
+                    <td>順</td>
+                    <td></td>
+                    <td>1109</td>
+                    <td>Y</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>3500000</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>3</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>17,000,000</td>
+                    <td>0</td>
+                    <td>點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第178271號</td>
+                    <td>(順股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>幸福</td>
+                    <td>23坪(77.48平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 3,500,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxNzgyNzF8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871210</td>
+                    <td class="document-file">/pcd/11511/17164221845.043.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>178271</td>
+                    <td>1151224</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>98.29</td>
+                    <td>3800000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>公館</td>
+                    <td class="property-address">新北市板橋區新海路72巷23號3樓</td>
+                    <td>1151224</td>
+                    <td>順</td>
+                    <td></td>
+                    <td>1331</td>
+                    <td>N</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>4分之1</td>
+                    <td>300000</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>4</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>3,800,000</td>
+                    <td>0</td>
+                    <td>不點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第178271號</td>
+                    <td>(順股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>公館</td>
+                    <td>29坪(98.29平方公尺) X 4分之1</td>
+                    <td>建物拍賣底價:新台幣 300,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxNzgyNzF8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>852154</td>
+                    <td class="document-file">/pcd/11510/27101515048.000.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>185249</td>
+                    <td>1151209</td>
+                    <td>4</td>
+                    <td></td>
+                    <td>62.86</td>
+                    <td>2820000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>大同</td>
+                    <td class="property-address">新北市板橋區大觀路三段212巷46號6樓</td>
+                    <td>1151209</td>
+                    <td>水</td>
+                    <td></td>
+                    <td>614</td>
+                    <td>N</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>3分之1</td>
+                    <td>1540000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>2</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>2,820,000</td>
+                    <td>0</td>
+                    <td>不點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第185249號</td>
+                    <td>(水股)</td>
+                    <td> x </td>
+                    <td>第4拍</td>
+                    <td>大同</td>
+                    <td>19坪(62.86平方公尺) X 3分之1</td>
+                    <td>建物拍賣底價:新台幣 1,540,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxODUyNDl8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871360</td>
+                    <td class="document-file">/pcd/11511/18100718515.014.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>190957</td>
+                    <td>1151215</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>83.55</td>
+                    <td>22040000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>大庭</td>
+                    <td class="property-address">新北市板橋區國光路160號</td>
+                    <td>1151215</td>
+                    <td>明</td>
+                    <td></td>
+                    <td>1360-12</td>
+                    <td>N</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>1700000</td>
+                    <td>甲</td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>2</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>22,040,000</td>
+                    <td>0</td>
+                    <td>不點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第190957號</td>
+                    <td>(明股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>大庭</td>
+                    <td>25坪(83.55平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 1,700,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxOTA5NTd8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871361</td>
+                    <td class="document-file">/pcd/11511/18100718515.014.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>190957</td>
+                    <td>1151215</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>83.55</td>
+                    <td>17750000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>大庭</td>
+                    <td class="property-address">新北市板橋區國光路160號2樓</td>
+                    <td>1151215</td>
+                    <td>明</td>
+                    <td></td>
+                    <td>1360-12</td>
+                    <td>N</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>1370000</td>
+                    <td>乙</td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>3</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>17,750,000</td>
+                    <td>0</td>
+                    <td>不點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第190957號</td>
+                    <td>(明股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>大庭</td>
+                    <td>25坪(83.55平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 1,370,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxOTA5NTd8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871362</td>
+                    <td class="document-file">/pcd/11511/18100718515.014.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>190957</td>
+                    <td>1151215</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>15.0</td>
+                    <td>22040000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>大庭</td>
+                    <td class="property-address">新北市板橋區國光路160號</td>
+                    <td>1151215</td>
+                    <td>明</td>
+                    <td></td>
+                    <td>1360-12</td>
+                    <td>N</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>840000</td>
+                    <td>甲</td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>4</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>22,040,000</td>
+                    <td>0</td>
+                    <td>不點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第190957號</td>
+                    <td>(明股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>大庭</td>
+                    <td>4坪(15.00平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 840,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxOTA5NTd8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871363</td>
+                    <td class="document-file">/pcd/11511/18100718515.014.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>190957</td>
+                    <td>1151215</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>15.0</td>
+                    <td>17750000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>大庭</td>
+                    <td class="property-address">新北市板橋區國光路160號二樓</td>
+                    <td>1151215</td>
+                    <td>明</td>
+                    <td></td>
+                    <td>1360-12</td>
+                    <td>N</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>680000</td>
+                    <td>乙</td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>5</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>17,750,000</td>
+                    <td>0</td>
+                    <td>不點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第190957號</td>
+                    <td>(明股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>大庭</td>
+                    <td>4坪(15.00平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 680,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxOTA5NTd8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871348</td>
+                    <td class="document-file">/pcd/11511/17141630065.003.pdf</td>
+                    <td>114</td>
+                    <td>司執</td>
+                    <td>197754</td>
+                    <td>1151224</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>163.74</td>
+                    <td>78000000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>新板</td>
+                    <td class="property-address">新北市板橋區中山路一段176之3號6樓</td>
+                    <td>1151224</td>
+                    <td>天</td>
+                    <td>三</td>
+                    <td>34</td>
+                    <td>Y</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>28000000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>2</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>78,000,000</td>
+                    <td>0</td>
+                    <td>點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執字第197754號</td>
+                    <td>(天股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>新板</td>
+                    <td>49坪(163.74平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 28,000,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1fDoxOTc3NTR8OlBDRA==</td>
+                    <td>6</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871217</td>
+                    <td class="document-file">/pcd/11511/17170208035.043.pdf</td>
+                    <td>114</td>
+                    <td>司執助</td>
+                    <td>015401</td>
+                    <td>1151224</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>41.54</td>
+                    <td>21650000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>幸福</td>
+                    <td class="property-address">新北市板橋區新海路188號13樓</td>
+                    <td>1151224</td>
+                    <td>順</td>
+                    <td></td>
+                    <td>1048</td>
+                    <td>Y</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>6000000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>2</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>21,650,000</td>
+                    <td>0</td>
+                    <td>點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執助字第015401號</td>
+                    <td>(順股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>幸福</td>
+                    <td>12坪(41.54平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 6,000,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1p1V8OjAxNTQwMXw6UENE</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>871218</td>
+                    <td class="document-file">/pcd/11511/17170208035.043.pdf</td>
+                    <td>114</td>
+                    <td>司執助</td>
+                    <td>015401</td>
+                    <td>1151224</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>873.97</td>
+                    <td>21650000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>幸福</td>
+                    <td class="property-address">新北市板橋區新海路150號3樓</td>
+                    <td>1151224</td>
+                    <td>順</td>
+                    <td></td>
+                    <td>1048</td>
+                    <td>Y</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>10000分之21</td>
+                    <td>150000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>3</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>21,650,000</td>
+                    <td>0</td>
+                    <td>點交</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>114司執助字第015401號</td>
+                    <td>(順股)</td>
+                    <td> x </td>
+                    <td>第1拍</td>
+                    <td>幸福</td>
+                    <td>264坪(873.97平方公尺) X 10000分之21</td>
+                    <td>建物拍賣底價:新台幣 150,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE0fDqlcbD1p1V8OjAxNTQwMXw6UENE</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>864110</td>
+                    <td class="document-file">/pcd/11511/10134919876.032.pdf</td>
+                    <td>115</td>
+                    <td>司執</td>
+                    <td>013586</td>
+                    <td>1151215</td>
+                    <td>2</td>
+                    <td></td>
+                    <td>100.58</td>
+                    <td>11474000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>民生</td>
+                    <td class="property-address">新北市板橋區溪崑一街58號五樓</td>
+                    <td>1151215</td>
+                    <td>協</td>
+                    <td></td>
+                    <td>367</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>1分之1</td>
+                    <td>1620000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>3</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>11,474,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>115司執字第013586號</td>
+                    <td>(協股)</td>
+                    <td> x </td>
+                    <td>第2拍</td>
+                    <td>民生</td>
+                    <td>30坪(100.58平方公尺) X 1分之1</td>
+                    <td>建物拍賣底價:新台幣 1,620,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE1fDqlcbD1fDowMTM1ODZ8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>861854</td>
+                    <td class="document-file">/pcd/11511/10095726296.000.pdf</td>
+                    <td>115</td>
+                    <td>司執</td>
+                    <td>019972</td>
+                    <td>1151214</td>
+                    <td>3</td>
+                    <td></td>
+                    <td>75.73</td>
+                    <td>9610000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>江子翠</td>
+                    <td class="property-address">新北市板橋區民治街144巷4號3樓</td>
+                    <td>1151214</td>
+                    <td>和</td>
+                    <td>第三崁</td>
+                    <td>0209-0027</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>890000</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>2</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>9,610,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>115司執字第019972號</td>
+                    <td>(和股)</td>
+                    <td> x </td>
+                    <td>第3拍</td>
+                    <td>江子翠</td>
+                    <td>22坪(75.73平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 890,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE1fDqlcbD1fDowMTk5NzJ8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>861862</td>
+                    <td class="document-file">/pcd/11511/11100551387.030.pdf</td>
+                    <td>115</td>
+                    <td>司執</td>
+                    <td>039959</td>
+                    <td>1151214</td>
+                    <td>3</td>
+                    <td></td>
+                    <td>68.72</td>
+                    <td>28390000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>民族</td>
+                    <td class="property-address">新北市板橋區國泰街25巷7號</td>
+                    <td>1151214</td>
+                    <td>和</td>
+                    <td></td>
+                    <td>77</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>4240000</td>
+                    <td>乙</td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>13</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>28,390,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>115司執字第039959號</td>
+                    <td>(和股)</td>
+                    <td> x </td>
+                    <td>第3拍</td>
+                    <td>民族</td>
+                    <td>20坪(68.72平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 4,240,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE1fDqlcbD1fDowMzk5NTl8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+                <tr>
+                    <td>861863</td>
+                    <td class="document-file">/pcd/11511/11100551387.030.pdf</td>
+                    <td>115</td>
+                    <td>司執</td>
+                    <td>039959</td>
+                    <td>1151214</td>
+                    <td>3</td>
+                    <td></td>
+                    <td>78.29</td>
+                    <td>28390000</td>
+                    <td>新北市</td>
+                    <td>板橋區</td>
+                    <td>民族</td>
+                    <td class="property-address">新北市板橋區國泰街25巷7號2樓</td>
+                    <td>1151214</td>
+                    <td>和</td>
+                    <td></td>
+                    <td>77</td>
+                    <td>M</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>全部</td>
+                    <td>5000000</td>
+                    <td>乙</td>
+                    <td>0</td>
+                    <td>N</td>
+                    <td></td>
+                    <td></td>
+                    <td>PCD</td>
+                    <td>14</td>
+                    <td>臺灣新北地方法院</td>
+                    <td>28,390,000</td>
+                    <td>0</td>
+                    <td>如備註或使用情形欄所示</td>
+                    <td></td>
+                    <td>否</td>
+                    <td>115司執字第039959號</td>
+                    <td>(和股)</td>
+                    <td> x </td>
+                    <td>第3拍</td>
+                    <td>民族</td>
+                    <td>23坪(78.29平方公尺) X 全部</td>
+                    <td>建物拍賣底價:新台幣 5,000,000 元</td>
+                    <td></td>
+                    <td></td>
+                    <td>MTE1fDqlcbD1fDowMzk5NTl8OlBDRA==</td>
+                    <td>0</td>
+                    <td>F</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</body>
+</html>
