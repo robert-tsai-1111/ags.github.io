@@ -476,10 +476,10 @@
 
     <div class="controls-hint">
       <div>
-        • <b>快按</b> (0.01~0.29s): 向右移 &amp; 亮綠燈<br>
-        • <b>長按</b> (0.30~0.80s): 向左移 &amp; 亮紅燈<br>
-        • <b>未按</b> (1.5s): 記錄字元並回起點亮白燈<br>
-        • <b>久按</b> (&gt;0.8s 回起點 / &gt;5s 清空電文)
+        • <b>快按</b> (0.01~0.24s): 向右移 &amp; 亮綠燈<br>
+        • <b>長按</b> (0.25~0.72s): 向左移 &amp; 亮紅燈<br>
+        • <b>未按</b> (1s~3s): 記錄字元並回起點亮白燈<br>
+        • <b>久按</b> (&gt;5s 傳送)
       </div>
       <button id="virtual-key" class="key-btn">按住電鍵<br>(右鍵/空白)</button>
     </div>
@@ -637,9 +637,9 @@
     if (clearMessage) {
       sentText = '';
       document.getElementById('sent-message').textContent = '';
-      updateDisplay('START', 'white', '久按 >5s • 電文已清空並回起點');
+      updateDisplay('START', 'white', '久按 >5s • 傳送電文並回起點');
     } else {
-      updateDisplay('START', 'white', '久按 >0.8s • 回到出發點亮白燈');
+      updateDisplay('START', 'white', '久按 >8s • 取消電文回到起點');
     }
   }
 
@@ -660,10 +660,10 @@
     holdFeedbackInterval = setInterval(() => {
       if (!isPressing || hardClearTriggered) return;
       const heldSec = (performance.now() - pressStartTime) / 1000;
-      if (heldSec < 0.30) {
+      if (heldSec < 0.24) {
         badgeEl.className = 'badge green';
         badgeEl.textContent = `按住中 ${heldSec.toFixed(2)}s (放開: 向右綠燈)`;
-      } else if (heldSec <= 0.80) {
+      } else if (heldSec <= 0.72) {
         badgeEl.className = 'badge red';
         badgeEl.textContent = `按住中 ${heldSec.toFixed(2)}s (放開: 向左紅燈)`;
       } else if (heldSec <= 5.00) {
@@ -697,8 +697,8 @@
 
     const durationSec = (performance.now() - pressStartTime) / 1000;
 
-    // 1. 快按 (0.01 ~ 0.29 sec): 向右移動 (.), 停在格上並亮綠燈
-    if (durationSec >= 0.01 && durationSec < 0.30) {
+    // 1. 快按 (0.01 ~ 0.24 sec): 向右移動 (.), 停在格上並亮綠燈
+    if (durationSec >= 0.01 && durationSec < 0.25) {
       const nextPath = currentPath + '.';
       if (MORSE_TREE[nextPath]) {
         currentPath = nextPath;
@@ -709,8 +709,8 @@
       }
       startIdleTimer();
     }
-    // 2. 長按 (0.30 ~ 0.80 sec): 向左移動 (-), 停在格上並亮紅燈
-    else if (durationSec >= 0.30 && durationSec <= 0.80) {
+    // 2. 長按 (0.25 ~ 0.72 sec): 向左移動 (-), 停在格上並亮紅燈
+    else if (durationSec >= 0.25 && durationSec <= 0.72) {
       const nextPath = currentPath + '-';
       if (MORSE_TREE[nextPath]) {
         currentPath = nextPath;
@@ -721,8 +721,8 @@
       }
       startIdleTimer();
     }
-    // 3. 久按 (> 0.80 sec): 回到出發點, 停在起點並亮白燈
-    else if (durationSec > 0.80) {
+    // 3. 久按 (> 2.80 sec): 回到出發點, 停在起點並亮白燈
+    else if (durationSec > 2.80) {
       resetToStart(false);
     }
   }
@@ -751,7 +751,7 @@
     // Fallback for browsers (like Chrome/Edge on Windows/macOS) that suppress mouseup/pointerup after opening contextmenu on long right-click
     if (isPressing && activeSource === 'mouse2') {
       const heldSec = (performance.now() - pressStartTime) / 1000;
-      if (heldSec >= 0.30) {
+      if (heldSec >= 0.24) {
         handlePressEnd('mouse2');
       }
     }
