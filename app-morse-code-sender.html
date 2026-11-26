@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morse Code Sender - 6" Metal Reference Card</title>
+<style>
+  :root {
+    --bg-dark: #121417;
+    --card-bg: #18191c;
+    --metal-border-light: #e2e4e8;
+    --metal-border-mid: #a8aeb8;
+    --metal-border-dark: #6b7280;
+    --line-color: #c8cdd5;
+    --text-color: #d6dbe2;
+    --led-off: #3a3f47;
+    --led-green: #22c55e;
+    --led-green-glow: rgba(34, 197, 94, 0.85);
+    --led-red: #ef4444;
+    --led-red-glow: rgba(239, 68, 68, 0.85);
+    --led-white: #ffffff;
+    --led-white-glow: rgba(255, 255, 255, 0.9);
+  }
+
+  * {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 16px;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 14px;
+  }
+
+  /* 6-inch physical card aspect ratio (~ 4.2in x 6.0in => 0.7 ratio) */
+  .card-wrapper {
+    position: relative;
+    width: min(92vw, 390px);
+    height: min(74vh, 558px);
+    aspect-ratio: 390 / 558;
+    border-radius: 22px;
+    padding: 7px;
+    background: linear-gradient(135deg, var(--metal-border-light) 0%, var(--metal-border-mid) 45%, var(--metal-border-dark) 100%);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), inset 0 1px 2px rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 25%, #23262b 0%, #141518 85%);
+    border-radius: 16px;
+    border: 2px solid #4b5563;
+    overflow: hidden;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.9);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .card-title {
+    fill: var(--text-color);
+    font-size: 23px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .letter-label {
+    fill: var(--text-color);
+    font-size: 19px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-anchor: middle;
+    dominant-baseline: central;
+  }
+
+  .trace-line {
+    stroke: var(--line-color);
+    stroke-width: 2.2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .node-bezel {
+    fill: #7b828e;
+    stroke: #aeb5c0;
+    stroke-width: 1.5;
+  }
+
+  .node-led {
+    fill: var(--led-off);
+    transition: fill 0.08s ease, filter 0.08s ease;
+  }
+
+  /* LED states */
+  .node-led.green {
+    fill: var(--led-green);
+    filter: drop-shadow(0 0 8px var(--led-green-glow)) drop-shadow(0 0 16px var(--led-green-glow));
+  }
+
+  .node-led.red {
+    fill: var(--led-red);
+    filter: drop-shadow(0 0 8px var(--led-red-glow)) drop-shadow(0 0 16px var(--led-red-glow));
+  }
+
+  .node-led.white {
+    fill: var(--led-white);
+    filter: drop-shadow(0 0 10px var(--led-white-glow)) drop-shadow(0 0 20px var(--led-white-glow));
+  }
+
+  .antenna-led {
+    fill: #525864;
+    transition: fill 0.08s ease, filter 0.08s ease;
+  }
+
+  .antenna-led.white {
+    fill: var(--led-white);
+    filter: drop-shadow(0 0 10px var(--led-white-glow)) drop-shadow(0 0 18px var(--led-white-glow));
+  }
+
+  /* Status & Output Console */
+  .console-panel {
+    width: min(92vw, 390px);
+    background: #1c1f24;
+    border: 1px solid #323741;
+    border-radius: 12px;
+    padding: 12px 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #9ca3af;
+  }
+
+  .badge {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    background: #2a2f38;
+    color: #e5e7eb;
+  }
+
+  .badge.green { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.4); }
+  .badge.red { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+  .badge.white { background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); }
+
+  .progress-track {
+    width: 100%;
+    height: 5px;
+    background: #2b303a;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #f59e0b;
+    transition: width 0.05s linear;
+  }
+
+  .message-box {
+    background: #111317;
+    border: 1px solid #2d323c;
+    border-radius: 8px;
+    padding: 8px 12px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .message-label {
+    font-size: 12px;
+    color: #9ca3af;
+    white-space: nowrap;
+  }
+
+  .message-text {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #38bdf8;
+    word-break: break-all;
+    flex: 1;
+    text-align: right;
+  }
+
+  .controls-hint {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #8b949e;
+    line-height: 1.45;
+  }
+
+  .key-btn {
+    background: linear-gradient(180deg, #374151 0%, #1f2937 100%);
+    color: #f3f4f6;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #111827;
+    touch-action: manipulation;
+  }
+
+  .key-btn:active, .key-btn.pressed {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #111827;
+    background: #4b5563;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card-wrapper">
+    <div class="card-inner">
+      <svg id="morse-svg" viewBox="0 0 390 558" xmlns="http://www.w3.org/2000/svg">
+        <!-- Top Right Lanyard Hole -->
+        <circle cx="355" cy="34" r="19" fill="#6b7280" stroke="#aeb5c0" stroke-width="2"/>
+        <circle cx="355" cy="34" r="13" fill="#121417" stroke="#4b5563" stroke-width="1.5"/>
+
+        <!-- Title Text -->
+        <text x="102" y="54" class="card-title" text-anchor="middle">MORSE</text>
+        <text x="275" y="54" class="card-title" text-anchor="middle">CODE</text>
+
+        <!-- Central Antenna Start Node -->
+        <g id="node-START" class="morse-node">
+          <polygon points="182,66 212,66 197,94" fill="none" stroke="#c8cdd5" stroke-width="2.2" stroke-linejoin="round"/>
+          <polygon id="led-START" class="antenna-led white" points="186,69 208,69 197,89"/>
+          <line x1="197" y1="66" x2="197" y2="112" class="trace-line"/>
+          <path d="M 192,107 A 5,5 0 0 0 202,107" class="trace-line"/>
+        </g>
+
+        <!-- Circuit Connecting Lines -->
+        <!-- Top Horizontal Trunk -->
+        <line x1="65" y1="100" x2="182" y2="100" class="trace-line"/>
+        <line x1="212" y1="100" x2="345" y2="100" class="trace-line"/>
+
+        <!-- Left Side Vertical & Sub-branches -->
+        <!-- M -> G -> Z & G -> Q -->
+        <line x1="108" y1="100" x2="108" y2="225" class="trace-line"/>
+        <line x1="65" y1="162" x2="108" y2="162" class="trace-line"/>
+
+        <!-- T -> N -> D -> B -->
+        <line x1="152" y1="100" x2="152" y2="472" class="trace-line"/>
+        <!-- N -> K -> Y & K -> C -->
+        <line x1="65" y1="286" x2="152" y2="286" class="trace-line"/>
+        <line x1="108" y1="286" x2="108" y2="348" class="trace-line"/>
+        <!-- D -> X -->
+        <line x1="108" y1="410" x2="152" y2="410" class="trace-line"/>
+
+        <!-- Right Side Vertical & Sub-branches -->
+        <!-- E -> A -> W -> J -->
+        <line x1="232" y1="100" x2="232" y2="472" class="trace-line"/>
+        <!-- A -> R -> L -->
+        <line x1="232" y1="286" x2="312" y2="286" class="trace-line"/>
+        <!-- W -> P -->
+        <line x1="232" y1="410" x2="275" y2="410" class="trace-line"/>
+
+        <!-- I -> U -> F -->
+        <line x1="272" y1="100" x2="272" y2="225" class="trace-line"/>
+
+        <!-- S -> V -->
+        <line x1="312" y1="100" x2="312" y2="162" class="trace-line"/>
+
+        <!-- ================= LEFT BRANCH NODES ================= -->
+        <!-- Row 1: O (---), M (--), T (-) -->
+        <g id="node-O">
+          <text x="65" y="77" class="letter-label">O</text>
+          <rect x="49" y="92" width="32" height="16" rx="3" class="node-bezel"/>
+          <rect id="led-O" x="52" y="95" width="26" height="10" rx="2" class="node-led"/>
+        </g>
+        <g id="node-M">
+          <text x="108" y="77" class="letter-label">M</text>
+          <rect x="92" y="92" width="32" height="16" rx="3" class="node-bezel"/>
+          <rect id="led-M" x="95" y="95" width="26" height="10" rx="2" class="node-led"/>
+        </g>
+        <g id="node-T">
+          <text x="152" y="77" class="letter-label">T</text>
+          <rect x="136" y="92" width="32" height="16" rx="3" class="node-bezel"/>
+          <rect id="led-T" x="139" y="95" width="26" height="10" rx="2" class="node-led"/>
+        </g>
+
+        <!-- Row 2: Q (--.-), G (--.) -->
+        <g id="node-Q">
+          <text x="65" y="190" class="letter-label">Q</text>
+          <rect x="49" y="154" width="32" height="16" rx="3" class="node-bezel"/>
+          <rect id="led-Q" x="52" y="157" width="26" height="10" rx="2" class="node-led"/>
+        </g>
+        <g id="node-G">
+          <text x="132" y="162" class="letter-label">G</text>
+          <circle cx="108" cy="162" r="13" class="node-bezel"/>
+          <circle id="led-G" cx="108" cy="162" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 3: Z (--..) -->
+        <g id="node-Z">
+          <text x="132" y="225" class="letter-label">Z</text>
+          <circle cx="108" cy="225" r="13" class="node-bezel"/>
+          <circle id="led-Z" cx="108" cy="225" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 4: Y (-.--) , K (-.-) , N (-.) -->
+        <g id="node-Y">
+          <text x="65" y="263" class="letter-label">Y</text>
+          <rect x="49" y="278" width="32" height="16" rx="3" class="node-bezel"/>
+          <rect id="led-Y" x="52" y="281" width="26" height="10" rx="2" class="node-led"/>
+        </g>
+        <g id="node-K">
+          <text x="108" y="263" class="letter-label">K</text>
+          <rect x="92" y="278" width="32" height="16" rx="3" class="node-bezel"/>
+          <rect id="led-K" x="95" y="281" width="26" height="10" rx="2" class="node-led"/>
+        </g>
+        <g id="node-N">
+          <text x="175" y="278" class="letter-label">N</text>
+          <circle cx="152" cy="286" r="13" class="node-bezel"/>
+          <circle id="led-N" cx="152" cy="286" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 5: C (-.-.) -->
+        <g id="node-C">
+          <text x="132" y="344" class="letter-label">C</text>
+          <circle cx="108" cy="348" r="13" class="node-bezel"/>
+          <circle id="led-C" cx="108" cy="348" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 6: X (-..-) , D (-..) -->
+        <g id="node-X">
+          <text x="82" y="410" class="letter-label">X</text>
+          <rect x="92" y="402" width="32" height="16" rx="3" class="node-bezel"/>
+          <rect id="led-X" x="95" y="405" width="26" height="10" rx="2" class="node-led"/>
+        </g>
+        <g id="node-D">
+          <text x="176" y="402" class="letter-label">D</text>
+          <circle cx="152" cy="410" r="13" class="node-bezel"/>
+          <circle id="led-D" cx="152" cy="410" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 7: B (-...) -->
+        <g id="node-B">
+          <text x="128" y="472" class="letter-label">B</text>
+          <circle cx="152" cy="472" r="13" class="node-bezel"/>
+          <circle id="led-B" cx="152" cy="472" r="9.5" class="node-led"/>
+        </g>
+
+
+        <!-- ================= RIGHT BRANCH NODES ================= -->
+        <!-- Row 1: E (.), I (..), S (...), H (....) -->
+        <g id="node-E">
+          <text x="232" y="77" class="letter-label">E</text>
+          <circle cx="232" cy="100" r="13" class="node-bezel"/>
+          <circle id="led-E" cx="232" cy="100" r="9.5" class="node-led"/>
+        </g>
+        <g id="node-I">
+          <text x="272" y="77" class="letter-label">I</text>
+          <circle cx="272" cy="100" r="13" class="node-bezel"/>
+          <circle id="led-I" cx="272" cy="100" r="9.5" class="node-led"/>
+        </g>
+        <g id="node-S">
+          <text x="312" y="77" class="letter-label">S</text>
+          <circle cx="312" cy="100" r="13" class="node-bezel"/>
+          <circle id="led-S" cx="312" cy="100" r="9.5" class="node-led"/>
+        </g>
+        <g id="node-H">
+          <text x="348" y="77" class="letter-label">H</text>
+          <circle cx="348" cy="100" r="13" class="node-bezel"/>
+          <circle id="led-H" cx="348" cy="100" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 2: U (..-), V (...-) -->
+        <g id="node-U">
+          <text x="249" y="162" class="letter-label">U</text>
+          <rect x="264" y="146" width="16" height="32" rx="3" class="node-bezel"/>
+          <rect id="led-U" x="267" y="149" width="10" height="26" rx="2" class="node-led"/>
+        </g>
+        <g id="node-V">
+          <text x="335" y="162" class="letter-label">V</text>
+          <rect x="304" y="146" width="16" height="32" rx="3" class="node-bezel"/>
+          <rect id="led-V" x="307" y="149" width="10" height="26" rx="2" class="node-led"/>
+        </g>
+
+        <!-- Row 3: F (..-.) -->
+        <g id="node-F">
+          <text x="296" y="225" class="letter-label">F</text>
+          <circle cx="272" cy="225" r="13" class="node-bezel"/>
+          <circle id="led-F" cx="272" cy="225" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 4: A (.-), R (.-.), L (.-..) -->
+        <g id="node-A">
+          <text x="209" y="294" class="letter-label">A</text>
+          <rect x="224" y="270" width="16" height="32" rx="3" class="node-bezel"/>
+          <rect id="led-A" x="227" y="273" width="10" height="26" rx="2" class="node-led"/>
+        </g>
+        <g id="node-R">
+          <text x="272" y="311" class="letter-label">R</text>
+          <circle cx="272" cy="286" r="13" class="node-bezel"/>
+          <circle id="led-R" cx="272" cy="286" r="9.5" class="node-led"/>
+        </g>
+        <g id="node-L">
+          <text x="335" y="286" class="letter-label">L</text>
+          <circle cx="312" cy="286" r="13" class="node-bezel"/>
+          <circle id="led-L" cx="312" cy="286" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 6: W (.--), P (.--.) -->
+        <g id="node-W">
+          <text x="207" y="422" class="letter-label">W</text>
+          <rect x="224" y="394" width="16" height="32" rx="3" class="node-bezel"/>
+          <rect id="led-W" x="227" y="397" width="10" height="26" rx="2" class="node-led"/>
+        </g>
+        <g id="node-P">
+          <text x="299" y="410" class="letter-label">P</text>
+          <circle cx="275" cy="410" r="13" class="node-bezel"/>
+          <circle id="led-P" cx="275" cy="410" r="9.5" class="node-led"/>
+        </g>
+
+        <!-- Row 7: J (.---) -->
+        <g id="node-J">
+          <text x="253" y="472" class="letter-label">J</text>
+          <rect x="224" y="456" width="16" height="32" rx="3" class="node-bezel"/>
+          <rect id="led-J" x="227" y="459" width="10" height="26" rx="2" class="node-led"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Control & Telemetry Panel -->
+  <div class="console-panel">
+    <div class="status-row">
+      <span>目前位置: <strong id="current-pos" style="color:#fff;">START (天線)</strong></span>
+      <span id="action-badge" class="badge white">白燈 • 待命起點</span>
+    </div>
+
+    <div class="progress-track" title="未按鍵自動記錄倒數 (1.5s)">
+      <div id="idle-bar" class="progress-bar"></div>
+    </div>
+
+    <div class="message-box">
+      <span class="message-label">已發送電文:</span>
+      <span id="sent-message" class="message-text"></span>
+    </div>
+
+    <div class="controls-hint">
+      <div>
+        • <b>快按</b> (0.01~0.29s): 向右移 &amp; 亮綠燈<br>
+        • <b>長按</b> (0.30~0.80s): 向左移 &amp; 亮紅燈<br>
+        • <b>未按</b> (1.5s): 記錄字元並回起點亮白燈<br>
+        • <b>久按</b> (&gt;0.8s 回起點 / &gt;5s 清空電文)
+      </div>
+      <button id="virtual-key" class="key-btn">按住電鍵<br>(右鍵/空白)</button>
+    </div>
+  </div>
+
+<script>
+  // Morse Binary Tree Mapping (Dot = Right branch on map, Dash = Left branch on map)
+  const MORSE_TREE = {
+    '': 'START',
+    '.': 'E',
+    '-': 'T',
+    '..': 'I',
+    '.-': 'A',
+    '-.': 'N',
+    '--': 'M',
+    '...': 'S',
+    '..-': 'U',
+    '.-.': 'R',
+    '.--': 'W',
+    '-..': 'D',
+    '-.-': 'K',
+    '--.': 'G',
+    '---': 'O',
+    '....': 'H',
+    '...-': 'V',
+    '..-.': 'F',
+    '.-..': 'L',
+    '.--.': 'P',
+    '.---': 'J',
+    '-...': 'B',
+    '-..-': 'X',
+    '-.-.': 'C',
+    '-.--': 'Y',
+    '--..': 'Z',
+    '--.-': 'Q'
+  };
+
+  let currentPath = '';
+  let sentText = '';
+  let isPressing = false;
+  let activeSource = null;
+  let pressStartTime = 0;
+  let idleTimeout = null;
+  let idleInterval = null;
+  let holdFeedbackInterval = null;
+  let longResetTimeout = null;
+  let hardClearTriggered = false;
+
+  const IDLE_COMMIT_MS = 1500; // 1.5s (within 1~3 sec requirement)
+
+  // Web Audio API subtle telegraph beep
+  let audioCtx = null;
+  let oscillator = null;
+
+  function startBeep() {
+    try {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      oscillator = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      oscillator.type = 'sine';
+      oscillator.frequency.setValueAtTime(680, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      oscillator.connect(gain);
+      gain.connect(audioCtx.destination);
+      oscillator.start();
+    } catch (e) {}
+  }
+
+  function stopBeep() {
+    try {
+      if (oscillator) {
+        oscillator.stop();
+        oscillator.disconnect();
+        oscillator = null;
+      }
+    } catch (e) {}
+  }
+
+  function clearAllLeds() {
+    document.querySelectorAll('.node-led, .antenna-led').forEach(el => {
+      el.classList.remove('green', 'red', 'white');
+    });
+  }
+
+  function updateDisplay(nodeId, colorClass, statusText) {
+    clearAllLeds();
+    const targetLed = document.getElementById('led-' + nodeId);
+    if (targetLed && colorClass) {
+      targetLed.classList.add(colorClass);
+    }
+
+    const posEl = document.getElementById('current-pos');
+    const badgeEl = document.getElementById('action-badge');
+    posEl.textContent = nodeId === 'START' ? 'START (天線)' : `${nodeId} (${currentPath})`;
+    badgeEl.className = 'badge ' + colorClass;
+    badgeEl.textContent = statusText;
+  }
+
+  function stopIdleTimers() {
+    if (idleTimeout) {
+      clearTimeout(idleTimeout);
+      idleTimeout = null;
+    }
+    if (idleInterval) {
+      clearInterval(idleInterval);
+      idleInterval = null;
+    }
+    document.getElementById('idle-bar').style.width = '0%';
+  }
+
+  function stopHoldTimers() {
+    if (holdFeedbackInterval) {
+      clearInterval(holdFeedbackInterval);
+      holdFeedbackInterval = null;
+    }
+    if (longResetTimeout) {
+      clearTimeout(longResetTimeout);
+      longResetTimeout = null;
+    }
+  }
+
+  function startIdleTimer() {
+    stopIdleTimers();
+    if (currentPath === '') return;
+
+    const startTime = Date.now();
+    const barEl = document.getElementById('idle-bar');
+
+    idleInterval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const pct = Math.min(100, (elapsed / IDLE_COMMIT_MS) * 100);
+      barEl.style.width = pct + '%';
+    }, 30);
+
+    idleTimeout = setTimeout(() => {
+      stopIdleTimers();
+      const char = MORSE_TREE[currentPath];
+      if (char && char !== 'START') {
+        sentText += char;
+        document.getElementById('sent-message').textContent = sentText;
+      }
+      currentPath = '';
+      updateDisplay('START', 'white', `已記錄「${char}」• 回起點亮白燈`);
+    }, IDLE_COMMIT_MS);
+  }
+
+  function resetToStart(clearMessage = false) {
+    stopIdleTimers();
+    currentPath = '';
+    if (clearMessage) {
+      sentText = '';
+      document.getElementById('sent-message').textContent = '';
+      updateDisplay('START', 'white', '久按 >5s • 電文已清空並回起點');
+    } else {
+      updateDisplay('START', 'white', '久按 >0.8s • 回到出發點亮白燈');
+    }
+  }
+
+  function handlePressStart(source) {
+    if (isPressing) return;
+    isPressing = true;
+    activeSource = source;
+    hardClearTriggered = false;
+    pressStartTime = performance.now();
+    stopIdleTimers();
+    stopHoldTimers();
+    startBeep();
+    document.getElementById('virtual-key').classList.add('pressed');
+
+    const badgeEl = document.getElementById('action-badge');
+
+    // Live hold timer indicator
+    holdFeedbackInterval = setInterval(() => {
+      if (!isPressing || hardClearTriggered) return;
+      const heldSec = (performance.now() - pressStartTime) / 1000;
+      if (heldSec < 0.30) {
+        badgeEl.className = 'badge green';
+        badgeEl.textContent = `按住中 ${heldSec.toFixed(2)}s (放開: 向右綠燈)`;
+      } else if (heldSec <= 0.80) {
+        badgeEl.className = 'badge red';
+        badgeEl.textContent = `按住中 ${heldSec.toFixed(2)}s (放開: 向左紅燈)`;
+      } else if (heldSec <= 5.00) {
+        badgeEl.className = 'badge white';
+        badgeEl.textContent = `按住中 ${heldSec.toFixed(2)}s (放開: 回起點白燈)`;
+      }
+    }, 25);
+
+    // Monitor > 5 seconds continuous hold
+    longResetTimeout = setTimeout(() => {
+      if (isPressing) {
+        hardClearTriggered = true;
+        resetToStart(true);
+      }
+    }, 5000);
+  }
+
+  function handlePressEnd(source) {
+    if (!isPressing) return;
+    if (source && activeSource && source !== activeSource) return;
+
+    isPressing = false;
+    activeSource = null;
+    stopBeep();
+    stopHoldTimers();
+    document.getElementById('virtual-key').classList.remove('pressed');
+
+    if (hardClearTriggered) {
+      return;
+    }
+
+    const durationSec = (performance.now() - pressStartTime) / 1000;
+
+    // 1. 快按 (0.01 ~ 0.29 sec): 向右移動 (.), 停在格上並亮綠燈
+    if (durationSec >= 0.01 && durationSec < 0.30) {
+      const nextPath = currentPath + '.';
+      if (MORSE_TREE[nextPath]) {
+        currentPath = nextPath;
+        updateDisplay(MORSE_TREE[currentPath], 'green', `快按 (${durationSec.toFixed(2)}s) • 向右亮綠燈`);
+      } else {
+        currentPath = '';
+        updateDisplay('START', 'white', '超出地圖邊界 • 回到起點亮白燈');
+      }
+      startIdleTimer();
+    }
+    // 2. 長按 (0.30 ~ 0.80 sec): 向左移動 (-), 停在格上並亮紅燈
+    else if (durationSec >= 0.30 && durationSec <= 0.80) {
+      const nextPath = currentPath + '-';
+      if (MORSE_TREE[nextPath]) {
+        currentPath = nextPath;
+        updateDisplay(MORSE_TREE[currentPath], 'red', `長按 (${durationSec.toFixed(2)}s) • 向左亮紅燈`);
+      } else {
+        currentPath = '';
+        updateDisplay('START', 'white', '超出地圖邊界 • 回到起點亮白燈');
+      }
+      startIdleTimer();
+    }
+    // 3. 久按 (> 0.80 sec): 回到出發點, 停在起點並亮白燈
+    else if (durationSec > 0.80) {
+      resetToStart(false);
+    }
+  }
+
+  // Keyboard Listeners: Spacebar or Right Arrow
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space' || e.code === 'ArrowRight') {
+      e.preventDefault();
+      if (!e.repeat) {
+        handlePressStart('key');
+      }
+    }
+  }, { capture: true });
+
+  window.addEventListener('keyup', (e) => {
+    if (e.code === 'Space' || e.code === 'ArrowRight') {
+      e.preventDefault();
+      handlePressEnd('key');
+    }
+  }, { capture: true });
+
+  // Prevent browser right-click context menu & mouse gestures from hijacking long right-click
+  window.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    // Fallback for browsers (like Chrome/Edge on Windows/macOS) that suppress mouseup/pointerup after opening contextmenu on long right-click
+    if (isPressing && activeSource === 'mouse2') {
+      const heldSec = (performance.now() - pressStartTime) / 1000;
+      if (heldSec >= 0.30) {
+        handlePressEnd('mouse2');
+      }
+    }
+    return false;
+  }, { capture: true });
+
+  // Use Pointer Events + Mouse Events in capture phase
+  window.addEventListener('pointerdown', (e) => {
+    if (e.button === 2) {
+      e.preventDefault();
+      handlePressStart('mouse2');
+    }
+  }, { capture: true });
+
+  window.addEventListener('pointerup', (e) => {
+    if (e.button === 2) {
+      e.preventDefault();
+      handlePressEnd('mouse2');
+    }
+  }, { capture: true });
+
+  window.addEventListener('pointercancel', (e) => {
+    if (isPressing && activeSource === 'mouse2') {
+      handlePressEnd('mouse2');
+    }
+  }, { capture: true });
+
+  window.addEventListener('mousedown', (e) => {
+    if (e.button === 2) {
+      e.preventDefault();
+      handlePressStart('mouse2');
+    }
+  }, { capture: true });
+
+  window.addEventListener('mouseup', (e) => {
+    if (e.button === 2) {
+      e.preventDefault();
+      handlePressEnd('mouse2');
+    }
+  }, { capture: true });
+
+  // Fallback check via mousemove if right button (buttons & 2) was released while browser swallowed mouseup
+  window.addEventListener('mousemove', (e) => {
+    if (isPressing && activeSource === 'mouse2' && (e.buttons & 2) === 0) {
+      handlePressEnd('mouse2');
+    }
+  }, { capture: true });
+
+  // Virtual Key Button (Left click or Touch)
+  const vKey = document.getElementById('virtual-key');
+  vKey.addEventListener('mousedown', (e) => {
+    if (e.button === 0) {
+      e.preventDefault();
+      handlePressStart('mouse0');
+    }
+  });
+  vKey.addEventListener('mouseup', (e) => {
+    if (e.button === 0) {
+      e.preventDefault();
+      handlePressEnd('mouse0');
+    }
+  });
+  vKey.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    handlePressStart('touch');
+  });
+  vKey.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    handlePressEnd('touch');
+  });
+
+  // Initial state: START white LED
+  updateDisplay('START', 'white', '白燈 • 待命起點');
+</script>
+</body>
+</html>
